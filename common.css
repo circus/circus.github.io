@@ -1,0 +1,46 @@
+/*@import url(http://fonts.googleapis.com/css?family=Montserrat);*/
+body {color:#552200; background-color:#ffdec9; font-family:"Futura", "Gill Sans MT", "Trebuchet MS", sans-serif}
+.dim {opacity:0.3}
+ul.dim:hover {opacity:0.8; color: blue;}
+ul.dim {text-indent:0}
+.pic .alert {color:#C00}
+.pic .p, .cpic .p {color:#552200; padding-top:5px; font-weight:normal}
+.pic {float:left; text-align:center; width:150px; height:250px; margin:5px; font-weight:bold; border:2px solid #ffbf95}
+div.cpic {text-align:center; width:150px; height:250px; margin-left:150px; margin-right:150px; font-weight:bold; border:2px solid #ffbf95}
+.double {float:left; width:314px; height:250px; margin:5px; border:2px solid #ffbf95; text-align:center}
+.tesla {background-color:#040322}
+.double img {max-height:250px; max-width:310px}
+.tile {float:left; width:100px; height:100px; margin:5px}
+.pic img, .cpic img, .tile img {border:0px; max-height:100px; max-width:100px;}
+.icon {height:80px;border:0px;margin:0px}
+div, span.pic, span.p {display:block}
+div.cpic, span.cpic {display:inline-block}
+br {clear:both}
+.last {width:100%; text-align:right; font-style:italic; font-size:smaller}
+a:link, a:visited {color:#1d6470}
+a.stud:link, a.stud:visited {color:#00A953; text-decoration: underline; text-decoration-style: double;}
+a.red:link, a.red:visited {color:#b64d70; font-style:normal}
+a.now:link, a.now:visited {color:#ff6332; font-style:normal}
+.pic:hover, .cpic:hover, .double:hover {background-color:#ffbf95}
+h1 a img, h1 img {float:right; margin-left:50px; margin-bottom:50px}
+code {font-family:"Courier Prime", Courier, monospace}
+.bmp {text-align: center}
+.bmp img {border: 1px solid black}
+.help {color:#ffdec9; font-size:smaller; font-style:italic}
+.title {font-size:larger;}
+.title>ul{font-size:smaller;}
+ol.fwd {counter-reset: item}
+ol li {display:block; text-indent:-2em}
+ol li:before {content: "[" counter(item) "] "; counter-increment:item; font-weight: bold; padding: .5em}
+ol.back li:before {content: "[" counter(item) "] "; counter-increment:item -1; font-weight: bold; padding: .5em}
+li a {font-style:italic}
+li.wip:after {content: " (under review)"; color:#ff6332}
+.prop strong {color:black}
+.prop a {color: #b64d70; font-weight: normal}
+.prop dt {font-weight: bold}
+.censored {background-color: black; color: black;}
+table.realtable th, table.realtable * td {border: 1px solid black;}
+li.j::marker {color:red}
+li.c::marker {color:blue}
+li.w::marker {color:cadetblue}
+a.a {text-decoration-style:double;}
