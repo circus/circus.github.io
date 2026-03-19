@@ -44,3 +44,9 @@ li.j::marker {color:red}
 li.c::marker {color:blue}
 li.w::marker {color:cadetblue}
 a.a {text-decoration-style:double;}
+td.r {text-align: right;}
+td.c {text-align: center;}
+table tr:first-child td {border-top: 2px solid black; border-bottom: 1px solid black;}
+table tr:last-child td {border-bottom: 2px solid black;}
+table.c {margin: 0px auto;}
+td {padding-left: 1em; padding-right: 1em;}

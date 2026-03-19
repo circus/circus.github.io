@@ -2,14 +2,21 @@
 	<head viewport title="Dr. Vadim Zaytsev — a circus of projects, artefacts and deliverables" />
 	<body>
 		<hr/>
-		<picdir>logos</picdir>
 		<pic>
 			<a>wag</a>
-			<img>terminal.200.png</img>
+			<img>logos/terminal.200.png</img>
 			<alt>Grammarware</alt>
-			<title>Weighted Attribute Grammars (WAG)</title>
+			<title>WAG: Weighted Attribute Grammars</title>
 			<name>Weighted Attribute Grammars</name>
 			<text>ongoing research activities</text>
+		</pic>
+		<pic>
+			<a>tip</a>
+			<img>tip/tip.200.png</img>
+			<alt>TIP logo</alt>
+			<title>Taxonomy of Inconsistency Patterns</title>
+			<name>Taxonomy of Inconsistency Patterns</name>
+			<text>evidence-based taxonomy</text>
 		</pic>
 		<footer>
 			Dim tiles refer to inactive projects.

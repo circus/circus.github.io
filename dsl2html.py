@@ -28,31 +28,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	lines = f.readlines()
 	f.close()
 	g = open(html, 'w', encoding='utf-8')
-	# if lines[1].startswith('<!doctype html>'):
-	# 	lines[0] = ''
-	# g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-	i = 0
-	paper = False
-	resolver = {}
-	for i in range(0,len(lines)):
-		if lines[i].strip().startswith('<paper'):
-			HX += 1
-			tmp = lines[i].strip().split('#')
-			if len(tmp)>1:
-				resolver[tmp[1]] = HX
-	# print(resolver,HX)
-	HX += 1
-	for i in range(0,len(lines)):
-		while lines[i].find('[#')>0:
-			tmp = lines[i].split('#')[1]
-			if tmp not in resolver.keys():
-				print('Cannot resolve #'+tmp+'#')
-				break
-			else:
-				# print('Resolved #%s# to %s' % (tmp,HX-resolver[tmp]))
-				lines[i] = lines[i].replace('#'+tmp+'#', str(HX-resolver[tmp]))
-	# TODO: HX is total!
 	HX = i = 0
+	table = False
 	while i < len(lines):
 		# skip comments
 		if lines[i].strip().startswith('<!--'):
@@ -64,65 +41,6 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			i += 1
 			# to be on the safe side of the boundary bug
 			continue
-		if paper:
-			if lines[i].strip().startswith('<a>'):
-				paperA = lines[i].strip()[3:-4]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<t>'):
-				paperT = lines[i].strip()[3:-4]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<v>'):
-				paperV = lines[i].strip()[3:-4]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<x>'):
-				paperX = lines[i].strip()[3:-4]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<doi>'):
-				paperFull = 'http://dx.doi.org/'+lines[i].strip()[5:-6]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<read>'):
-				paperText.append(lines[i].strip()[6:-7])
-				lines[i] = ''
-			elif lines[i].strip().startswith('<uri'):
-				if lines[i].strip().startswith('<uri>'):
-					paperFull = lines[i].strip()[5:-6]
-				elif lines[i].strip().startswith('<uri closed'):
-					paperFull = lines[i].strip()[13:-6]
-				elif lines[i].strip().startswith('<uri open'):
-					paperOpen = lines[i].strip()[11:-6]
-				else:
-					print('What kind of URI is "'+lines[i].strip()+'"?')
-				lines[i] = ''
-			elif lines[i].strip().startswith('<acm>'):
-				if not paperFull:
-					paperFull = 'http://dl.acm.org/citation.cfm?id=' + lines[i].strip()[5:-6]
-				if not paperBib:
-					paperBib = 'http://dl.acm.org/citation.cfm?id=' + lines[i].strip()[5:-6]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<bib>'):
-				paperBib = lines[i].strip()[5:-6]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<dblp>'):
-				s = lines[i].strip()[6:-7]
-				if s.startswith('https://dblp.org/rec/bibtex/'):
-					s = s.replace('https://dblp.org/rec/bibtex/', '')
-				paperBib = 'http://dblp.org/rec/bibtex/' + s
-				lines[i] = ''
-			elif lines[i].strip().startswith('<sleigh>'):
-				paperBib = 'http://bibtex.github.io/'+lines[i].strip()[8:-9]+'.html'
-				lines[i] = ''
-			elif lines[i].strip().startswith('<arxiv>'):
-				paperOpen = 'http://arxiv.org/abs/'+lines[i].strip()[7:-8]
-				lines[i] = ''
-			elif lines[i].strip().startswith('<gwbib>'):
-				paperBib = 'http://grammarware.net/bib/'+lines[i].strip()[7:-8]+'.bib'
-				lines[i] = ''
-			elif lines[i].strip().startswith('<gwpdf>'):
-				paperOpen = 'http://grammarware.net/text/'+lines[i].strip()[7:-8]
-				lines[i] = ''
-			elif lines[i].strip() != '</paper>' and not lines[i].strip().startswith('<paper'):
-				paperText.append(lines[i].strip())
-				lines[i] = ''
 		# globals
 		if lines[i].strip().startswith('<path '):
 			pairs = lines[i][5:].split('"')
@@ -139,6 +57,29 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					print('Unknown path is being set: ' + pairs[2*j][:-1])
 			i += 1
 			continue
+		# table
+		if not table and lines[i].strip().startswith('<table'):
+			table = lines[i].strip().split(' ')[-1][:-1]
+			# print('INTO the table')
+			if lines[i].find('center') > -1:
+				lines[i] = lines[i].replace('center', 'class="c"')
+			inside_table = 0
+		elif table:
+			if lines[i].strip().startswith('</table>'):
+				# print('OUT of table')
+				table = False
+			else:
+				cells = lines[i].strip().split(' & ')
+				lines[i] = '<tr>'
+				for j in range(len(cells)):
+					if j >= len(table):
+						print('\n[WARN] Too many columns in a table\n')
+					if table[j] != 'l':
+						lines[i] += f'<td class="{table[j]}">{cells[j]}</td>'
+					else:
+						lines[i] += f'<td>{cells[j]}</td>'
+				lines[i] += '</tr>'
+				inside_table += 1
 		# unified head
 		if lines[i].strip().startswith('<head '):
 			if lines[i].strip().find('viewport') < 0:
@@ -181,7 +122,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 '''.format(vp, title, csspath, end))
 			i += 1
 		# useful macros
-		# <credit first="Marcus Gerhold@mgerhold.personalweb.utwente.nl" last="others">
+		if lines[i].strip() == '<clear/>':
+			lines[i] = '<br style="clear:both">'
 		if lines[i].strip() == '<credit/>':
 			lines[i] = '<div style="text-align:center;">by <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>\n'
 		if lines[i].strip().startswith('<credit '):
@@ -412,6 +354,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					picwithdir = pic['img']
 					if not picwithdir.startswith('https://'):
 						picwithdir = picdir + picwithdir
+						# print(f'{picwithdir} = {picdir} + {picwithdir}')
 
 					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}" alt="{}" title="{}">'+\
 						'<br>{}{}</span></a></div>\n').format(\
