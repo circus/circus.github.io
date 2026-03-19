@@ -1,7 +1,7 @@
 #!/opt/anaconda3/bin/python
 # -*- coding: utf-8 -*-
 
-import glob, re, datetime
+import glob, re, datetime, os
 
 def expandred(input, tag, prefix, suffix, name):
 	return input.replace(f'<{tag}>', f'<a class="red" href="{prefix}').replace(f'</{tag}>', f'{suffix}">({name})</a>')
@@ -19,11 +19,15 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	# Other counters
 	HX = 0
 	picdir = divclass = ''
-	print('Processing', dsl)
+	print('Processing', dsl, '...', end="")
 	f = open(dsl, 'r', encoding='utf-8')
+	html = dsl.replace('.dsl', '.html')
+	if os.path.exists(html) and os.path.getmtime(html) >= os.path.getmtime(dsl):
+		print(' preserved')
+		continue
 	lines = f.readlines()
 	f.close()
-	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
+	g = open(html, 'w', encoding='utf-8')
 	# if lines[1].startswith('<!doctype html>'):
 	# 	lines[0] = ''
 	# g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
@@ -422,7 +426,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = lines[i].replace('<hr/>', '<hr>').replace('<br/>', '<br>')
 			# ultimately, write
 			g.write(lines[i])
+
 		i += 1
 	g.close()
+	print(' updated')
 
 
