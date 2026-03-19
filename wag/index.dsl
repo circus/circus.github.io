@@ -1,7 +1,7 @@
 <html doctype>
 	<head jquery title="Dr. Vadim Zaytsev — Weighted Attribute Grammars" />
 	<body>
-		<header/>
+		<credit first="Marcus Gerhold@mgerhold.personalweb.utwente.nl" last="others">
 		<h1>
 			Weighted Attribute Grammars
 		</h1>

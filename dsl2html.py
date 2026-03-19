@@ -181,8 +181,32 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 '''.format(vp, title, csspath, end))
 			i += 1
 		# useful macros
-		if lines[i].strip() == '<header/>':
-			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr>'
+		# <credit first="Marcus Gerhold@mgerhold.personalweb.utwente.nl" last="others">
+		if lines[i].strip() == '<credit/>':
+			lines[i] = '<div style="text-align:center;">by <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>\n'
+		if lines[i].strip().startswith('<credit '):
+			odd = first = last = False
+			bywhom = ['<a href="http://grammarware.github.io">Vadim Zaytsev</a>']
+			for word in lines[i].strip().split('"'):
+				if odd:
+					if word.find('@') > -1:
+						name,link = word.split('@')
+						if not link.startswith('http'):
+							link = 'https://' + link
+						creditline = f'<a href="{link}">{name}</a>'
+					else:
+						creditline = word
+					if first:
+						bywhom.insert(0, creditline)
+					elif last:
+						bywhom.append(creditline)
+					else:
+						print(f'\n[FAIL] How to credit "{word}"?\n')
+				else:
+					first = word.endswith('first=')
+					last = word.endswith('last=')
+				odd = not odd
+			lines[i] = '<div style="text-align:center;">by ' + ' &amp; '.join(bywhom) + '</div><hr>\n'
 		if lines[i].strip() == '<html doctype>':
 			lines[i] = '''<!doctype html><html lang="en">
 '''

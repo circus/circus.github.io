@@ -2,13 +2,9 @@
 <html doctype>
 	<head title="WAGon" />
 	<body>
-		<div style="text-align:center;">
-			<a href="https://dulfer.be/">Rafael Dulfer</a> and
-			<a href="http://grammarware.github.io">Vadim Zaytsev</a>
-		</div>
-		<hr>
+		<credit first="Rafael Dulfer@dulfer.be">
 		<h1>
-			Weighted Attribute Grammars Oriented Notation (WAGon)
+			<a href="..">Weighted Attribute Grammars</a> Oriented Notation (WAGon)
 		</h1>
 		<hr/>
 		<p>

@@ -4,12 +4,12 @@
 		<hr/>
 		<picdir>logos</picdir>
 		<pic>
-			<a>http://grammarware.net/</a>
-			<img>https://grammarware.github.io/logos/terminal.200.png</img>
+			<a>wag</a>
+			<img>terminal.200.png</img>
 			<alt>Grammarware</alt>
-			<title>Biography, lists of publications and presentations, curriculum vitae, affiliations, event participation, etc</title>
-			<name>Home Page</name>
-			<text>CV, bio, lists of talks, papers, venues, contact details</text>
+			<title>Weighted Attribute Grammars (WAG)</title>
+			<name>Weighted Attribute Grammars</name>
+			<text>ongoing research activities</text>
 		</pic>
 		<footer>
 			Dim tiles refer to inactive projects.
