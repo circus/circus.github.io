@@ -70,15 +70,27 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				table = False
 			else:
 				cells = lines[i].strip().split(' & ')
+				coloured = cells[0].count('¶')
+				cells[0] = cells[0].replace('¶','')
 				lines[i] = '<tr>'
 				for j in range(len(cells)):
 					if j >= len(table):
 						print('\n[WARN] Too many columns in a table\n')
+						continue
+					cell = cells[j].strip()
+					cell_class = ''
 					if table[j] != 'l':
-						lines[i] += f'<td class="{table[j]}">{cells[j]}</td>'
+						cell_class += table[j] + ' '
+					cell_class += 'X'*coloured + ' '
+					cell_class = cell_class.strip()
+					if cell.find('@') > -1:
+						cell, link = cell.split('@')
+						cell = f'<a href="{link}">{cell}</a>'
+					if cell_class:
+						lines[i] += f'<td class="{cell_class}">{cell}</td>'
 					else:
-						lines[i] += f'<td>{cells[j]}</td>'
-				lines[i] += '</tr>'
+						lines[i] += f'<td>{cell}</td>'
+				lines[i] += '</tr>\n'
 				inside_table += 1
 		# unified head
 		if lines[i].strip().startswith('<head '):

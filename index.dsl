@@ -18,6 +18,7 @@
 			<name>Taxonomy of Inconsistency Patterns</name>
 			<text>evidence-based taxonomy</text>
 		</pic>
+		<clear/>
 		<footer>
 			Dim tiles refer to inactive projects.
 			<!-- See <a href="copyright.html">copyright disclaimer</a>.<br/> -->

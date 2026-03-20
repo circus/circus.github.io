@@ -15,11 +15,10 @@ div.cpic {text-align:center; width:150px; height:250px; margin-left:150px; margi
 .icon {height:80px;border:0px;margin:0px}
 div, span.pic, span.p {display:block}
 div.cpic, span.cpic {display:inline-block}
-br {clear:both}
 .last {width:100%; text-align:right; font-style:italic; font-size:smaller}
 a:link, a:visited {color:#1d6470}
 a.stud:link, a.stud:visited {color:#00A953; text-decoration: underline; text-decoration-style: double;}
-a.red:link, a.red:visited {color:#b64d70; font-style:normal}
+a.red:link, a.red:visited, span.red {color:#b64d70; font-style:normal}
 a.now:link, a.now:visited {color:#ff6332; font-style:normal}
 .pic:hover, .cpic:hover, .double:hover {background-color:#ffbf95}
 h1 a img, h1 img {float:right; margin-left:50px; margin-bottom:50px}
@@ -50,3 +49,6 @@ table tr:first-child td {border-top: 2px solid black; border-bottom: 1px solid b
 table tr:last-child td {border-bottom: 2px solid black;}
 table.c {margin: 0px auto;}
 td {padding-left: 1em; padding-right: 1em;}
+td.X {background-color: #aade74;}
+td.XX {background-color: #ffffc9;}
+td.XXX {background-color: #ff9a85;}
