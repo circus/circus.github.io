@@ -1,4 +1,5 @@
 all:
+	cd tip && python gen.py
 	python dsl2html.py
 
 jquery:
