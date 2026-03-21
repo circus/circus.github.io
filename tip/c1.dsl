@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C1</code>: Structural mismatch
 		</h1>
-		<p>An expected correspondence, allocation, or refinement relation between views is missing, extra, or incompatible.</p>
+		<p>An expected correspondence, allocation, or refinement relation between views is missing, extra, or incompatible.</p><p>C1 captures the broad family of cases where views are expected to align through some <em>correspondence or refinement relation</em> but do not. Examples include a design-level call relation that is added without a matching implementation update, a missing subsystem in a lower-level model, and failure of a one-to-one model-to-code decomposition mapping. The same family also subsumes many formal refinement cases where a lower-level model changes the realised structure in a way that no longer preserves the intent of the higher-level one.</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

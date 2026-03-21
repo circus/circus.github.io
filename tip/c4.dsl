@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C4</code>: Requirement satisfaction gap
 		</h1>
-		<p>A requirement is not adequately realised, linked, tested, or accompanied by the artefacts needed to justify satisfaction.</p>
+		<p>A requirement is not adequately realised, linked, tested, or accompanied by the artefacts needed to justify satisfaction.</p><p>C4 covers failures to justify that <em>requirements are satisfied or covered</em>. Some examples are classical viewpoint gaps, such as a required dependent view not being created, or a formal schema lacking its required associated description. Others arise later in the lifecycle, for instance when critical requirements are not traced through to tests, or when tests continue to execute but no longer cover the intended behaviour after model evolution.</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

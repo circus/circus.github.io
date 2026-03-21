@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C5</code>: Terminology divergence
 		</h1>
-		<p>Corresponding concepts are named differently, or the same label is used for non-equivalent concepts across views.</p>
+		<p>Corresponding concepts are named differently, or the same label is used for non-equivalent concepts across views.</p><p>C5 captures lexical and <em>terminological disagreement</em>, be it simply naming or representative of semantic mismatches. Illustrative cases include class renaming in a library that is not propagated across related artefacts, inconsistent names for linked properties, and fragile model-code correspondence rules that depend on naming conventions being followed uniformly. We retained naming as a top-level category because the surveys already indicate that terminology inconsistency is a real obstacle in multi-view work, and because naming problems often act as the first point of failure for correspondence mechanisms.</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C2</code>: Interface contract mismatch
 		</h1>
-		<p>Views disagree at a boundary on signatures, ports, parameter sets, types, units, directions, or equivalent exchanged values.</p>
+		<p>Views disagree at a boundary on signatures, ports, parameter sets, types, units, directions, or equivalent exchanged values.</p><p>C2 is about <em>interfacing between components</em>, it isolates boundary-level disagreements. Typical exam-ples include incompatible call signatures, wrong connector direction, inconsistent parametrisation of the same physical quantity, or mismatched equivalent values in aligned models [7, 8, 11]. We separated C2 from C1 because many inter-view defects arise not from missing correspondence, but from correspondence that exists yet disagrees on the contract at the boundary.</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

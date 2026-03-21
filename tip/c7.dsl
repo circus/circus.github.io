@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C7</code>: Temporal skew
 		</h1>
-		<p>Views are individually plausible but inconsistent because they reflect different points in evolution, propagation, or branching history.</p>
+		<p>Views are individually plausible but inconsistent because they reflect different points in evolution, propagation, or branching history.</p><p>C7 captures drift caused by <em>asynchronous evolution</em>. Examples include code customised after generation while the source model remains unchanged, models staying stale for long periods while implementations evolve, and parallel versions producing conflicting states for the same method</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

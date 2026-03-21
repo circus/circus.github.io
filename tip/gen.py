@@ -2,6 +2,31 @@
 
 import os
 
+def safe_load(filename):
+	if not filename.endswith('.dsl'):
+		filename += '.dsl'
+	if not os.path.exists(filename):
+		return ''
+	with open(filename, "r", encoding="utf-8") as f:
+		return f.read()
+
+def load_data(filename):
+	result = []
+	record = []
+	with open(filename, "r", encoding="utf-8") as f:
+		for line in f.readlines():
+			line = line.strip()
+			if not line:
+				if record:
+					result.append(record)
+					record = []
+			else:
+				record.append(line)
+	if record:
+		result.append(record)
+	return result
+
+
 c_pattern = '''
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns###TITLE###" />
@@ -47,15 +72,7 @@ Case ID & Source & Primary & Secondary
 {1}
 </table>'''
 
-c_table = '''
-C1 & Structural mismatch          & 13 & 8 & An expected correspondence, allocation, or refinement relation between views is missing, extra, or incompatible.
-C2 & Interface contract mismatch  &  4 & 5 & Views disagree at a boundary on signatures, ports, parameter sets, types, units, directions, or equivalent exchanged values.
-C3 & Behavioural contradiction    &  3 & 6 & Views admit conflicting protocols, orderings, pre/postconditions, state combinations, or jointly unsafe behaviour.
-C4 & Requirement satisfaction gap &  7 & 1 & A requirement is not adequately realised, linked, tested, or accompanied by the artefacts needed to justify satisfaction.
-C5 & Terminology divergence       &  3 & 3 & Corresponding concepts are named differently, or the same label is used for non-equivalent concepts across views.
-C6 & Traceability disruption      &  7 & 6 & Explicit cross-artefact links are missing, stale, ambiguous, incomplete, or insufficiently maintained for navigation or impact analysis.
-C7 & Temporal skew                &  3 & 9 & Views are individually plausible but inconsistent because they reflect different points in evolution, propagation, or branching history.
-'''.strip()
+c_table = load_data('cat.data')[1:]
 
 e_table = '''
 G98-2   & Grundy1998              & C1 & C7
@@ -100,22 +117,14 @@ J22-1   & Jongeling2022Reality    & C7 & C1
 JS22-2  & Jongeling2022Structural & C7 & C6
 '''.strip()
 
-c_list = [line.strip().split(' ')[0] for line in c_table.split('\n')]
-
-def safe_load(filename):
-	if not filename.endswith('.dsl'):
-		filename += '.dsl'
-	if not os.path.exists(filename):
-		return ''
-	with open(filename, "r", encoding="utf-8") as f:
-		return f.read()
+c_list = [line[0] for line in c_table]
 
 filename = 'index.dsl'
 old_content = safe_load(filename)
 new_content = c_pattern.replace('###TITLE###','').replace('###SUBTITLE###','').replace('###SUBPARA###',indexpara).replace('###EVIDENCE###', evidence)
 par0 = par1 = ''
-for line in c_table.split('\n'):
-	columns = [word.strip() for word in line.split(' & ')][:-1]
+for line in c_table:
+	columns = [word.strip() for word in line[:4]]
 	columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
 	par0 += ' & '.join(columns) + '\n'
 for line in e_table.split('\n'):
@@ -141,14 +150,16 @@ for c in c_list:
 	new_content = c_pattern.replace('###TITLE###',title).replace('###SUBTITLE###',subtitle).replace('###SUBPARA###',subpara).replace('###EVIDENCE###', evidence)
 	par0 = par1 = par3 = par4 = ''
 	par2 = c
-	for line in c_table.split('\n'):
-		columns = [word.strip() for word in line.split(' & ')]
+	for line in c_table:
+		columns = [word.strip() for word in line]
 		if columns[0] == c:
 			par3 = columns[1]
 			par4 = columns[4]
+			if len(columns) > 5:
+				par4 += '</p><p>' + columns[5]
 		else:
 			columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
-		par0 += ' & '.join(columns[:-1]) + '\n'
+		par0 += ' & '.join(columns[:4]) + '\n'
 	for line in e_table.split('\n'):
 		columns = [word.strip() for word in line.split(' & ')]
 		# colour the rows

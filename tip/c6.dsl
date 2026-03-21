@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C6</code>: Traceability disruption
 		</h1>
-		<p>Explicit cross-artefact links are missing, stale, ambiguous, incomplete, or insufficiently maintained for navigation or impact analysis.</p>
+		<p>Explicit cross-artefact links are missing, stale, ambiguous, incomplete, or insufficiently maintained for navigation or impact analysis.</p><p>C6 covers explicit <em>relation failures</em>: stale links, incomplete link sets, missing links needed for impact analysis, or insufficient relation information for backward navigation after a test failure. In this category, the main defect is that the cross-artefact relation itself is not reliably available, even when the underlying artefacts may still be individually valid.</p><p>Disruptions of the traceability chain also turned out to be a major meeting point between research prototypes and industrial practice. Published tools often handle trace links more readily than behavioural semantics, but the literature simultaneously shows how easily those links decay under evolution.</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

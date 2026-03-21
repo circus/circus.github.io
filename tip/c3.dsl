@@ -9,7 +9,7 @@
 			in Multi-View Modelling
 			<br><span class="red">Category</span> <code>C3</code>: Behavioural contradiction
 		</h1>
-		<p>Views admit conflicting protocols, orderings, pre/postconditions, state combinations, or jointly unsafe behaviour.</p>
+		<p>Views admit conflicting protocols, orderings, pre/postconditions, state combinations, or jointly unsafe behaviour.</p><p>C3 covers cases where the problem lies in the <em>jointly admitted behaviour</em> rather than in naming or structure. In our corpus, the clearest examples come from behavioural multi-modelling: different models compose into globally unsafe traffic-light states, or one model allows progress that is inconsistent with the state assumed by another. We also observed refinement examples in which lower-level protocols alter the nondeterministic or allowed behaviour of a higher-level one. Although C3 is one of the smallest categories in our counts, we do not interpret that as lack of importance. Quite the opposite: behavioural contradictions are repeatedly described by others as difficult to detect, expensive to formalise, and under-supported by available tools</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
