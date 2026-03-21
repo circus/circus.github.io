@@ -34,6 +34,16 @@ def maybe_update(new_content, old_content, filename):
 			f.write(new_content)
 		print(filename, '... updated')
 
+def hyper_value(value):
+	return f'{value}@{value.lower()}.html'
+def hyper_bracketed_value(value):
+	return f'[{value}]@{value.lower()}.html'
+def hyper_other_value(value1, value2):
+	return f'{value1}@{value2.lower()}.html'
+
+def join(columns):
+	return ' & '.join(columns) + '\n'
+
 def process_index():
 	filename = 'index.dsl'
 	old_content = safe_load(filename)
@@ -45,16 +55,16 @@ def process_index():
 	par0 = par1 = ''
 	for line in c_table:
 		columns = line[:4]
-		columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
-		par0 += ' & '.join(columns) + '\n'
+		columns[1] = hyper_other_value(columns[1], columns[0])
+		par0 += join(columns)
 	for line in e_table:
 		columns = line[:4]
 		# TODO: hyperlinkify the case ID
-		columns[1] = f'[{columns[1]}]@{columns[1].lower()}.html'
-		columns[2] = f'{columns[2]}@{columns[2].lower()}.html'
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
 		if columns[3] != '—':
-			columns[3] = f'{columns[3]}@{columns[3].lower()}.html'
-		par1 += ' & '.join(columns) + '\n'
+			columns[3] = hyper_value(columns[3])
+		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1), old_content, filename)
 
 def process_category(c):
@@ -68,29 +78,32 @@ def process_category(c):
 	par0 = par1 = par3 = par4 = ''
 	par2 = c
 	for line in c_table:
-		columns = [word.strip() for word in line] # FIXME
+		columns = line[:]
 		if columns[0] == c:
 			par3 = columns[1]
 			par4 = columns[4]
 			if len(columns) > 5:
 				par4 += '</p><p>' + columns[5]
 		else:
-			columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
-		par0 += ' & '.join(columns[:4]) + '\n'
+			columns[1] = hyper_other_value(columns[1], columns[0])
+		par0 += join(columns[:4])
 	for line in e_table:
-		columns = [word.strip() for word in line] # FIXME
+		columns = line[:4]
 		# colour the rows
 		if columns[2] == c:
 			columns[0] = '¶ ' + columns[0]
 		if columns[3] == c:
 			columns[0] = '¶¶ ' + columns[0]
 		# TODO: hyperlinkify the case ID
-		columns[1] = f'[{columns[1]}]@{columns[1].lower()}.html'
-		columns[2] = f'{columns[2]}@{columns[2].lower()}.html'
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
 		if columns[3] != '—':
-			columns[3] = f'{columns[3]}@{columns[3].lower()}.html'
-		par1 += ' & '.join(columns) + '\n'
+			columns[3] = hyper_value(columns[3])
+		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
+
+def process_case(case):
+	return
 
 c_pattern = '''
 <html doctype>
@@ -143,3 +156,5 @@ e_table = load_data('evidence.data')[1:]
 process_index()
 for line in c_table:
 	process_category(line[0])
+for line in e_table:
+	process_case(line)
