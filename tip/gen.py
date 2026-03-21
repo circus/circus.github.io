@@ -73,49 +73,7 @@ Case ID & Source & Primary & Secondary
 </table>'''
 
 c_table = load_data('cat.data')[1:]
-
-e_table = '''
-G98-2   & Grundy1998              & C1 & C7
-J19-1   & Jongeling2019           & C1 & C7
-J19-3   & Jongeling2019           & C1 & —
-DHI-3   & Feldmann2019            & C1 & C5
-J22-3   & Jongeling2022Reality    & C1 & C7
-JS22-1  & Jongeling2022Structural & C1 & C6
-N94-2   & Nuseibeh1994            & C1 & C5
-W05-1   & Wehrheim2005            & C1 & C2
-W05-2   & Wehrheim2005            & C1 & C3
-W05-3   & Wehrheim2005            & C1 & C3
-W05-4   & Wehrheim2005            & C1 & C3
-W05-5   & Wehrheim2005            & C1 & C2
-W05-6   & Wehrheim2005            & C1 & C3
-G98-3   & Grundy1998              & C2 & C1
-J19-2   & Jongeling2019           & C2 & C3
-DHI-2   & Feldmann2019            & C2 & C1
-DHI-4   & Feldmann2019            & C2 & C1
-BC23-1  & Krauter2023             & C3 & C1
-BC23-2  & Krauter2023             & C3 & C2
-BC23-4  & Krauter2023             & C3 & C6
-DHI-5   & Feldmann2019            & C4 & C2
-J22-2   & Jongeling2022Reality    & C4 & C7
-ST21-1  & Stunkel2021             & C4 & C6
-ABB09-1 & Abbors2009              & C4 & C6
-N94-1   & Nuseibeh1994            & C4 & C1
-N94-3   & Nuseibeh1994            & C4 & C2
-N94-4   & Nuseibeh1994            & C4 & C6
-G98-1   & Grundy1998              & C5 & C7
-DHI-1   & Feldmann2019            & C5 & —
-JS22-3  & Jongeling2022Structural & C5 & C1
-MG12-1  & Mader2012               & C6 & C7
-BC23-3  & Krauter2023             & C6 & C3
-OD18-1  & Javed2018               & C6 & C7
-DEM16-1 & Demuth2016              & C6 & C7
-BUC11-1 & Buchgeher2011           & C6 & —
-GEO12-1 & George2012              & C6 & C4
-MUR08-1 & Murta2008               & C6 & C7
-G98-4   & Grundy1998              & C7 & C5
-J22-1   & Jongeling2022Reality    & C7 & C1
-JS22-2  & Jongeling2022Structural & C7 & C6
-'''.strip()
+e_table = load_data('evidence.data')[1:]
 
 c_list = [line[0] for line in c_table]
 
@@ -124,11 +82,11 @@ old_content = safe_load(filename)
 new_content = c_pattern.replace('###TITLE###','').replace('###SUBTITLE###','').replace('###SUBPARA###',indexpara).replace('###EVIDENCE###', evidence)
 par0 = par1 = ''
 for line in c_table:
-	columns = [word.strip() for word in line[:4]]
+	columns = [word.strip() for word in line[:4]] # FIXME
 	columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
 	par0 += ' & '.join(columns) + '\n'
-for line in e_table.split('\n'):
-	columns = [word.strip() for word in line.split(' & ')]
+for line in e_table:
+	columns = [word.strip() for word in line] # FIXME
 	# TODO: hyperlinkify the case ID
 	columns[1] = f'[{columns[1]}]@{columns[1].lower()}.html'
 	columns[2] = f'{columns[2]}@{columns[2].lower()}.html'
@@ -151,7 +109,7 @@ for c in c_list:
 	par0 = par1 = par3 = par4 = ''
 	par2 = c
 	for line in c_table:
-		columns = [word.strip() for word in line]
+		columns = [word.strip() for word in line] # FIXME
 		if columns[0] == c:
 			par3 = columns[1]
 			par4 = columns[4]
@@ -160,8 +118,8 @@ for c in c_list:
 		else:
 			columns[1] = f'{columns[1]}@{columns[0].lower()}.html'
 		par0 += ' & '.join(columns[:4]) + '\n'
-	for line in e_table.split('\n'):
-		columns = [word.strip() for word in line.split(' & ')]
+	for line in e_table:
+		columns = [word.strip() for word in line] # FIXME
 		# colour the rows
 		if columns[2] == c:
 			columns[0] = '¶ ' + columns[0]
