@@ -13,6 +13,21 @@
 	<dd><a href="wehrheim2005.html">Wehrheim2005</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c2.html">C2</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Model-driven development</dd>
+	<dd>formal multiview refinement</dd>
+<dt>Views</dt>
+	<dd>Class model A</dd>
+	<dd>extended class model C</dd>
+<dt>Artefacts</dt>
+	<dd>Methods get/put in A</dd>
+	<dd>get/put/full in C</dd>
+<dt>Quotes</dt>
+	<dd>"The classes model buffers with methods put and get, and class C in addition with a method full querying the contents of the buffer... Can a user of A use C as if it were A?"</dd>
+<dt>Summary</dt>
+	<dd>A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface.</dd>
+	<dd>Model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behavior preservation.</dd>
+	<dd>The extended model is only consistent if new operations do not interfere with the behavior and state assumptions inherited from the abstract class.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

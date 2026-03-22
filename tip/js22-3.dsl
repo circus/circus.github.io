@@ -13,6 +13,19 @@
 	<dd><a href="jongeling2022structural.html">Jongeling2022Structural</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c5.html">C5</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Industrial model-code consistency</dd>
+<dt>Views</dt>
+	<dd>System model</dd>
+	<dd>code</dd>
+<dt>Artefacts</dt>
+	<dd>Matched element names under architectural guidelines</dd>
+<dt>Quotes</dt>
+	<dd>"this puts a requirement on following a specific naming convention. Not everybody does this"</dd>
+<dt>Summary</dt>
+	<dd>Model-code correspondence depends on naming conventions that are not uniformly followed.</dd>
+	<dd>Cause: informal naming discipline is relied upon for correspondence but is not socially enforced consistently.</dd>
+	<dd>As a result, reduced precision/usefulness of consistency checks and disagreement over enforcement strictness.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

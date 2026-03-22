@@ -13,6 +13,22 @@
 	<dd><a href="krauter2023.html">Krauter2023</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c3.html">C3</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Behavioral multi-modeling</dd>
+	<dd>traffic management</dd>
+<dt>Views</dt>
+	<dd>Interacting behavioral models in a configured multi-model</dd>
+<dt>Artefacts</dt>
+	<dd>Traffic-light instances</dd>
+	<dd>T-Junction controller</dd>
+	<dd>buses</dd>
+	<dd>global properties</dd>
+<dt>Quotes</dt>
+	<dd>"the models are not independent ... if we were to run the models independently in parallel, the properties would be violated"</dd>
+<dt>Summary</dt>
+	<dd>Locally sensible models become globally inconsistent when composed without the required coordination semantics.</dd>
+	<dd>Cause: behavioral dependence among views is ignored during composition/execution.</dd>
+	<dd>As a result, violations of global behavioral properties that span models.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

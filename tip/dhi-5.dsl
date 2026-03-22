@@ -13,6 +13,22 @@
 	<dd><a href="feldmann2019.html">Feldmann2019</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c4.html">C4</a> (primary); <a href="c2.html">C2</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Automated production systems</dd>
+	<dd>planning + Simulink</dd>
+<dt>Views</dt>
+	<dd>Planning property model</dd>
+	<dd>top-level Simulink display model</dd>
+<dt>Artefacts</dt>
+	<dd>Planning Property</dd>
+	<dd>Simulink Display</dd>
+	<dd>satisfies link</dd>
+<dt>Quotes</dt>
+	<dd>"Display ?d (value ?vVal) must satisfy respective Property ?p (defaultValue ?dVal, minValue ?minVal, maxValue ?maxVal)"</dd>
+<dt>Summary</dt>
+	<dd>A displayed/implemented value violates the property it is supposed to satisfy, either by being unequal or out of range.</dd>
+	<dd>Cause: satisfaction relation exists, but checked property bounds or expected value are violated.</dd>
+	<dd>As a result, supposedly satisfied planning/property constraint is not actually met.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

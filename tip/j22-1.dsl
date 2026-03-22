@@ -13,6 +13,20 @@
 	<dd><a href="jongeling2022reality.html">Jongeling2022Reality</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c7.html">C7</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Industrial continuous model-based development</dd>
+<dt>Views</dt>
+	<dd>Software design models</dd>
+	<dd>generated+manually modified implementation code</dd>
+<dt>Artefacts</dt>
+	<dd>Generated code</dd>
+	<dd>models intended to document implementation</dd>
+<dt>Quotes</dt>
+	<dd>"the generated code, rather than the model, is modified, leading to inconsistency between the code and the model ... the models can no longer be used as accurate documentation of the implementation"</dd>
+<dt>Summary</dt>
+	<dd>Code is customized after generation, but the originating model is left behind.</dd>
+	<dd>Cause: manual post-generation evolution of code without reverse synchronization to the model.</dd>
+	<dd>As a result, model ceases to be a trustworthy description of the implementation; maintainability suffers.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

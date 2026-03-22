@@ -13,6 +13,18 @@
 	<dd><a href="grundy1998.html">Grundy1998</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c7.html">C7</a> (primary); <a href="c5.html">C5</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Collaborative software development</dd>
+<dt>Views</dt>
+	<dd>Alternative versions of shared views</dd>
+<dt>Artefacts</dt>
+	<dd>Class method across parallel versions</dd>
+<dt>Quotes</dt>
+	<dd>"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."</dd>
+<dt>Summary</dt>
+	<dd>Parallel edits on different versions produce conflicting states for the same method.</dd>
+	<dd>Cause: concurrent evolution without immediate reconciliation.</dd>
+	<dd>As a result, merge/conflict situation across versions; synchronization and repair become necessary.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

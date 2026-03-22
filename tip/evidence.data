@@ -12,116 +12,231 @@ G98-2
 Grundy1998
 C1
 C7
+Software development environments // UML-like OO design
+OO design view // textual code view(s)
+Method call connection in design model // affected textual code views
+"adding a method call connection in an OO design view can not be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent"
+A design-level call relation is added, but the implementation view is not updated accordingly. // Refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined. // Implementation no longer reflects the design; manual repair is required.
 
 J19-1
 Jongeling2019
 C1
 C7
+Industrial MBSE (SysML/Simulink, automotive ABS example)
+High-level SysML diagrams // lower-level Simulink model
+SysML internal block/activity/parametric diagrams // Simulink refinement model
+"if the system model is changed, requiring some changes in the Simulink model ... not updating the Simulink model of the ABS might result in its incorrect implementation"
+A change in the high-level system model is not reflected in the refining Simulink model. // Evolution of the abstract model without co-evolution of the lower-level model. // Incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.
 
 J19-3
 Jongeling2019
 C1
 —
+Industrial MBSE (SysML/Simulink)
+SysML block diagram // Simulink model
+Expected subsystem/block correspondence
+"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"
+A lower-level model omits a subsystem required by the higher-level architectural view. // Missing correspondence under a refinement relation. // Likely incompleteness or incorrect realization of the higher-level design.
 
 DHI-3
 Feldmann2019
 C1
 C5
+Automated production systems // project + discipline models
+Project documentation // discipline-specific model
+Documentation item // refined common/model element // refinement link
+"Refinement between project documentation and discipline model" with conditions including name mismatch and wrong refined artifact kind
+A documentation artifact does not properly refine or correspond to the intended discipline-specific model element. // Refinement relation is ill-formed or points to a mismatched artifact. // Breakdown of abstraction linkage between management/documentation and engineering views.
 
 J22-3
 Jongeling2022Reality
 C1
 C7
+Industrial continuous model-based development
+High-level system/architecture models // implementation
+System models // implementation artifacts // feedback links
+"It is accepted by engineers that the models are not fully consistent with the eventual implementation ... Nevertheless, it is required that the eventual implementation conforms to the requirements. In the current setting, there is no feedback loop between the model and implementation"
+Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist. // Asynchronous development and missing feedback loop between abstraction levels. // Implementation may drift from the intended design and engineers lose model-based overview.
 
 JS22-1
 Jongeling2022Structural
 C1
 C6
+Industrial model-code consistency
+System model // code repositories/folders
+System components // Git repositories // folders with public_include
+"each system component in the model ... should be matched to a Git repository. Soon, exceptions to this rule appeared, because in some cases multiple system components were included in a single repository"
+The intended one-to-one mapping between model components and code containers fails in practice. // Real code organization does not obey the assumed architectural correspondence rule. // Initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.
 
 N94-2
 Nuseibeh1994
 C1
 C5
+Requirements engineering // viewpoint-based specification
+Tabular collection view // agent hierarchy view
+Source/Destination entry in TC diagram // named agent in hierarchy
+"every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"
+A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge. // Cross-view correspondence constraint between partial requirements views is violated. // The same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.
 
 W05-1
 Wehrheim2005
 C1
 C2
+Model-driven development // formal multiview refinement
+Static class model A // corresponding refined class model C
+Attribute buffer // operation choose // class-level data semantics
+"In class A attribute buffer is of type set (...) whereas in C buffer is of type (injective) sequence and choose always chooses the first element in the sequence."
+A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves. // A data-type transformation changes the semantics of state and operations across refinement levels. // The refined model may preserve representation but alter observable behavior unless a valid refinement relation is established.
 
 W05-2
 Wehrheim2005
 C1
 C3
+Model-driven development // formal multiview refinement
+Higher-level protocol state machine A // lower-level protocol state machine C
+open/close/read/write protocol states and transitions
+"The state machine of A belongs to a higher-level model, it is nondeterministic and also models the case where the file to be opened is non-existent... In C the nondeterminism has been resolved, possibly by ensuring applicability of open on existing files only."
+A lower-level protocol removes the higher-level nondeterministic case in which open may target a non-existent file. // Protocol refinement tightens behavioral assumptions relative to the abstract view. // Behavioral possibilities differ across abstraction levels; refinement must be checked to ensure the lower-level behavior is still permitted by the higher-level one.
 
 W05-3
 Wehrheim2005
 C1
 C3
+Model-driven development // formal multiview refinement
+Static class model A // refined class model C
+Operation send in A // operations prepare and transmit in C
+"While class A contains a single operation send, class C uses two operations for one send, the first one being responsible for preparing the message... and the second one for actual transmission."
+A single abstract send operation is split into prepare and transmit in the refined class model. // An operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths. // The refined model can admit behaviors not present in the abstract one unless continuation and proper-starting conditions are enforced.
 
 W05-4
 Wehrheim2005
 C1
 C3
+Model-driven development // formal multiview refinement
+Dynamic protocol model A // refined protocol model C
+send transition in A // prepare/transmit transitions in C
+"Again sending is split into preparation and transmission... Continuation: after a trace of C in which prepare has occured but transmit not, transmit may not be refused; Proper starting: There are no traces in C in which transmit occurs without a prior prepare."
+A send transition is split into prepare and transmit in the protocol state machine, with extra ordering constraints needed to avoid spurious behavior. // Behavioral refinement introduces intermediate protocol states that must still correspond to one abstract transition. // Without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.
 
 W05-5
 Wehrheim2005
 C1
 C2
+Model-driven development // formal multiview refinement
+Class model A // extended class model C
+Methods get/put in A // get/put/full in C
+"The classes model buffers with methods put and get, and class C in addition with a method full querying the contents of the buffer... Can a user of A use C as if it were A?"
+A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface. // Model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behavior preservation. // The extended model is only consistent if new operations do not interfere with the behavior and state assumptions inherited from the abstract class.
 
 W05-6
 Wehrheim2005
 C1
 C3
+Model-driven development // formal multiview refinement
+Behavior model A // extended behavior model C
+Original put/get protocol // added parallel full transition
+"A state machine is extended with a parallel component independently executing the method full... execution of full in C may not interfere with the ‘old’ behaviour modelled in A."
+A dynamic model is extended with a parallel full action that must remain non-interfering with the existing put/get behavior. // Behavioral extension introduces new transitions running alongside the original protocol. // Consistency depends on substitutivity: the extended model must preserve the old behavior under interleaving with the new action.
 
 G98-3
 Grundy1998
 C2
 C1
+Software development environments // UML-like OO design
+Multiple design and implementation views
+Method calls // argument lists // class methods
+"semantic inconsistencies in specifications (e.g. a type mis-match between method calls or a non-existent method is called)"
+Two related artifacts agree enough to connect, but disagree on call signature or method existence. // Cause: semantic/interface constraints between linked elements are violated. // As a result, incorrect or impossible interaction between components/classes; manual correction required.
 
 J19-2
 Jongeling2019
 C2
 C3
+Industrial MBSE (SysML/Simulink, automotive ABS example)
+System model // Simulink model
+Shared parameter/value for total car mass
+"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"
+Corresponding models use conflicting values for the same physical quantity. // Cause: shared parameter value diverges across views. // As a result, behavior of the implemented function may be incorrect despite local plausibility of each model.
 
 DHI-2
 Feldmann2019
 C2
 C1
+Automated production systems // electrics models
+Inter- and intra-model electrical interface descriptions
+Connectors // electric interfaces // bus interfaces
+"Connector does not point from input to output interface or vice versa" // "Connector does not point from bus interface to compatible bus interface"
+A connector links interfaces in the wrong direction or between incompatible interface kinds. // Cause: interface compatibility and direction constraints are violated. // As a result, invalid integration relation between connected elements.
 
 DHI-4
 Feldmann2019
 C2
 C1
+Automated production systems // SysML-Simulink alignment
+Top-level Simulink model // SysML/UML property model
+Simulink Constant // SysML/UML Property // equivalence link
+"Equivalence between top-level Simulink Constant and SysML Property" with condition "?vVal != ?pVal"
+Two elements explicitly marked equivalent carry different values across models. // Cause: value disagreement between corresponding elements under an equivalence relation. // As a result, equivalent artifacts cease to agree semantically, requiring repair or tolerance.
 
 BC23-1
 Krauter2023
 C3
 C1
+Behavioral multi-modeling // traffic management
+UML state machine traffic-light model // BPMN T-Junction controller model
+Traffic light states A/B/C // global safety property over combined models
+"unsafe traffic occurs if traffic light A is green or amber and traffic light B is green or amber simultaneously ... the same state combinations are forbidden for traffic lights B and C"
+Two behavioral views jointly admit a globally unsafe combination of light states. // Cause: global property over interacting behavioral models is violated even though each local model may be plausible on its own. // As a result, unsafe system behavior; traffic participants may be allowed to pass simultaneously on conflicting directions.
 
 BC23-2
 Krauter2023
 C3
 C2
+Behavioral multi-modeling // traffic management
+BPMN bus controller model // UML/BPMN traffic-light/T-Junction behavior
+Pass Junction activity // corresponding traffic-light states
+"we want to check that they cannot pass when their traffic light is red or red-amber ... the Pass Junction activity should not execute while the corresponding traffic light is red or red-amber"
+The bus behavioral model allows progress that is inconsistent with the traffic-light state in the coupled controller model. // Cause: interaction semantics between models are insufficiently constrained or incorrectly coordinated. // As a result, behavioral safety violation during execution.
 
 BC23-4
 Krauter2023
 C3
 C6
+Behavioral multi-modeling // traffic management
+Interacting behavioral models in a configured multi-model
+Traffic-light instances // T-Junction controller // buses // global properties
+"the models are not independent ... if we were to run the models independently in parallel, the properties would be violated"
+Locally sensible models become globally inconsistent when composed without the required coordination semantics. // Cause: behavioral dependence among views is ignored during composition/execution. // As a result, violations of global behavioral properties that span models.
 
 DHI-5
 Feldmann2019
 C4
 C2
+Automated production systems // planning + Simulink
+Planning property model // top-level Simulink display model
+Planning Property // Simulink Display // satisfies link
+"Display ?d (value ?vVal) must satisfy respective Property ?p (defaultValue ?dVal, minValue ?minVal, maxValue ?maxVal)"
+A displayed/implemented value violates the property it is supposed to satisfy, either by being unequal or out of range. // Cause: satisfaction relation exists, but checked property bounds or expected value are violated. // As a result, supposedly satisfied planning/property constraint is not actually met.
 
 J22-2
 Jongeling2022Reality
 C4
 C7
+Industrial continuous model-based development
+Design models // tests // implementation models
+Test cases/scripts/models // models under test
+"When tests are consistent with the design models, it is meant that ... the test cases appropriately cover the models ... Inconsistency caused by, e.g., a drop in test coverage is much more subtle to detect than test case failure"
+Tests still run, but no longer cover the intended model elements or behaviors after evolution. // Cause: co-evolution of tests lags behind changes in design/implementation models. // As a result, passing tests may become misleading or meaningless as evidence for the model.
 
 ST21-1
 Stunkel2021
 C4
 C6
+General multi-model management
+Requirements model // code model // test model
+Mandatory requirement // realizing method // associated test case
+"Every method, which realizes a requirement must have an associated test case and for every mandatory requirement there has to be at least one test case ... assume that a new mandatory requirement is added to M1. This obviously invalidates CR-1 since there is no unit test for the new requirement."
+A new mandatory requirement is introduced without adding or linking a corresponding test. // Cause: a consistency rule spanning requirements, implementation, and tests is broken by partial co-evolution. // As a result, the multi-model set becomes invalid under the stated coverage/satisfaction rule.
 
 ABB09-1
 Abbors2009
@@ -137,46 +252,91 @@ N94-1
 Nuseibeh1994
 C4
 C1
+Requirements engineering // viewpoint-based specification
+Agent hierarchy view // tabular collection view(s)
+Agent in hierarchy // corresponding TC ViewPoint instance
+"For each agent in the agent hierarchy there must be one ViewPoint instantiated from a TC template"
+An agent exists in the higher-level decomposition, but no corresponding tabular-collection ViewPoint is created for it. // Cause: a required successor specification view is missing, so the decomposition is not elaborated into the next required requirements view. // As a result, the requirements description is incomplete across views; downstream checks and refinements cannot be carried out for that agent.
 
 N94-3
 Nuseibeh1994
 C4
 C2
+Requirements engineering // viewpoint-based specification
+Tabular collection views for different agents
+Output of one agent // Input of another agent
+"the Output produced by one agent in a tabular collection diagram must be consumed as an Input in the tabular collection diagram [of] another agent"
+An output declared by one agent is not consumed as an input by any other related agent view. // Cause: inter-view coverage/completeness rule on information flow is violated. // As a result, the requirements model contains an unfulfilled or dangling flow of information between agents.
 
 N94-4
 Nuseibeh1994
 C4
 C6
+Requirements engineering // viewpoint-based specification
+Z schema ViewPoint // associated textual description ViewPoint
+Formal schema // companion textual description
+"for each Z schema (ViewPoint), there is an associated textual description (ViewPoint)"
+A formal schema exists without its required associated textual description view. // Cause: an existential inter-view dependency is not satisfied; one required companion requirements view is missing. // As a result, the specification is incomplete and loses the paired descriptive context required by the method.
 
 G98-1
 Grundy1998
 C5
 C7
+Software development environments // UML-like OO design
+OOA/D design view // other design diagrams // code // documentation // analysis diagrams
+Class interface // related diagrams // derived code // documentation artifacts
+"renaming a class in an OO design view means all other analysis, design, implementation and documentation views become inconsistent unless the class name is changed in these views"
+A class is renamed in one design view, but the corresponding name is not propagated to related views and artifacts. // Cause: local edit to a shared conceptual element is not propagated across redundant or corresponding representations. // As a result, cross-view disagreement; developers may overlook the inconsistency; downstream artifacts no longer refer to the same concept consistently.
 
 DHI-1
 Feldmann2019
 C5
 —
+Automated production systems // heterogeneous engineering models
+Inter-model vocabulary alignment
+Properties across linked models
+"Figure A.4. Inconsistency 1.4: Naming inconsistency for properties"
+Linked properties across models use inconsistent names. // Cause: equivalent elements lack aligned terminology. // As a result, correspondence establishment and interpretation become harder; repair action is naming-related.
 
 JS22-3
 Jongeling2022Structural
 C5
 C1
+Industrial model-code consistency
+System model // code
+Matched element names under architectural guidelines
+"this puts a requirement on following a specific naming convention. Not everybody does this"
+Model-code correspondence depends on naming conventions that are not uniformly followed. // Cause: informal naming discipline is relied upon for correspondence but is not socially enforced consistently. // As a result, reduced precision/usefulness of consistency checks and disagreement over enforcement strictness.
 
 MG12-1
 Mader2012
 C6
 C7
+Requirements traceability // UML-based development
+Requirements // analysis models // design models
+Traceability relations between lifecycle artifacts
+"it is necessary to have an up-to-date set of traceability relations ... [and] maintain traceability relations over time as the software system evolves in order to prevent their decay"
+Trace links that were once valid become stale as related artifacts evolve. // Cause: artifact evolution without commensurate maintenance of trace links. // As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.
 
 BC23-3
 Krauter2023
 C6
 C3
+Behavioral multi-modeling // traffic management
+Traffic-light state machine // T-Junction model // bus models
+Behavioral relations/interactions between models
+"the traffic light model is currently not related to the T-Junction and bus models while the T-Junction is supposed to control the traffic lights"
+The intended control relation exists conceptually, but is absent from the multi-model as an explicit relation. // Cause: missing inter-model linkage/interaction specification. // As a result, global behavioral requirements cannot be checked reliably until the relationship model is introduced.
 
 OD18-1
 Javed2018
 C6
 C7
+Software traceability evolution
+Versions of a software project // traceability links between artifacts
+Existing trace links across versions/releases
+"a new major version leads to the decay of traceability links"
+Trace links that were valid in one project version become stale after major-version evolution. // Cause: substantial system evolution without synchronized update of stored trace links. // As a result, trace set loses validity and requires maintenance/evolution support.
 
 DEM16-1
 Demuth2016
@@ -212,18 +372,38 @@ MUR08-1
 Murta2008
 C6
 C7
+Architecture-to-implementation traceability
+Software architecture // implementation code
+Versions of architectural elements // versions of source code configuration items // trace links
+"A traditional obstacle in the use of multiple representations is the need to maintain traceability among the representations in the face of evolution ... relate versions of architectural elements to versions of source code configuration items"
+Architecture-to-code links must survive concurrent version evolution on both sides. // Cause: trace links are tied to evolving versions of both architecture and code artifacts. // As a result, without continuous evolution of traces, architecture and implementation lose synchronization.
 
 G98-4
 Grundy1998
 C7
 C5
+Collaborative software development
+Alternative versions of shared views
+Class method across parallel versions
+"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."
+Parallel edits on different versions produce conflicting states for the same method. // Cause: concurrent evolution without immediate reconciliation. // As a result, merge/conflict situation across versions; synchronization and repair become necessary.
 
 J22-1
 Jongeling2022Reality
 C7
 C1
+Industrial continuous model-based development
+Software design models // generated+manually modified implementation code
+Generated code // models intended to document implementation
+"the generated code, rather than the model, is modified, leading to inconsistency between the code and the model ... the models can no longer be used as accurate documentation of the implementation"
+Code is customized after generation, but the originating model is left behind. // Cause: manual post-generation evolution of code without reverse synchronization to the model. // As a result, model ceases to be a trustworthy description of the implementation; maintainability suffers.
 
 JS22-2
 Jongeling2022Structural
 C7
 C6
+Industrial model-code consistency
+System model // implementation code
+Model elements and corresponding code elements
+"Now, things are improved in the code and then forgotten about. Then six months later, you see that the model is not at all updated. So some reminder is needed to show that the model is not correct anymore."
+Code evolves, but the system model remains stale for long periods. // Cause: long lag between code updates and model maintenance. // As a result, stale model, loss of trust, and need for reminders/checks to surface skew.

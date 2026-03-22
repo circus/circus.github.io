@@ -13,6 +13,19 @@
 	<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a></dd>
+<dt>Domain</dt>
+	<dd>Industrial MBSE (SysML/Simulink)</dd>
+<dt>Views</dt>
+	<dd>SysML block diagram</dd>
+	<dd>Simulink model</dd>
+<dt>Artefacts</dt>
+	<dd>Expected subsystem/block correspondence</dd>
+<dt>Quotes</dt>
+	<dd>"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"</dd>
+<dt>Summary</dt>
+	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
+	<dd>Missing correspondence under a refinement relation.</dd>
+	<dd>Likely incompleteness or incorrect realization of the higher-level design.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

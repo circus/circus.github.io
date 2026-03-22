@@ -13,6 +13,21 @@
 	<dd><a href="krauter2023.html">Krauter2023</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c6.html">C6</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Behavioral multi-modeling</dd>
+	<dd>traffic management</dd>
+<dt>Views</dt>
+	<dd>Traffic-light state machine</dd>
+	<dd>T-Junction model</dd>
+	<dd>bus models</dd>
+<dt>Artefacts</dt>
+	<dd>Behavioral relations/interactions between models</dd>
+<dt>Quotes</dt>
+	<dd>"the traffic light model is currently not related to the T-Junction and bus models while the T-Junction is supposed to control the traffic lights"</dd>
+<dt>Summary</dt>
+	<dd>The intended control relation exists conceptually, but is absent from the multi-model as an explicit relation.</dd>
+	<dd>Cause: missing inter-model linkage/interaction specification.</dd>
+	<dd>As a result, global behavioral requirements cannot be checked reliably until the relationship model is introduced.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

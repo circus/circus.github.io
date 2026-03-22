@@ -13,6 +13,21 @@
 	<dd><a href="nuseibeh1994.html">Nuseibeh1994</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c5.html">C5</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Requirements engineering</dd>
+	<dd>viewpoint-based specification</dd>
+<dt>Views</dt>
+	<dd>Tabular collection view</dd>
+	<dd>agent hierarchy view</dd>
+<dt>Artefacts</dt>
+	<dd>Source/Destination entry in TC diagram</dd>
+	<dd>named agent in hierarchy</dd>
+<dt>Quotes</dt>
+	<dd>"every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"</dd>
+<dt>Summary</dt>
+	<dd>A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge.</dd>
+	<dd>Cross-view correspondence constraint between partial requirements views is violated.</dd>
+	<dd>The same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

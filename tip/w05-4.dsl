@@ -13,6 +13,21 @@
 	<dd><a href="wehrheim2005.html">Wehrheim2005</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Model-driven development</dd>
+	<dd>formal multiview refinement</dd>
+<dt>Views</dt>
+	<dd>Dynamic protocol model A</dd>
+	<dd>refined protocol model C</dd>
+<dt>Artefacts</dt>
+	<dd>send transition in A</dd>
+	<dd>prepare/transmit transitions in C</dd>
+<dt>Quotes</dt>
+	<dd>"Again sending is split into preparation and transmission... Continuation: after a trace of C in which prepare has occured but transmit not, transmit may not be refused; Proper starting: There are no traces in C in which transmit occurs without a prior prepare."</dd>
+<dt>Summary</dt>
+	<dd>A send transition is split into prepare and transmit in the protocol state machine, with extra ordering constraints needed to avoid spurious behavior.</dd>
+	<dd>Behavioral refinement introduces intermediate protocol states that must still correspond to one abstract transition.</dd>
+	<dd>Without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

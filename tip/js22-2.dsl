@@ -13,6 +13,19 @@
 	<dd><a href="jongeling2022structural.html">Jongeling2022Structural</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c7.html">C7</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Industrial model-code consistency</dd>
+<dt>Views</dt>
+	<dd>System model</dd>
+	<dd>implementation code</dd>
+<dt>Artefacts</dt>
+	<dd>Model elements and corresponding code elements</dd>
+<dt>Quotes</dt>
+	<dd>"Now, things are improved in the code and then forgotten about. Then six months later, you see that the model is not at all updated. So some reminder is needed to show that the model is not correct anymore."</dd>
+<dt>Summary</dt>
+	<dd>Code evolves, but the system model remains stale for long periods.</dd>
+	<dd>Cause: long lag between code updates and model maintenance.</dd>
+	<dd>As a result, stale model, loss of trust, and need for reminders/checks to surface skew.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

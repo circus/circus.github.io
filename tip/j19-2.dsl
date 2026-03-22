@@ -13,6 +13,19 @@
 	<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c2.html">C2</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Industrial MBSE (SysML/Simulink, automotive ABS example)</dd>
+<dt>Views</dt>
+	<dd>System model</dd>
+	<dd>Simulink model</dd>
+<dt>Artefacts</dt>
+	<dd>Shared parameter/value for total car mass</dd>
+<dt>Quotes</dt>
+	<dd>"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"</dd>
+<dt>Summary</dt>
+	<dd>Corresponding models use conflicting values for the same physical quantity.</dd>
+	<dd>Cause: shared parameter value diverges across views.</dd>
+	<dd>As a result, behavior of the implemented function may be incorrect despite local plausibility of each model.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

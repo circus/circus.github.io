@@ -13,6 +13,22 @@
 	<dd><a href="feldmann2019.html">Feldmann2019</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c2.html">C2</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Automated production systems</dd>
+	<dd>SysML-Simulink alignment</dd>
+<dt>Views</dt>
+	<dd>Top-level Simulink model</dd>
+	<dd>SysML/UML property model</dd>
+<dt>Artefacts</dt>
+	<dd>Simulink Constant</dd>
+	<dd>SysML/UML Property</dd>
+	<dd>equivalence link</dd>
+<dt>Quotes</dt>
+	<dd>"Equivalence between top-level Simulink Constant and SysML Property" with condition "?vVal != ?pVal"</dd>
+<dt>Summary</dt>
+	<dd>Two elements explicitly marked equivalent carry different values across models.</dd>
+	<dd>Cause: value disagreement between corresponding elements under an equivalence relation.</dd>
+	<dd>As a result, equivalent artifacts cease to agree semantically, requiring repair or tolerance.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

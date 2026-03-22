@@ -13,6 +13,19 @@
 	<dd><a href="javed2018.html">Javed2018</a></dd>
 <dt>Categories</dt>
 	<dd><a href="c6.html">C6</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Software traceability evolution</dd>
+<dt>Views</dt>
+	<dd>Versions of a software project</dd>
+	<dd>traceability links between artifacts</dd>
+<dt>Artefacts</dt>
+	<dd>Existing trace links across versions/releases</dd>
+<dt>Quotes</dt>
+	<dd>"a new major version leads to the decay of traceability links"</dd>
+<dt>Summary</dt>
+	<dd>Trace links that were valid in one project version become stale after major-version evolution.</dd>
+	<dd>Cause: substantial system evolution without synchronized update of stored trace links.</dd>
+	<dd>As a result, trace set loses validity and requires maintenance/evolution support.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
