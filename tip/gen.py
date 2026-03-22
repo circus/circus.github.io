@@ -71,9 +71,9 @@ def process_category(c):
 	filename = c.lower() + '.dsl'
 	old_content = safe_load(filename)
 	new_content = c_pattern\
-		.replace('###TITLE###',title)\
-		.replace('###SUBTITLE###',subtitle)\
-		.replace('###SUBPARA###',subpara)\
+		.replace('###TITLE###',title_cat)\
+		.replace('###SUBTITLE###',subtitle_cat)\
+		.replace('###SUBPARA###',subpara_cat)\
 		.replace('###EVIDENCE###', evidence)
 	par0 = par1 = par3 = par4 = ''
 	par2 = c
@@ -104,6 +104,39 @@ def process_category(c):
 
 def process_case(case):
 	return
+	filename = case.lower() + '.dsl'
+	old_content = safe_load(filename)
+	new_content = c_pattern\
+		.replace('###TITLE###',title_case)\
+		.replace('###SUBTITLE###',subtitle_case)\
+		.replace('###SUBPARA###',subpara)\
+		.replace('###EVIDENCE###', evidence)
+	par0 = par1 = par3 = par4 = ''
+	par2 = c
+	for line in c_table:
+		columns = line[:]
+		if columns[0] == c:
+			par3 = columns[1]
+			par4 = columns[4]
+			if len(columns) > 5:
+				par4 += '</p><p>' + columns[5]
+		else:
+			columns[1] = hyper_other_value(columns[1], columns[0])
+		par0 += join(columns[:4])
+	for line in e_table:
+		columns = line[:4]
+		# colour the rows
+		if columns[2] == c:
+			columns[0] = '¶ ' + columns[0]
+		if columns[3] == c:
+			columns[0] = '¶¶ ' + columns[0]
+		# TODO: hyperlinkify the case ID
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
+		if columns[3] != '—':
+			columns[3] = hyper_value(columns[3])
+		par1 += join(columns)
+	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 c_pattern = '''
 <html doctype>
@@ -128,8 +161,10 @@ c_pattern = '''
 </html>
 '''
 
-title = ' - {2}: {3}'
-subtitle = '<br><span class="red">Category</span> <code>{2}</code>: {3}'
+title_cat = ' - {2}: {3}'
+title_case = ' — {2}'
+subtitle_cat = '<br><span class="red">Category</span> <code>{2}</code>: {3}'
+subtitle_case = '<br><span class="red">Case</span> <code>{2}</code>'
 indexpara = '''<p>
 Multi-view modelling relies on consistency across heterogeneous views. Up until now, the literature
 lacked a compact, example-backed taxonomy of the inconsistency patterns that we keep seeing across
@@ -143,7 +178,8 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 40 examples were retained as core evidence and 6 as support-only examples. The taxonomy provides a
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
 and a basis for more precise claims about what checking and repair approaches do and do not cover.</p>'''
-subpara = '<p>{4}</p>'
+subpara_cat = '<p>{4}</p>'
+subpara_case = '<p>{3}</p>'
 evidence = '''<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary

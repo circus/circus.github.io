@@ -36,12 +36,13 @@ li a {font-style:italic}
 li.wip:after {content: " (under review)"; color:#ff6332}
 .prop strong {color:black}
 .prop a {color: #b64d70; font-weight: normal}
-.prop dt {font-weight: bold}
+.prop dt, dt {font-weight: bold}
 .censored {background-color: black; color: black;}
 table.realtable th, table.realtable * td {border: 1px solid black;}
 li.j::marker {color:red}
 li.c::marker {color:blue}
 li.w::marker {color:cadetblue}
+dd {display: list-item; list-style-type: disc;}
 a.a {text-decoration-style:double;}
 td.r {text-align: right;}
 td.c {text-align: center;}
