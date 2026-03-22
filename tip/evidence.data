@@ -89,7 +89,7 @@ documentation item // refined common/model element // refinement link
 A documentation artifact does not properly refine or correspond to the intended discipline-specific model element. // Cause: refinement relation is ill-formed or points to a mismatched artifact. // As a result, breakdown of abstraction linkage between management/documentation and engineering views.
 
 N94-2
-Nuseibeh1994
+NuseibehKF1994
 C1
 C5
 requirements engineering // viewpoint-based specification
@@ -99,7 +99,7 @@ source/destination entry in TC diagram // named agent in hierarchy
 A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge. // Cause: cross-view correspondence constraint between partial requirements views is violated. // As a result, the same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.
 
 JS22-1
-Jongeling2022Structural
+JongelingFCCC2022
 C1
 C6
 industrial model-code consistency
@@ -109,7 +109,7 @@ system components // Git repositories // folders with public_include
 The intended one-to-one mapping between model components and code containers fails in practice. // Cause: real code organisation does not obey the assumed architectural correspondence rule. // As a result, initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.
 
 G98-2
-Grundy1998
+GrundyHM1998
 C1
 C7
 software development environments // UML-like OO design
@@ -129,7 +129,7 @@ SysML internal block/activity/parametric diagrams // Simulink refinement model
 A change in the high-level system model is not reflected in the refining Simulink model. // Cause: evolution of the abstract model without co-evolution of the lower-level model. // As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.
 
 J22-3
-Jongeling2022Reality
+JongelingCCC2022
 C1
 C7
 industrial continuous model-based development
@@ -159,7 +159,7 @@ Simulink Constant // SysML/UML Property // equivalence link
 Two elements explicitly marked equivalent carry different values across models. // Cause: value disagreement between corresponding elements under an equivalence relation. // As a result, equivalent artifacts cease to agree semantically, requiring repair or tolerance.
 
 G98-3
-Grundy1998
+GrundyHM1998
 C2
 C1
 software development environments // UML-like OO design
@@ -179,7 +179,7 @@ shared parameter/value for total car mass
 Corresponding models use conflicting values for the same physical quantity. // Cause: shared parameter value diverges across views. // As a result, behaviour of the implemented function may be incorrect despite local plausibility of each model.
 
 BC23-1
-Krauter2023
+KrauterKRLS2023
 C3
 C1
 behavioural multi-modeling // traffic management
@@ -189,7 +189,7 @@ traffic light states A/B/C // global safety property over combined models
 Two behavioural views jointly admit a globally unsafe combination of light states. // Cause: global property over interacting behavioural models is violated even though each local model may be plausible on its own. // As a result, unsafe system behaviour; traffic participants may be allowed to pass simultaneously on conflicting directions.
 
 BC23-2
-Krauter2023
+KrauterKRLS2023
 C3
 C2
 behavioural multi-modeling // traffic management
@@ -199,7 +199,7 @@ Pass Junction activity // corresponding traffic-light states
 The bus behavioural model allows progress that is inconsistent with the traffic-light state in the coupled controller model. // Cause: interaction semantics between models are insufficiently constrained or incorrectly coordinated. // As a result, behavioural safety violation during execution.
 
 BC23-4
-Krauter2023
+KrauterKRLS2023
 C3
 C6
 behavioural multi-modeling // traffic management
@@ -209,7 +209,7 @@ traffic-light instances // T-Junction controller // buses // global properties
 Locally sensible models become globally inconsistent when composed without the required coordination semantics. // Cause: behavioural dependence among views is ignored during composition/execution. // As a result, violations of global behavioural properties that span models.
 
 N94-1
-Nuseibeh1994
+NuseibehKF1994
 C4
 C1
 requirements engineering // viewpoint-based specification
@@ -229,7 +229,7 @@ Planning Property // Simulink Display // satisfies link
 A displayed/implemented value violates the property it is supposed to satisfy, either by being unequal or out of range. // Cause: satisfaction relation exists, but checked property bounds or expected value are violated. // As a result, supposedly satisfied planning/property constraint is not actually met.
 
 N94-3
-Nuseibeh1994
+NuseibehKF1994
 C4
 C2
 requirements engineering // viewpoint-based specification
@@ -239,7 +239,7 @@ output of one agent // Input of another agent
 An output declared by one agent is not consumed as an input by any other related agent view. // Cause: inter-view coverage/completeness rule on information flow is violated. // As a result, the requirements model contains an unfulfilled or dangling flow of information between agents.
 
 ABB09-1
-Abbors2009
+AbborsTL2009
 C4
 C6
 model-based testing in telecommunications
@@ -249,7 +249,7 @@ requirement elements and links // traced UML elements // propagated QML requirem
 Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test. // Cause: trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic. // As a result, there are missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.
 
 N94-4
-Nuseibeh1994
+NuseibehKF1994
 C4
 C6
 requirements engineering // viewpoint-based specification
@@ -259,7 +259,7 @@ formal schema // companion textual description
 A formal schema exists without its required associated textual description view. // Cause: an existential inter-view dependency is not satisfied; one required companion requirements view is missing. // As a result, the specification is incomplete and loses the paired descriptive context required by the method.
 
 ST21-1
-Stunkel2021
+StunkelKRL2021
 C4
 C6
 general multi-model management
@@ -269,7 +269,7 @@ mandatory requirement // realising method // associated test case
 A new mandatory requirement is introduced without adding or linking a corresponding test. // Cause: a consistency rule spanning requirements, implementation, and tests is broken by partial co-evolution. // As a result, the multi-model set becomes invalid under the stated coverage/satisfaction rule.
 
 J22-2
-Jongeling2022Reality
+JongelingCCC2022
 C4
 C7
 industrial continuous model-based development
@@ -289,7 +289,7 @@ properties across linked models
 Linked properties across models use inconsistent names. // Cause: equivalent elements lack aligned terminology. // As a result, correspondence establishment and interpretation become harder; repair action is naming-related.
 
 JS22-3
-Jongeling2022Structural
+JongelingFCCC2022
 C5
 C1
 industrial model-code consistency
@@ -299,7 +299,7 @@ matched element names under architectural guidelines
 Model-code correspondence depends on naming conventions that are not uniformly followed. // Cause: informal naming discipline is relied upon for correspondence but is not socially enforced consistently. // As a result, reduced precision/usefulness of consistency checks and disagreement over enforcement strictness.
 
 G98-1
-Grundy1998
+GrundyHM1998
 C5
 C7
 software development environments // UML-like OO design
@@ -309,7 +309,7 @@ class interface // related diagrams // derived code // documentation artifacts
 A class is renamed in one design view, but the corresponding name is not propagated to related views and artifacts. // Cause: local edit to a shared conceptual element is not propagated across redundant or corresponding representations. // As a result, cross-view disagreement; developers may overlook the inconsistency; downstream artifacts no longer refer to the same concept consistently.
 
 BUC11-1
-Buchgeher2011
+BuchgeherWeinreich2011
 C6
 —
 Architecture decisions and implementation traceability
@@ -319,7 +319,7 @@ Traceability relationships among decision, architecture, and code artifacts
 Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact. // Cause: manual, retrospective trace recovery is error-prone and incomplete. // As a result, important relations can be missed, weakening architecture-related activities and reasoning.
 
 BC23-3
-Krauter2023
+KrauterKRLS2023
 C6
 C3
 behavioural multi-modeling // traffic management
@@ -329,7 +329,7 @@ behavioural relations/interactions between models
 The intended control relation exists conceptually, but is absent from the multi-model as an explicit relation. // Cause: missing inter-model linkage/interaction specification. // As a result, global behavioural requirements cannot be checked reliably until the relationship model is introduced.
 
 GEO12-1
-George2012
+GeorgeFHKBA2012
 C6
 C4
 model-based testing
@@ -339,7 +339,7 @@ relationships among requirements, design, tests, and executable tests
 When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements. // Cause: gaps between requirements, design, and test models are not bridged by explicit relations. // As a result, failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localise.
 
 DEM16-1
-Demuth2016
+DemuthKEM2016
 C6
 C7
 automation engineering // electrical models and controller software
@@ -349,7 +349,7 @@ engineer-defined links and consistency rules across tools
 Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules. // Cause: concurrent cross-domain evolution in heterogeneous engineering tools. // As a result, change impact becomes erroneous unless consistency checking notifies engineers.
 
 OD18-1
-Javed2018
+JavedMZ2018
 C6
 C7
 software traceability evolution
@@ -359,7 +359,7 @@ existing trace links across versions/releases
 Trace links that were valid in one project version become stale after major-version evolution. // Cause: substantial system evolution without synchronised update of stored trace links. // As a result, trace set loses validity and requires maintenance/evolution support.
 
 MG12-1
-Mader2012
+MaderG2012
 C6
 C7
 requirements traceability // UML-based development
@@ -369,7 +369,7 @@ traceability relations between lifecycle artifacts
 Trace links that were once valid become stale as related artifacts evolve. // Cause: artifact evolution without commensurate maintenance of trace links. // As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.
 
 MUR08-1
-Murta2008
+MurtaHW2008
 C6
 C7
 architecture-to-implementation traceability
@@ -379,7 +379,7 @@ versions of architectural elements // versions of source code configuration item
 Architecture-to-code links must survive concurrent version evolution on both sides. // Cause: trace links are tied to evolving versions of both architecture and code artifacts. // As a result, without continuous evolution of traces, architecture and implementation lose synchronisation.
 
 J22-1
-Jongeling2022Reality
+JongelingCCC2022
 C7
 C1
 industrial continuous model-based development
@@ -389,7 +389,7 @@ generated code // models intended to document implementation
 Code is customised after generation, but the originating model is left behind. // Cause: manual post-generation evolution of code without reverse synchronisation to the model. // As a result, model ceases to be a trustworthy description of the implementation; maintainability suffers.
 
 G98-4
-Grundy1998
+GrundyHM1998
 C7
 C5
 collaborative software development
@@ -399,7 +399,7 @@ class method across parallel versions
 Parallel edits on different versions produce conflicting states for the same method. // Cause: concurrent evolution without immediate reconciliation. // As a result, merge/conflict situation across versions; synchronisation and repair become necessary.
 
 JS22-2
-Jongeling2022Structural
+JongelingFCCC2022
 C7
 C6
 industrial model-code consistency
