@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J19-1" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>A change in the high-level system model is not reflected in the refining Simulink model.</dd>
 	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>
 	<dd>As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

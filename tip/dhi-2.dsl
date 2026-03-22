@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DHI-2" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>A connector links interfaces in the wrong direction or between incompatible interface kinds.</dd>
 	<dd>Cause: interface compatibility and direction constraints are violated.</dd>
 	<dd>As a result, invalid integration relation between connected elements.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

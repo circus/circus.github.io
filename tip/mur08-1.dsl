@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — MUR08-1" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Architecture-to-code links must survive concurrent version evolution on both sides.</dd>
 	<dd>Cause: trace links are tied to evolving versions of both architecture and code artifacts.</dd>
 	<dd>As a result, without continuous evolution of traces, architecture and implementation lose synchronisation.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

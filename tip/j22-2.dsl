@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J22-2" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Tests still run, but no longer cover the intended model elements or behaviours after evolution.</dd>
 	<dd>Cause: co-evolution of tests lags behind changes in design/implementation models.</dd>
 	<dd>As a result, passing tests may become misleading or meaningless as evidence for the model.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

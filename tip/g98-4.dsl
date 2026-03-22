@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — G98-4" />
 	<body>
@@ -25,7 +24,8 @@
 	<dd>Parallel edits on different versions produce conflicting states for the same method.</dd>
 	<dd>Cause: concurrent evolution without immediate reconciliation.</dd>
 	<dd>As a result, merge/conflict situation across versions; synchronisation and repair become necessary.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J19-3" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
 	<dd>Cause: missing correspondence under a refinement relation.</dd>
 	<dd>As a result, likely incompleteness or incorrect realisation of the higher-level design.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

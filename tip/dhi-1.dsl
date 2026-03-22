@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DHI-1" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>Linked properties across models use inconsistent names.</dd>
 	<dd>Cause: equivalent elements lack aligned terminology.</dd>
 	<dd>As a result, correspondence establishment and interpretation become harder; repair action is naming-related.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — JS22-2" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>Code evolves, but the system model remains stale for long periods.</dd>
 	<dd>Cause: long lag between code updates and model maintenance.</dd>
 	<dd>As a result, stale model, loss of trust, and need for reminders/checks to surface skew.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

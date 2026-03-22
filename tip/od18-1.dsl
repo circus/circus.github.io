@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — OD18-1" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>Trace links that were valid in one project version become stale after major-version evolution.</dd>
 	<dd>Cause: substantial system evolution without synchronised update of stored trace links.</dd>
 	<dd>As a result, trace set loses validity and requires maintenance/evolution support.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

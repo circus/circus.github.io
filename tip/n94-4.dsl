@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — N94-4" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A formal schema exists without its required associated textual description view.</dd>
 	<dd>Cause: an existential inter-view dependency is not satisfied; one required companion requirements view is missing.</dd>
 	<dd>As a result, the specification is incomplete and loses the paired descriptive context required by the method.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

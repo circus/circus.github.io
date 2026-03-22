@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — BC23-3" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>The intended control relation exists conceptually, but is absent from the multi-model as an explicit relation.</dd>
 	<dd>Cause: missing inter-model linkage/interaction specification.</dd>
 	<dd>As a result, global behavioural requirements cannot be checked reliably until the relationship model is introduced.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

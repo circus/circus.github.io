@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J22-3" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist.</dd>
 	<dd>Cause: asynchronous development and missing feedback loop between abstraction levels.</dd>
 	<dd>As a result, implementation may drift from the intended design and engineers lose model-based overview.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

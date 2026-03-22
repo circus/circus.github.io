@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DEM16-1" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules.</dd>
 	<dd>Cause: concurrent cross-domain evolution in heterogeneous engineering tools.</dd>
 	<dd>As a result, change impact becomes erroneous unless consistency checking notifies engineers.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

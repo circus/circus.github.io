@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — ST21-1" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>A new mandatory requirement is introduced without adding or linking a corresponding test.</dd>
 	<dd>Cause: a consistency rule spanning requirements, implementation, and tests is broken by partial co-evolution.</dd>
 	<dd>As a result, the multi-model set becomes invalid under the stated coverage/satisfaction rule.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

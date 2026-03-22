@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — JS22-3" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>Model-code correspondence depends on naming conventions that are not uniformly followed.</dd>
 	<dd>Cause: informal naming discipline is relied upon for correspondence but is not socially enforced consistently.</dd>
 	<dd>As a result, reduced precision/usefulness of consistency checks and disagreement over enforcement strictness.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

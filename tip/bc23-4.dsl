@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — BC23-4" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>Locally sensible models become globally inconsistent when composed without the required coordination semantics.</dd>
 	<dd>Cause: behavioural dependence among views is ignored during composition/execution.</dd>
 	<dd>As a result, violations of global behavioural properties that span models.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

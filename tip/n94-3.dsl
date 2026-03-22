@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — N94-3" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>An output declared by one agent is not consumed as an input by any other related agent view.</dd>
 	<dd>Cause: inter-view coverage/completeness rule on information flow is violated.</dd>
 	<dd>As a result, the requirements model contains an unfulfilled or dangling flow of information between agents.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

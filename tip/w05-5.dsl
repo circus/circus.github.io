@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — W05-5" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface.</dd>
 	<dd>Cause: model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behaviour preservation.</dd>
 	<dd>As a result, the extended model is only consistent if new operations do not interfere with the behaviour and state assumptions inherited from the abstract class.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

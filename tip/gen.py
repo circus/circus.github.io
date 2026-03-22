@@ -85,9 +85,9 @@ def process_category(c):
 	filename = c.lower() + '.dsl'
 	old_content = safe_load(filename)
 	new_content = c_pattern\
-		.replace('###TITLE###',title_cat)\
+		.replace('###TITLE###',title_double)\
 		.replace('###SUBTITLE###',subtitle_cat)\
-		.replace('###SUBPARA###',subpara_cat)\
+		.replace('###SUBPARA###',sub_para)\
 		.replace('###EVIDENCE###', evidence)
 	par0 = par1 = par3 = par4 = ''
 	par2 = c
@@ -122,9 +122,9 @@ def process_case(case):
 	filename = case[0].lower() + '.dsl'
 	old_content = safe_load(filename)
 	new_content = c_pattern\
-		.replace('###TITLE###',title_case)\
+		.replace('###TITLE###',title_single)\
 		.replace('###SUBTITLE###',subtitle_case)\
-		.replace('###SUBPARA###',subpara_case)\
+		.replace('###SUBPARA###',sub_list)\
 		.replace('###EVIDENCE###', evidence)
 	par0 = par1 = par3 = ''
 	par2 = case[0]
@@ -166,8 +166,52 @@ def process_case(case):
 	# ...
 	maybe_update(new_content.format(par0, par1, par2, par3), old_content, filename)
 
-c_pattern = '''
-<html doctype>
+def process_source(key):
+	filename = key.lower() + '.dsl'
+	old_content = safe_load(filename)
+	new_content = c_pattern\
+		.replace('###TITLE###',title_double)\
+		.replace('###SUBTITLE###',subtitle_source)\
+		.replace('###SUBPARA###',sub_bib)\
+		.replace('###EVIDENCE###', evidence)
+	par0 = par1 = par3 = par4 = ''
+	par2 = key
+	for line in bibitems[key]:
+		if line.find('http') > -1:
+			before, after = line.split('http')
+			link, after = after.split('"')
+			link = 'http' + link
+			par4 += before + f'<a href="{link}">{link}</a>"' + after
+		elif line.find('doi =') > -1:
+			before, after = line.split('{')
+			doi, after = after.split('}')
+			par4 += before + f'{{<a href="https://doi.org/{doi}">{doi}</a>}}' + after
+		# elif len(line) > 80:
+		# 	i = 80
+		# 	while line[i] != ' ':
+		# 		i -= 1
+		# 	par4 += line[:i] + '\n' + line[i:]
+		else:
+			par4 += line
+	for line in c_table:
+		columns = line[:]
+		columns[1] = hyper_other_value(columns[1], columns[0])
+		par0 += join(columns[:4])
+	for line in e_table:
+		columns = line[:4]
+		# colour the rows
+		if columns[1] == key:
+			columns[0] = '¶ ' + hyper_value(columns[0])
+		else:
+			columns[0] = hyper_value(columns[0])
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
+		if columns[3] != '—':
+			columns[3] = hyper_value(columns[3])
+		par1 += join(columns)
+	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
+
+c_pattern = '''<html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns###TITLE###" />
 	<body>
 		<credit/>
@@ -189,10 +233,11 @@ c_pattern = '''
 </html>
 '''
 
-title_cat = ' - {2}: {3}'
-title_case = ' — {2}'
+title_double = ' - {2}: {3}'
+title_single = ' — {2}'
 subtitle_cat = '<br><span class="red">Category</span> <code>{2}</code>: {3}'
 subtitle_case = '<br><span class="red">Case</span> <code>{2}</code>'
+subtitle_source = '<br><span class="red">Source</span> <code>{2}</code>'
 indexpara = '''<p>
 Multi-view modelling relies on consistency across heterogeneous views. Up until now, the literature
 lacked a compact, example-backed taxonomy of the inconsistency patterns that we keep seeing across
@@ -206,8 +251,9 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 40 examples were retained as core evidence and 6 as support-only examples. The taxonomy provides a
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
 and a basis for more precise claims about what checking and repair approaches do and do not cover.</p>'''
-subpara_cat = '<p>{4}</p>'
-subpara_case = '<dl>{3}</dl><h2>Taxonomy Categories</h2>'
+sub_para = '<p>{4}</p>'
+sub_list = '<dl>{3}</dl>\n<h2>Taxonomy Categories</h2>'
+sub_bib = '<p>{3}</p>\n<pre>{4}</pre>\n<h2>Taxonomy Categories</h2>'
 evidence = '''<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
@@ -222,3 +268,17 @@ for line in c_table:
 	process_category(line[0])
 for line in e_table:
 	process_case(line)
+
+# all the sources from BibTeX
+bibitems = {}
+with open('sources.bib', "r", encoding="utf-8") as f:
+	for line in f.readlines():
+		if not line.strip():
+			continue
+		if line.startswith('@'):
+			key = line.split('{')[-1].split(',')[0]
+			bibitems[key] = [line]
+		else:
+			bibitems[key].append(line)
+for key in bibitems.keys():
+	process_source(key)

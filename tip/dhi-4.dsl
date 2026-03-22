@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DHI-4" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>Two elements explicitly marked equivalent carry different values across models.</dd>
 	<dd>Cause: value disagreement between corresponding elements under an equivalence relation.</dd>
 	<dd>As a result, equivalent artifacts cease to agree semantically, requiring repair or tolerance.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

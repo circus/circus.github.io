@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — G98-3" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Two related artifacts agree enough to connect, but disagree on call signature or method existence.</dd>
 	<dd>Cause: semantic/interface constraints between linked elements are violated.</dd>
 	<dd>As a result, incorrect or impossible interaction between components/classes; manual correction required.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — W05-2" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>A lower-level protocol removes the higher-level nondeterministic case in which open may target a non-existent file.</dd>
 	<dd>Cause: protocol refinement tightens behavioural assumptions relative to the abstract view.</dd>
 	<dd>As a result, behavioural possibilities differ across abstraction levels; refinement must be checked to ensure the lower-level behaviour is still permitted by the higher-level one.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

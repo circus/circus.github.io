@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — JS22-1" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>The intended one-to-one mapping between model components and code containers fails in practice.</dd>
 	<dd>Cause: real code organisation does not obey the assumed architectural correspondence rule.</dd>
 	<dd>As a result, initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

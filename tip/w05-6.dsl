@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — W05-6" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A dynamic model is extended with a parallel full action that must remain non-interfering with the existing put/get behaviour.</dd>
 	<dd>Cause: behavioural extension introduces new transitions running alongside the original protocol.</dd>
 	<dd>As a result, consistency depends on substitutivity: the extended model must preserve the old behaviour under interleaving with the new action.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

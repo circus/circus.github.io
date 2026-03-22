@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — W05-1" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves.</dd>
 	<dd>Cause: a data-type transformation changes the semantics of state and operations across refinement levels.</dd>
 	<dd>As a result, the refined model may preserve representation but alter observable behaviour unless a valid refinement relation is established.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

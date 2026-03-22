@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — N94-2" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge.</dd>
 	<dd>Cause: cross-view correspondence constraint between partial requirements views is violated.</dd>
 	<dd>As a result, the same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

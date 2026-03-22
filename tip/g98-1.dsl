@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — G98-1" />
 	<body>
@@ -33,7 +32,8 @@
 	<dd>A class is renamed in one design view, but the corresponding name is not propagated to related views and artifacts.</dd>
 	<dd>Cause: local edit to a shared conceptual element is not propagated across redundant or corresponding representations.</dd>
 	<dd>As a result, cross-view disagreement; developers may overlook the inconsistency; downstream artifacts no longer refer to the same concept consistently.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

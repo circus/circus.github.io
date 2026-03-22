@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — BC23-2" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>The bus behavioural model allows progress that is inconsistent with the traffic-light state in the coupled controller model.</dd>
 	<dd>Cause: interaction semantics between models are insufficiently constrained or incorrectly coordinated.</dd>
 	<dd>As a result, behavioural safety violation during execution.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

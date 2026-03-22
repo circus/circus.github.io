@@ -53,3 +53,4 @@ td {padding-left: 1em; padding-right: 1em;}
 td.X {background-color: #aade74;}
 td.XX {background-color: #ffffc9;}
 td.XXX {background-color: #ff9a85;}
+pre {white-space: pre-wrap; border: 1px #552200 solid; font-size: larger; width: 80%;}

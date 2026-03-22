@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — GEO12-1" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements.</dd>
 	<dd>Cause: gaps between requirements, design, and test models are not bridged by explicit relations.</dd>
 	<dd>As a result, failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localise.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

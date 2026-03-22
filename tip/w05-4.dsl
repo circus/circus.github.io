@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — W05-4" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A send transition is split into prepare and transmit in the protocol state machine, with extra ordering constraints needed to avoid spurious behaviour.</dd>
 	<dd>Cause: behavioural refinement introduces intermediate protocol states that must still correspond to one abstract transition.</dd>
 	<dd>As a result, without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

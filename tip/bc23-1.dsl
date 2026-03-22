@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — BC23-1" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Two behavioural views jointly admit a globally unsafe combination of light states.</dd>
 	<dd>Cause: global property over interacting behavioural models is violated even though each local model may be plausible on its own.</dd>
 	<dd>As a result, unsafe system behaviour; traffic participants may be allowed to pass simultaneously on conflicting directions.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

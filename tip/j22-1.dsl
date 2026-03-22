@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J22-1" />
 	<body>
@@ -27,7 +26,8 @@
 	<dd>Code is customised after generation, but the originating model is left behind.</dd>
 	<dd>Cause: manual post-generation evolution of code without reverse synchronisation to the model.</dd>
 	<dd>As a result, model ceases to be a trustworthy description of the implementation; maintainability suffers.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

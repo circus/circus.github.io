@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — N94-1" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>An agent exists in the higher-level decomposition, but no corresponding tabular-collection ViewPoint is created for it.</dd>
 	<dd>Cause: a required successor specification view is missing, so the decomposition is not elaborated into the next required requirements view.</dd>
 	<dd>As a result, the requirements description is incomplete across views; downstream checks and refinements cannot be carried out for that agent.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

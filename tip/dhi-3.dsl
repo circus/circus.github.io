@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DHI-3" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>A documentation artifact does not properly refine or correspond to the intended discipline-specific model element.</dd>
 	<dd>Cause: refinement relation is ill-formed or points to a mismatched artifact.</dd>
 	<dd>As a result, breakdown of abstraction linkage between management/documentation and engineering views.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

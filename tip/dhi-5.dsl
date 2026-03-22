@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — DHI-5" />
 	<body>
@@ -29,7 +28,8 @@
 	<dd>A displayed/implemented value violates the property it is supposed to satisfy, either by being unequal or out of range.</dd>
 	<dd>Cause: satisfaction relation exists, but checked property bounds or expected value are violated.</dd>
 	<dd>As a result, supposedly satisfied planning/property constraint is not actually met.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

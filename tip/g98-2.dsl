@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — G98-2" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>A design-level call relation is added, but the implementation view is not updated accordingly.</dd>
 	<dd>Cause: refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined.</dd>
 	<dd>As a result, implementation no longer reflects the design; manual repair is required.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

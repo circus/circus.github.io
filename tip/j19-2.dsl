@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — J19-2" />
 	<body>
@@ -26,7 +25,8 @@
 	<dd>Corresponding models use conflicting values for the same physical quantity.</dd>
 	<dd>Cause: shared parameter value diverges across views.</dd>
 	<dd>As a result, behaviour of the implemented function may be incorrect despite local plausibility of each model.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

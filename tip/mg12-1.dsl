@@ -1,4 +1,3 @@
-
 <html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns — MG12-1" />
 	<body>
@@ -28,7 +27,8 @@
 	<dd>Trace links that were once valid become stale as related artifacts evolve.</dd>
 	<dd>Cause: artifact evolution without commensurate maintenance of trace links.</dd>
 	<dd>As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.</dd>
-</dl><h2>Taxonomy Categories</h2>
+</dl>
+<h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary

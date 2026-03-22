@@ -1,0 +1,98 @@
+<!doctype html><html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Taxonomy of Inconsistency Patterns - AbborsTL2009: </title>
+		<link href="../common.css" rel="stylesheet" type="text/css">
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3743366-8', 'auto');
+  ga('send', 'pageview');
+
+		function onn(n) {$('.help:eq('+n+')').css('color',$('body').css('color'));}
+		function off(n) {$('.help:eq('+n+')').css('color',$('body').css('background-color'));}
+		</script>
+		<script src="../jquery.js"></script>
+	</head>
+	<body>
+<div style="text-align:center;">by <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>
+		<h1>
+			<img src="tip.200.png" alt="TIP" title="TIP logo designed by Vadim Zaytsev"/>
+			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
+			in Multi-View Modelling
+			<br><span class="red">Source</span> <code>AbborsTL2009</code>
+		</h1>
+		<p></p>
+<pre>@inproceedings{AbborsTL2009,
+  author = {Fredrik Abbors and Dragos Truscan and Johan Lilius},
+  title = {{Tracing Requirements in a Model-Based Testing Approach}},
+  booktitle = {First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)},
+  year = {2009},
+  pages = {123--128},
+  publisher = {IEEE Computer Society},
+  doi = {<a href="https://doi.org/10.1109/VALID.2009.15">10.1109/VALID.2009.15</a>}
+}
+</pre>
+<h2>Taxonomy Categories</h2>
+<br style="clear:both">		<table class="c" clrr>
+<tr><td class="c">Code</td><td>Label</td><td class="r">As primary</td><td class="r">As secondary</td></tr>
+<tr><td class="c">C1</td><td><a href="c1.html">Structural mismatch</a></td><td class="r">13</td><td class="r">8</td></tr>
+<tr><td class="c">C2</td><td><a href="c2.html">Interface contract mismatch</a></td><td class="r">4</td><td class="r">5</td></tr>
+<tr><td class="c">C3</td><td><a href="c3.html">Behavioural contradiction</a></td><td class="r">3</td><td class="r">6</td></tr>
+<tr><td class="c">C4</td><td><a href="c4.html">Requirement satisfaction gap</a></td><td class="r">7</td><td class="r">1</td></tr>
+<tr><td class="c">C5</td><td><a href="c5.html">Terminology divergence</a></td><td class="r">3</td><td class="r">3</td></tr>
+<tr><td class="c">C6</td><td><a href="c6.html">Traceability disruption</a></td><td class="r">7</td><td class="r">6</td></tr>
+<tr><td class="c">C7</td><td><a href="c7.html">Temporal skew</a></td><td class="r">3</td><td class="r">9</td></tr>
+		</table>
+		<h2>Evidence Map</h2>
+<table class="c" llcc>
+<tr><td>Case ID</td><td>Source</td><td class="c">Primary</td><td class="c">Secondary</td></tr>
+<tr><td><a href="j19-3.html">J19-3</a></td><td><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c">—</td></tr>
+<tr><td><a href="w05-1.html">W05-1</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
+<tr><td><a href="w05-5.html">W05-5</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
+<tr><td><a href="w05-2.html">W05-2</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="w05-3.html">W05-3</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="w05-4.html">W05-4</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="w05-6.html">W05-6</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="dhi-3.html">DHI-3</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c5.html">C5</a></td></tr>
+<tr><td><a href="n94-2.html">N94-2</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c5.html">C5</a></td></tr>
+<tr><td><a href="js22-1.html">JS22-1</a></td><td><a href="jongelingfccc2022.html">[JongelingFCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
+<tr><td><a href="g98-2.html">G98-2</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="j19-1.html">J19-1</a></td><td><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="j22-3.html">J22-3</a></td><td><a href="jongelingccc2022.html">[JongelingCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="dhi-2.html">DHI-2</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="dhi-4.html">DHI-4</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="g98-3.html">G98-3</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="j19-2.html">J19-2</a></td><td><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="bc23-1.html">BC23-1</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="bc23-2.html">BC23-2</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
+<tr><td><a href="bc23-4.html">BC23-4</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
+<tr><td><a href="n94-1.html">N94-1</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="dhi-5.html">DHI-5</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
+<tr><td><a href="n94-3.html">N94-3</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
+<tr><td class="X"><a href="abb09-1.html">ABB09-1</a></td><td class="X"><a href="abborstl2009.html">[AbborsTL2009]</a></td><td class="c X"><a href="c4.html">C4</a></td><td class="c X"><a href="c6.html">C6</a></td></tr>
+<tr><td><a href="n94-4.html">N94-4</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
+<tr><td><a href="st21-1.html">ST21-1</a></td><td><a href="stunkelkrl2021.html">[StunkelKRL2021]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
+<tr><td><a href="j22-2.html">J22-2</a></td><td><a href="jongelingccc2022.html">[JongelingCCC2022]</a></td><td class="c"><a href="c4.html">C4</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="dhi-1.html">DHI-1</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c5.html">C5</a></td><td class="c">—</td></tr>
+<tr><td><a href="js22-3.html">JS22-3</a></td><td><a href="jongelingfccc2022.html">[JongelingFCCC2022]</a></td><td class="c"><a href="c5.html">C5</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="g98-1.html">G98-1</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c5.html">C5</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="buc11-1.html">BUC11-1</a></td><td><a href="buchgeherweinreich2011.html">[BuchgeherWeinreich2011]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c">—</td></tr>
+<tr><td><a href="bc23-3.html">BC23-3</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="geo12-1.html">GEO12-1</a></td><td><a href="georgefhkba2012.html">[GeorgeFHKBA2012]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c4.html">C4</a></td></tr>
+<tr><td><a href="dem16-1.html">DEM16-1</a></td><td><a href="demuthkem2016.html">[DemuthKEM2016]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="od18-1.html">OD18-1</a></td><td><a href="javedmz2018.html">[JavedMZ2018]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="mg12-1.html">MG12-1</a></td><td><a href="maderg2012.html">[MaderG2012]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="mur08-1.html">MUR08-1</a></td><td><a href="murtahw2008.html">[MurtaHW2008]</a></td><td class="c"><a href="c6.html">C6</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="j22-1.html">J22-1</a></td><td><a href="jongelingccc2022.html">[JongelingCCC2022]</a></td><td class="c"><a href="c7.html">C7</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
+<tr><td><a href="g98-4.html">G98-4</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c7.html">C7</a></td><td class="c"><a href="c5.html">C5</a></td></tr>
+<tr><td><a href="js22-2.html">JS22-2</a></td><td><a href="jongelingfccc2022.html">[JongelingFCCC2022]</a></td><td class="c"><a href="c7.html">C7</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
+</table>
+<div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. Last updated: March 2026.<br>
+			<a href="http://validator.w3.org/check/referer"><img src="../logos/xhtml.88.png" alt="XHTML 1.1"></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../logos/css.88.png" alt="CSS 3"></a></div>	</body>
+</html>
