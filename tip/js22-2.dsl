@@ -14,12 +14,12 @@
 <dt>Categories</dt>
 	<dd><a href="c7.html">C7</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Industrial model-code consistency</dd>
+	<dd>industrial model-code consistency</dd>
 <dt>Views</dt>
-	<dd>System model</dd>
+	<dd>system model</dd>
 	<dd>implementation code</dd>
 <dt>Artefacts</dt>
-	<dd>Model elements and corresponding code elements</dd>
+	<dd>model elements and corresponding code elements</dd>
 <dt>Quotes</dt>
 	<dd>"Now, things are improved in the code and then forgotten about. Then six months later, you see that the model is not at all updated. So some reminder is needed to show that the model is not correct anymore."</dd>
 <dt>Summary</dt>

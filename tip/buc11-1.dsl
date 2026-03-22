@@ -25,8 +25,8 @@
 	<dd>"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"</dd>
 <dt>Summary</dt>
 	<dd>Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact.</dd>
-	<dd>Manual, retrospective trace recovery is error-prone and incomplete.</dd>
-	<dd>Important relations can be missed, weakening architecture-related activities and reasoning.</dd>
+	<dd>Cause: manual, retrospective trace recovery is error-prone and incomplete.</dd>
+	<dd>As a result, important relations can be missed, weakening architecture-related activities and reasoning.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

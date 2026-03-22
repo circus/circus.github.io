@@ -14,13 +14,13 @@
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c5.html">C5</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Requirements engineering</dd>
+	<dd>requirements engineering</dd>
 	<dd>viewpoint-based specification</dd>
 <dt>Views</dt>
-	<dd>Tabular collection view</dd>
+	<dd>tabular collection view</dd>
 	<dd>agent hierarchy view</dd>
 <dt>Artefacts</dt>
-	<dd>Source/Destination entry in TC diagram</dd>
+	<dd>source/destination entry in TC diagram</dd>
 	<dd>named agent in hierarchy</dd>
 <dt>Quotes</dt>
 	<dd>"every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"</dd>

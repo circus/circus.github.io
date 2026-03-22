@@ -14,12 +14,12 @@
 <dt>Categories</dt>
 	<dd><a href="c2.html">C2</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Software development environments</dd>
+	<dd>software development environments</dd>
 	<dd>UML-like OO design</dd>
 <dt>Views</dt>
-	<dd>Multiple design and implementation views</dd>
+	<dd>multiple design and implementation views</dd>
 <dt>Artefacts</dt>
-	<dd>Method calls</dd>
+	<dd>method calls</dd>
 	<dd>argument lists</dd>
 	<dd>class methods</dd>
 <dt>Quotes</dt>

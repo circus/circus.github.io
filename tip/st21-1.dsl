@@ -14,14 +14,14 @@
 <dt>Categories</dt>
 	<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>General multi-model management</dd>
+	<dd>general multi-model management</dd>
 <dt>Views</dt>
-	<dd>Requirements model</dd>
+	<dd>requirements model</dd>
 	<dd>code model</dd>
 	<dd>test model</dd>
 <dt>Artefacts</dt>
-	<dd>Mandatory requirement</dd>
-	<dd>realizing method</dd>
+	<dd>mandatory requirement</dd>
+	<dd>realising method</dd>
 	<dd>associated test case</dd>
 <dt>Quotes</dt>
 	<dd>"Every method, which realizes a requirement must have an associated test case and for every mandatory requirement there has to be at least one test case ... assume that a new mandatory requirement is added to M1. This obviously invalidates CR-1 since there is no unit test for the new requirement."</dd>

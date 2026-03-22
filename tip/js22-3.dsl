@@ -14,12 +14,12 @@
 <dt>Categories</dt>
 	<dd><a href="c5.html">C5</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Industrial model-code consistency</dd>
+	<dd>industrial model-code consistency</dd>
 <dt>Views</dt>
-	<dd>System model</dd>
+	<dd>system model</dd>
 	<dd>code</dd>
 <dt>Artefacts</dt>
-	<dd>Matched element names under architectural guidelines</dd>
+	<dd>matched element names under architectural guidelines</dd>
 <dt>Quotes</dt>
 	<dd>"this puts a requirement on following a specific naming convention. Not everybody does this"</dd>
 <dt>Summary</dt>

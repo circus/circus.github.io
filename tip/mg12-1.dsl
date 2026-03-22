@@ -14,14 +14,14 @@
 <dt>Categories</dt>
 	<dd><a href="c6.html">C6</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Requirements traceability</dd>
+	<dd>requirements traceability</dd>
 	<dd>UML-based development</dd>
 <dt>Views</dt>
-	<dd>Requirements</dd>
+	<dd>requirements</dd>
 	<dd>analysis models</dd>
 	<dd>design models</dd>
 <dt>Artefacts</dt>
-	<dd>Traceability relations between lifecycle artifacts</dd>
+	<dd>traceability relations between lifecycle artifacts</dd>
 <dt>Quotes</dt>
 	<dd>"it is necessary to have an up-to-date set of traceability relations ... [and] maintain traceability relations over time as the software system evolves in order to prevent their decay"</dd>
 <dt>Summary</dt>

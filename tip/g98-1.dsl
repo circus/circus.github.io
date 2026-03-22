@@ -14,7 +14,7 @@
 <dt>Categories</dt>
 	<dd><a href="c5.html">C5</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Software development environments</dd>
+	<dd>software development environments</dd>
 	<dd>UML-like OO design</dd>
 <dt>Views</dt>
 	<dd>OOA/D design view</dd>
@@ -23,7 +23,7 @@
 	<dd>documentation</dd>
 	<dd>analysis diagrams</dd>
 <dt>Artefacts</dt>
-	<dd>Class interface</dd>
+	<dd>class interface</dd>
 	<dd>related diagrams</dd>
 	<dd>derived code</dd>
 	<dd>documentation artifacts</dd>

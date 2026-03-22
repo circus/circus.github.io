@@ -14,10 +14,10 @@
 <dt>Categories</dt>
 	<dd><a href="c2.html">C2</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Automated production systems</dd>
+	<dd>automated production systems</dd>
 	<dd>SysML-Simulink alignment</dd>
 <dt>Views</dt>
-	<dd>Top-level Simulink model</dd>
+	<dd>top-level Simulink model</dd>
 	<dd>SysML/UML property model</dd>
 <dt>Artefacts</dt>
 	<dd>Simulink Constant</dd>

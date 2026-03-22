@@ -14,20 +14,20 @@
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Model-driven development</dd>
+	<dd>model-driven development</dd>
 	<dd>formal multiview refinement</dd>
 <dt>Views</dt>
-	<dd>Static class model A</dd>
+	<dd>static class model A</dd>
 	<dd>refined class model C</dd>
 <dt>Artefacts</dt>
-	<dd>Operation send in A</dd>
+	<dd>operation send in A</dd>
 	<dd>operations prepare and transmit in C</dd>
 <dt>Quotes</dt>
 	<dd>"While class A contains a single operation send, class C uses two operations for one send, the first one being responsible for preparing the message... and the second one for actual transmission."</dd>
 <dt>Summary</dt>
 	<dd>A single abstract send operation is split into prepare and transmit in the refined class model.</dd>
 	<dd>Cause: an operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths.</dd>
-	<dd>As a result, the refined model can admit behaviors not present in the abstract one unless continuation and proper-starting conditions are enforced.</dd>
+	<dd>As a result, the refined model can admit behaviours not present in the abstract one unless continuation and proper-starting conditions are enforced.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

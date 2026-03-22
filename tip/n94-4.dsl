@@ -14,13 +14,13 @@
 <dt>Categories</dt>
 	<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Requirements engineering</dd>
+	<dd>requirements engineering</dd>
 	<dd>viewpoint-based specification</dd>
 <dt>Views</dt>
 	<dd>Z schema ViewPoint</dd>
 	<dd>associated textual description ViewPoint</dd>
 <dt>Artefacts</dt>
-	<dd>Formal schema</dd>
+	<dd>formal schema</dd>
 	<dd>companion textual description</dd>
 <dt>Quotes</dt>
 	<dd>"for each Z schema (ViewPoint), there is an associated textual description (ViewPoint)"</dd>

@@ -14,13 +14,13 @@
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a> (primary); <a href="c2.html">C2</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Model-driven development</dd>
+	<dd>model-driven development</dd>
 	<dd>formal multiview refinement</dd>
 <dt>Views</dt>
-	<dd>Static class model A</dd>
+	<dd>static class model A</dd>
 	<dd>corresponding refined class model C</dd>
 <dt>Artefacts</dt>
-	<dd>Attribute buffer</dd>
+	<dd>attribute buffer</dd>
 	<dd>operation choose</dd>
 	<dd>class-level data semantics</dd>
 <dt>Quotes</dt>
@@ -28,7 +28,7 @@
 <dt>Summary</dt>
 	<dd>A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves.</dd>
 	<dd>Cause: a data-type transformation changes the semantics of state and operations across refinement levels.</dd>
-	<dd>As a result, the refined model may preserve representation but alter observable behavior unless a valid refinement relation is established.</dd>
+	<dd>As a result, the refined model may preserve representation but alter observable behaviour unless a valid refinement relation is established.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

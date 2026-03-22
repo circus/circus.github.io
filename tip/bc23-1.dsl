@@ -14,20 +14,20 @@
 <dt>Categories</dt>
 	<dd><a href="c3.html">C3</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Behavioral multi-modeling</dd>
+	<dd>behavioural multi-modeling</dd>
 	<dd>traffic management</dd>
 <dt>Views</dt>
 	<dd>UML state machine traffic-light model</dd>
 	<dd>BPMN T-Junction controller model</dd>
 <dt>Artefacts</dt>
-	<dd>Traffic light states A/B/C</dd>
+	<dd>traffic light states A/B/C</dd>
 	<dd>global safety property over combined models</dd>
 <dt>Quotes</dt>
 	<dd>"unsafe traffic occurs if traffic light A is green or amber and traffic light B is green or amber simultaneously ... the same state combinations are forbidden for traffic lights B and C"</dd>
 <dt>Summary</dt>
-	<dd>Two behavioral views jointly admit a globally unsafe combination of light states.</dd>
-	<dd>Cause: global property over interacting behavioral models is violated even though each local model may be plausible on its own.</dd>
-	<dd>As a result, unsafe system behavior; traffic participants may be allowed to pass simultaneously on conflicting directions.</dd>
+	<dd>Two behavioural views jointly admit a globally unsafe combination of light states.</dd>
+	<dd>Cause: global property over interacting behavioural models is violated even though each local model may be plausible on its own.</dd>
+	<dd>As a result, unsafe system behaviour; traffic participants may be allowed to pass simultaneously on conflicting directions.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>

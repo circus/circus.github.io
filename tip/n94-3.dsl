@@ -14,12 +14,12 @@
 <dt>Categories</dt>
 	<dd><a href="c4.html">C4</a> (primary); <a href="c2.html">C2</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>Requirements engineering</dd>
+	<dd>requirements engineering</dd>
 	<dd>viewpoint-based specification</dd>
 <dt>Views</dt>
-	<dd>Tabular collection views for different agents</dd>
+	<dd>tabular collection views for different agents</dd>
 <dt>Artefacts</dt>
-	<dd>Output of one agent</dd>
+	<dd>output of one agent</dd>
 	<dd>Input of another agent</dd>
 <dt>Quotes</dt>
 	<dd>"the Output produced by one agent in a tabular collection diagram must be consumed as an Input in the tabular collection diagram [of] another agent"</dd>
