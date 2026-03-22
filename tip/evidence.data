@@ -16,7 +16,7 @@ Software development environments // UML-like OO design
 OO design view // textual code view(s)
 Method call connection in design model // affected textual code views
 "adding a method call connection in an OO design view can not be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent"
-A design-level call relation is added, but the implementation view is not updated accordingly. // Refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined. // Implementation no longer reflects the design; manual repair is required.
+A design-level call relation is added, but the implementation view is not updated accordingly. // Cause: refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined. // As a result, implementation no longer reflects the design; manual repair is required.
 
 J19-1
 Jongeling2019
@@ -26,7 +26,7 @@ Industrial MBSE (SysML/Simulink, automotive ABS example)
 High-level SysML diagrams // lower-level Simulink model
 SysML internal block/activity/parametric diagrams // Simulink refinement model
 "if the system model is changed, requiring some changes in the Simulink model ... not updating the Simulink model of the ABS might result in its incorrect implementation"
-A change in the high-level system model is not reflected in the refining Simulink model. // Evolution of the abstract model without co-evolution of the lower-level model. // Incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.
+A change in the high-level system model is not reflected in the refining Simulink model. // Cause: evolution of the abstract model without co-evolution of the lower-level model. // As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.
 
 J19-3
 Jongeling2019
@@ -36,7 +36,7 @@ Industrial MBSE (SysML/Simulink)
 SysML block diagram // Simulink model
 Expected subsystem/block correspondence
 "we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"
-A lower-level model omits a subsystem required by the higher-level architectural view. // Missing correspondence under a refinement relation. // Likely incompleteness or incorrect realization of the higher-level design.
+A lower-level model omits a subsystem required by the higher-level architectural view. // Cause: missing correspondence under a refinement relation. // As a result, likely incompleteness or incorrect realization of the higher-level design.
 
 DHI-3
 Feldmann2019
@@ -46,7 +46,7 @@ Automated production systems // project + discipline models
 Project documentation // discipline-specific model
 Documentation item // refined common/model element // refinement link
 "Refinement between project documentation and discipline model" with conditions including name mismatch and wrong refined artifact kind
-A documentation artifact does not properly refine or correspond to the intended discipline-specific model element. // Refinement relation is ill-formed or points to a mismatched artifact. // Breakdown of abstraction linkage between management/documentation and engineering views.
+A documentation artifact does not properly refine or correspond to the intended discipline-specific model element. // Cause: refinement relation is ill-formed or points to a mismatched artifact. // As a result, breakdown of abstraction linkage between management/documentation and engineering views.
 
 J22-3
 Jongeling2022Reality
@@ -56,7 +56,7 @@ Industrial continuous model-based development
 High-level system/architecture models // implementation
 System models // implementation artifacts // feedback links
 "It is accepted by engineers that the models are not fully consistent with the eventual implementation ... Nevertheless, it is required that the eventual implementation conforms to the requirements. In the current setting, there is no feedback loop between the model and implementation"
-Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist. // Asynchronous development and missing feedback loop between abstraction levels. // Implementation may drift from the intended design and engineers lose model-based overview.
+Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist. // Cause: asynchronous development and missing feedback loop between abstraction levels. // As a result, implementation may drift from the intended design and engineers lose model-based overview.
 
 JS22-1
 Jongeling2022Structural
@@ -66,7 +66,7 @@ Industrial model-code consistency
 System model // code repositories/folders
 System components // Git repositories // folders with public_include
 "each system component in the model ... should be matched to a Git repository. Soon, exceptions to this rule appeared, because in some cases multiple system components were included in a single repository"
-The intended one-to-one mapping between model components and code containers fails in practice. // Real code organization does not obey the assumed architectural correspondence rule. // Initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.
+The intended one-to-one mapping between model components and code containers fails in practice. // Cause: real code organization does not obey the assumed architectural correspondence rule. // As a result, initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.
 
 N94-2
 Nuseibeh1994
@@ -76,7 +76,7 @@ Requirements engineering // viewpoint-based specification
 Tabular collection view // agent hierarchy view
 Source/Destination entry in TC diagram // named agent in hierarchy
 "every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"
-A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge. // Cross-view correspondence constraint between partial requirements views is violated. // The same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.
+A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge. // Cause: cross-view correspondence constraint between partial requirements views is violated. // As a result, the same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.
 
 W05-1
 Wehrheim2005
@@ -86,7 +86,7 @@ Model-driven development // formal multiview refinement
 Static class model A // corresponding refined class model C
 Attribute buffer // operation choose // class-level data semantics
 "In class A attribute buffer is of type set (...) whereas in C buffer is of type (injective) sequence and choose always chooses the first element in the sequence."
-A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves. // A data-type transformation changes the semantics of state and operations across refinement levels. // The refined model may preserve representation but alter observable behavior unless a valid refinement relation is established.
+A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves. // Cause: a data-type transformation changes the semantics of state and operations across refinement levels. // As a result, the refined model may preserve representation but alter observable behavior unless a valid refinement relation is established.
 
 W05-2
 Wehrheim2005
@@ -96,7 +96,7 @@ Model-driven development // formal multiview refinement
 Higher-level protocol state machine A // lower-level protocol state machine C
 open/close/read/write protocol states and transitions
 "The state machine of A belongs to a higher-level model, it is nondeterministic and also models the case where the file to be opened is non-existent... In C the nondeterminism has been resolved, possibly by ensuring applicability of open on existing files only."
-A lower-level protocol removes the higher-level nondeterministic case in which open may target a non-existent file. // Protocol refinement tightens behavioral assumptions relative to the abstract view. // Behavioral possibilities differ across abstraction levels; refinement must be checked to ensure the lower-level behavior is still permitted by the higher-level one.
+A lower-level protocol removes the higher-level nondeterministic case in which open may target a non-existent file. // Cause: protocol refinement tightens behavioral assumptions relative to the abstract view. // As a result, behavioral possibilities differ across abstraction levels; refinement must be checked to ensure the lower-level behavior is still permitted by the higher-level one.
 
 W05-3
 Wehrheim2005
@@ -106,7 +106,7 @@ Model-driven development // formal multiview refinement
 Static class model A // refined class model C
 Operation send in A // operations prepare and transmit in C
 "While class A contains a single operation send, class C uses two operations for one send, the first one being responsible for preparing the message... and the second one for actual transmission."
-A single abstract send operation is split into prepare and transmit in the refined class model. // An operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths. // The refined model can admit behaviors not present in the abstract one unless continuation and proper-starting conditions are enforced.
+A single abstract send operation is split into prepare and transmit in the refined class model. // Cause: an operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths. // As a result, the refined model can admit behaviors not present in the abstract one unless continuation and proper-starting conditions are enforced.
 
 W05-4
 Wehrheim2005
@@ -116,7 +116,7 @@ Model-driven development // formal multiview refinement
 Dynamic protocol model A // refined protocol model C
 send transition in A // prepare/transmit transitions in C
 "Again sending is split into preparation and transmission... Continuation: after a trace of C in which prepare has occured but transmit not, transmit may not be refused; Proper starting: There are no traces in C in which transmit occurs without a prior prepare."
-A send transition is split into prepare and transmit in the protocol state machine, with extra ordering constraints needed to avoid spurious behavior. // Behavioral refinement introduces intermediate protocol states that must still correspond to one abstract transition. // Without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.
+A send transition is split into prepare and transmit in the protocol state machine, with extra ordering constraints needed to avoid spurious behavior. // Cause: behavioral refinement introduces intermediate protocol states that must still correspond to one abstract transition. // As a result, without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.
 
 W05-5
 Wehrheim2005
@@ -126,7 +126,7 @@ Model-driven development // formal multiview refinement
 Class model A // extended class model C
 Methods get/put in A // get/put/full in C
 "The classes model buffers with methods put and get, and class C in addition with a method full querying the contents of the buffer... Can a user of A use C as if it were A?"
-A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface. // Model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behavior preservation. // The extended model is only consistent if new operations do not interfere with the behavior and state assumptions inherited from the abstract class.
+A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface. // Cause: model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behavior preservation. // As a result, the extended model is only consistent if new operations do not interfere with the behavior and state assumptions inherited from the abstract class.
 
 W05-6
 Wehrheim2005
@@ -136,7 +136,7 @@ Model-driven development // formal multiview refinement
 Behavior model A // extended behavior model C
 Original put/get protocol // added parallel full transition
 "A state machine is extended with a parallel component independently executing the method full... execution of full in C may not interfere with the ‘old’ behaviour modelled in A."
-A dynamic model is extended with a parallel full action that must remain non-interfering with the existing put/get behavior. // Behavioral extension introduces new transitions running alongside the original protocol. // Consistency depends on substitutivity: the extended model must preserve the old behavior under interleaving with the new action.
+A dynamic model is extended with a parallel full action that must remain non-interfering with the existing put/get behavior. // Cause: behavioral extension introduces new transitions running alongside the original protocol. // As a result, consistency depends on substitutivity: the extended model must preserve the old behavior under interleaving with the new action.
 
 G98-3
 Grundy1998
