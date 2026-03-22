@@ -73,7 +73,7 @@ def process_index():
 		par0 += join(columns)
 	for line in e_table:
 		columns = line[:4]
-		# TODO: hyperlinkify the case ID
+		columns[0] = hyper_value(columns[0])
 		columns[1] = hyper_bracketed_value(columns[1])
 		columns[2] = hyper_value(columns[2])
 		if columns[3] != '—':
