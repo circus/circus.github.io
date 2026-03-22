@@ -10,19 +10,19 @@
 			<br><span class="red">Case</span> <code>BC23-3</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="krauter2023.html">Krauter2023</a></dd>
+	<dd><a href="krauter2023.html">Krauter2023</a></dd>
 <dt>Categories</dt>
-<dd><a href="c6.html">C6</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
+	<dd><a href="c6.html">C6</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
-C3 & Behavioural contradiction@c3.html & 3 & 6
+¶¶ C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
+¶ C6 & Traceability disruption@c6.html & 7 & 6
 C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>

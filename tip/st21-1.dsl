@@ -10,9 +10,9 @@
 			<br><span class="red">Case</span> <code>ST21-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="stunkel2021.html">Stunkel2021</a></dd>
+	<dd><a href="stunkel2021.html">Stunkel2021</a></dd>
 <dt>Categories</dt>
-<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
+	<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -20,9 +20,9 @@
 C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
-C4 & Requirement satisfaction gap@c4.html & 7 & 1
+¶ C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
+¶¶ C6 & Traceability disruption@c6.html & 7 & 6
 C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>

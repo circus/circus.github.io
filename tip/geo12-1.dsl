@@ -10,9 +10,23 @@
 			<br><span class="red">Case</span> <code>GEO12-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="george2012.html">George2012</a></dd>
+	<dd><a href="george2012.html">George2012</a></dd>
 <dt>Categories</dt>
-<dd><a href="c6.html">C6</a> (primary); <a href="c4.html">C4</a> (secondary)</dd>
+	<dd><a href="c6.html">C6</a> (primary); <a href="c4.html">C4</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Model-based testing</dd>
+<dt>Views</dt>
+	<dd>Requirements model</dd>
+	<dd>design model</dd>
+	<dd>test model</dd>
+<dt>Artefacts</dt>
+	<dd>Relationships among requirements, design, tests, and executable tests</dd>
+<dt>Quotes</dt>
+	<dd>"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails"</dd>
+<dt>Summary</dt>
+	<dd>When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements.</dd>
+	<dd>Gaps between requirements, design, and test models are not bridged by explicit relations.</dd>
+	<dd>Failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localize.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -20,9 +34,9 @@
 C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
-C4 & Requirement satisfaction gap@c4.html & 7 & 1
+¶¶ C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
+¶ C6 & Traceability disruption@c6.html & 7 & 6
 C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>

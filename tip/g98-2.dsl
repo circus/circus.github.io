@@ -10,20 +10,20 @@
 			<br><span class="red">Case</span> <code>G98-2</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="grundy1998.html">Grundy1998</a></dd>
+	<dd><a href="grundy1998.html">Grundy1998</a></dd>
 <dt>Categories</dt>
-<dd><a href="c1.html">C1</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+	<dd><a href="c1.html">C1</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
-C1 & Structural mismatch@c1.html & 13 & 8
+¶ C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
 C6 & Traceability disruption@c6.html & 7 & 6
-C7 & Temporal skew@c7.html & 3 & 9
+¶¶ C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>
 		<h2>Evidence Map</h2>

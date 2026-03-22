@@ -10,9 +10,23 @@
 			<br><span class="red">Case</span> <code>BUC11-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="buchgeher2011.html">Buchgeher2011</a></dd>
+	<dd><a href="buchgeher2011.html">Buchgeher2011</a></dd>
 <dt>Categories</dt>
-<dd><a href="c6.html">C6</a></dd>
+	<dd><a href="c6.html">C6</a></dd>
+<dt>Domain</dt>
+	<dd>Architecture decisions and implementation traceability</dd>
+<dt>Views</dt>
+	<dd>Requirements/design decisions</dd>
+	<dd>architecture</dd>
+	<dd>implementation</dd>
+<dt>Artefacts</dt>
+	<dd>Traceability relationships among decision, architecture, and code artifacts</dd>
+<dt>Quotes</dt>
+	<dd>"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"</dd>
+<dt>Summary</dt>
+	<dd>Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact.</dd>
+	<dd>Manual, retrospective trace recovery is error-prone and incomplete.</dd>
+	<dd>Important relations can be missed, weakening architecture-related activities and reasoning.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -22,7 +36,7 @@ C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
+¶ C6 & Traceability disruption@c6.html & 7 & 6
 C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>

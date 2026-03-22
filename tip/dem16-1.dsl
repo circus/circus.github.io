@@ -10,9 +10,23 @@
 			<br><span class="red">Case</span> <code>DEM16-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="demuth2016.html">Demuth2016</a></dd>
+	<dd><a href="demuth2016.html">Demuth2016</a></dd>
 <dt>Categories</dt>
-<dd><a href="c6.html">C6</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+	<dd><a href="c6.html">C6</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>Automation engineering</dd>
+	<dd>electrical models and controller software</dd>
+<dt>Views</dt>
+	<dd>Electrical model</dd>
+	<dd>corresponding software controller</dd>
+<dt>Artefacts</dt>
+	<dd>Engineer-defined links and consistency rules across tools</dd>
+<dt>Quotes</dt>
+	<dd>"maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change"</dd>
+<dt>Summary</dt>
+	<dd>Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules.</dd>
+	<dd>Concurrent cross-domain evolution in heterogeneous engineering tools.</dd>
+	<dd>Change impact becomes erroneous unless consistency checking notifies engineers.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -22,8 +36,8 @@ C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
-C7 & Temporal skew@c7.html & 3 & 9
+¶ C6 & Traceability disruption@c6.html & 7 & 6
+¶¶ C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>
 		<h2>Evidence Map</h2>

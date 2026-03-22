@@ -127,6 +127,11 @@ ABB09-1
 Abbors2009
 C4
 C6
+Model-based testing in telecommunications
+Requirements model (SysML) // UML system models // QML/Qtronic test specifications // test reports
+Requirement elements and links // traced UML elements // propagated QML requirement tags // generated tests // failed-test back-traces
+"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."
+Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test. // Trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic. // Missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.
 
 N94-1
 Nuseibeh1994
@@ -177,16 +182,31 @@ DEM16-1
 Demuth2016
 C6
 C7
+Automation engineering // electrical models and controller software
+Electrical model // corresponding software controller
+Engineer-defined links and consistency rules across tools
+"maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change"
+Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules. // Concurrent cross-domain evolution in heterogeneous engineering tools. // Change impact becomes erroneous unless consistency checking notifies engineers.
 
 BUC11-1
 Buchgeher2011
 C6
 —
+Architecture decisions and implementation traceability
+Requirements/design decisions // architecture // implementation
+Traceability relationships among decision, architecture, and code artifacts
+"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"
+Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact. // Manual, retrospective trace recovery is error-prone and incomplete. // Important relations can be missed, weakening architecture-related activities and reasoning.
 
 GEO12-1
 George2012
 C6
 C4
+Model-based testing
+Requirements model // design model // test model
+Relationships among requirements, design, tests, and executable tests
+"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails"
+When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements. // Gaps between requirements, design, and test models are not bridged by explicit relations. // Failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localize.
 
 MUR08-1
 Murta2008

@@ -10,9 +10,9 @@
 			<br><span class="red">Case</span> <code>J22-2</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="jongeling2022reality.html">Jongeling2022Reality</a></dd>
+	<dd><a href="jongeling2022reality.html">Jongeling2022Reality</a></dd>
 <dt>Categories</dt>
-<dd><a href="c4.html">C4</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+	<dd><a href="c4.html">C4</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -20,10 +20,10 @@
 C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
-C4 & Requirement satisfaction gap@c4.html & 7 & 1
+¶ C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
 C6 & Traceability disruption@c6.html & 7 & 6
-C7 & Temporal skew@c7.html & 3 & 9
+¶¶ C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>
 		<h2>Evidence Map</h2>

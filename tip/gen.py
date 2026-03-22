@@ -35,14 +35,28 @@ def maybe_update(new_content, old_content, filename):
 		print(filename, '... updated')
 
 def hyper_value(value):
-	return f'{value}@{value.lower()}.html'
+	if value.startswith('¶ '):
+		value = value.split('¶ ')[-1]
+		return f'¶ {value}@{value.lower()}.html'
+	else:
+		return f'{value}@{value.lower()}.html'
 def hyper_bracketed_value(value):
 	return f'[{value}]@{value.lower()}.html'
 def hyper_other_value(value1, value2):
+	if value2.startswith('¶'):
+		value2 = value2.replace('¶','').strip()
 	return f'{value1}@{value2.lower()}.html'
+def hyper_html_value(value):
+	return f'<a href="{value.lower()}.html">{value}</a>'
 
 def join(columns):
 	return ' & '.join(columns) + '\n'
+
+def add_pair(t,d):
+	result = f'<dt>{t}</dt>\n'
+	for dd in d.split('//'):
+		result += f'\t<dd>{dd.strip()}</dd>\n'
+	return result
 
 def process_index():
 	filename = 'index.dsl'
@@ -91,10 +105,11 @@ def process_category(c):
 		columns = line[:4]
 		# colour the rows
 		if columns[2] == c:
-			columns[0] = '¶ ' + columns[0]
-		if columns[3] == c:
-			columns[0] = '¶¶ ' + columns[0]
-		# TODO: hyperlinkify the case ID
+			columns[0] = '¶ ' + hyper_value(columns[0])
+		elif columns[3] == c:
+			columns[0] = '¶¶ ' + hyper_value(columns[0])
+		else:
+			columns[0] = hyper_value(columns[0])
 		columns[1] = hyper_bracketed_value(columns[1])
 		columns[2] = hyper_value(columns[2])
 		if columns[3] != '—':
@@ -103,40 +118,53 @@ def process_category(c):
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 def process_case(case):
-	return
-	filename = case.lower() + '.dsl'
+	# print(case)
+	filename = case[0].lower() + '.dsl'
 	old_content = safe_load(filename)
 	new_content = c_pattern\
 		.replace('###TITLE###',title_case)\
 		.replace('###SUBTITLE###',subtitle_case)\
-		.replace('###SUBPARA###',subpara)\
+		.replace('###SUBPARA###',subpara_case)\
 		.replace('###EVIDENCE###', evidence)
-	par0 = par1 = par3 = par4 = ''
-	par2 = c
+	par0 = par1 = par3 = ''
+	par2 = case[0]
 	for line in c_table:
 		columns = line[:]
-		if columns[0] == c:
-			par3 = columns[1]
-			par4 = columns[4]
-			if len(columns) > 5:
-				par4 += '</p><p>' + columns[5]
-		else:
-			columns[1] = hyper_other_value(columns[1], columns[0])
+		if columns[0] == case[2]:
+			columns[0] = '¶ ' + columns[0]
+		if columns[0] == case[3]:
+			columns[0] = '¶¶ ' + columns[0]
+		columns[1] = hyper_other_value(columns[1], columns[0])
 		par0 += join(columns[:4])
 	for line in e_table:
 		columns = line[:4]
-		# colour the rows
-		if columns[2] == c:
-			columns[0] = '¶ ' + columns[0]
-		if columns[3] == c:
-			columns[0] = '¶¶ ' + columns[0]
-		# TODO: hyperlinkify the case ID
+		if columns[0] == case[0]:
+			columns[0] = '¶ ' + hyper_value(columns[0])
+		else:
+			columns[0] = hyper_value(columns[0])
 		columns[1] = hyper_bracketed_value(columns[1])
 		columns[2] = hyper_value(columns[2])
 		if columns[3] != '—':
 			columns[3] = hyper_value(columns[3])
 		par1 += join(columns)
-	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
+	# fill in the "form"
+	par3 = add_pair('Source', hyper_html_value(case[1]))
+	cats = hyper_html_value(case[2])
+	if case[3] != '—':
+		cats += f' (primary); {hyper_html_value(case[3])} (secondary)'
+	par3 += add_pair('Categories', cats)
+	if len(case)>4:
+		par3 += add_pair('Domain', case[4])
+	if len(case)>5:
+		par3 += add_pair('Views', case[5])
+	if len(case)>6:
+		par3 += add_pair('Artefacts', case[6])
+	if len(case)>7:
+		par3 += add_pair('Quotes', case[7])
+	if len(case)>8:
+		par3 += add_pair('Summary', case[8])
+	# ...
+	maybe_update(new_content.format(par0, par1, par2, par3), old_content, filename)
 
 c_pattern = '''
 <html doctype>
@@ -179,7 +207,7 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
 and a basis for more precise claims about what checking and repair approaches do and do not cover.</p>'''
 subpara_cat = '<p>{4}</p>'
-subpara_case = '<p>{3}</p>'
+subpara_case = '<dl>{3}</dl><h2>Taxonomy Categories</h2>'
 evidence = '''<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary

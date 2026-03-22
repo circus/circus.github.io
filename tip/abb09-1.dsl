@@ -10,21 +10,28 @@
 			<br><span class="red">Case</span> <code>ABB09-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="abbors2009.html">Abbors2009</a></dd>
+	<dd><a href="abbors2009.html">Abbors2009</a></dd>
 <dt>Categories</dt>
-<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
+	<dd><a href="c4.html">C4</a> (primary); <a href="c6.html">C6</a> (secondary)</dd>
 <dt>Domain</dt>
-<dd>Model-based testing in telecommunications</dd>
+	<dd>Model-based testing in telecommunications</dd>
 <dt>Views</dt>
-<dd>Requirements model (SysML); UML system models; QML/Qtronic test specifications; test reports</dd>
+	<dd>Requirements model (SysML)</dd>
+	<dd>UML system models</dd>
+	<dd>QML/Qtronic test specifications</dd>
+	<dd>test reports</dd>
 <dt>Artefacts</dt>
-<dd>Requirement elements and links; traced UML elements; propagated QML requirement tags; generated tests; failed-test back-traces</dd>
+	<dd>Requirement elements and links</dd>
+	<dd>traced UML elements</dd>
+	<dd>propagated QML requirement tags</dd>
+	<dd>generated tests</dd>
+	<dd>failed-test back-traces</dd>
 <dt>Quotes</dt>
-<dd>"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."</dd>
+	<dd>"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."</dd>
 <dt>Summary</dt>
-<dd>Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test.</dd>
-<dd>Trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic.</dd>
-<dd>Missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.</dd>
+	<dd>Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test.</dd>
+	<dd>Trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic.</dd>
+	<dd>Missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.</dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
@@ -32,9 +39,9 @@
 C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
-C4 & Requirement satisfaction gap@c4.html & 7 & 1
+¶ C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
-C6 & Traceability disruption@c6.html & 7 & 6
+¶¶ C6 & Traceability disruption@c6.html & 7 & 6
 C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>

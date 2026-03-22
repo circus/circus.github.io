@@ -10,14 +10,14 @@
 			<br><span class="red">Case</span> <code>J19-3</code>
 		</h1>
 		<dl><dt>Source</dt>
-<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
+	<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
 <dt>Categories</dt>
-<dd><a href="c1.html">C1</a></dd>
+	<dd><a href="c1.html">C1</a></dd>
 </dl><h2>Taxonomy Categories</h2>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
-C1 & Structural mismatch@c1.html & 13 & 8
+¶ C1 & Structural mismatch@c1.html & 13 & 8
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
