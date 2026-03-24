@@ -208,6 +208,9 @@ def process_source(key):
 		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
+def cap(s):
+	return ' '.join([word[0].upper() + word[1:] for word in s.split(' ')])
+
 c_pattern = '''<html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns###TITLE###" />
 	<body>
@@ -286,3 +289,15 @@ with open('sources.bib', "r", encoding="utf-8") as f:
 			bibitems[key].append(line)
 for key in bibitems.keys():
 	process_source(key)
+
+with open('macros.tex', "w", encoding="utf-8") as f:
+	f.write('\\usepackage{tabularx}\n')
+	f.write('\\newcolumntype{Y}{>{\\raggedright\\arraybackslash}X}\n\n')
+	for cat in all_cats:
+		letter = chr(ord('A') + int(cat[1]) - 1)
+		f.write(f'\\newcommand{{\\C{letter}}}{{\\textcolor{{purple}}{{\\textbf{{{cat}}}}}\\xspace}}\n')
+		for cat_rec in c_table:
+			if cat_rec[0] == cat:
+				f.write(f'\\newcommand{{\\C{letter}text}}{{{cat_rec[1]}\\xspace}}\n')
+				f.write(f'\\newcommand{{\\C{letter}textU}}{{{cap(cat_rec[1])}\\xspace}}\n')
+				f.write(f'\\newcommand{{\\C{letter}textL}}{{{cat_rec[1].lower()}\\xspace}}\n')
