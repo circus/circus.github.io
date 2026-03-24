@@ -19,11 +19,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	# Other counters
 	HX = 0
 	picdir = divclass = ''
-	print('Processing', dsl, '...', end="")
 	f = open(dsl, 'r', encoding='utf-8')
 	html = dsl.replace('.dsl', '.html')
 	if os.path.exists(html) and os.path.getmtime(html) >= os.path.getmtime(dsl):
-		print(' preserved')
+		# print(' preserved')
 		continue
 	lines = f.readlines()
 	f.close()
@@ -408,6 +407,6 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 
 		i += 1
 	g.close()
-	print(' updated')
+	print('Processing', dsl, '...', 'updated')
 
 

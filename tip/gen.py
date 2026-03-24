@@ -28,7 +28,8 @@ def load_data(filename):
 
 def maybe_update(new_content, old_content, filename):
 	if new_content == old_content:
-		print(filename, '... preserved')
+		# print(filename, '... preserved')
+		pass
 	else:
 		with open(filename, "w", encoding="utf-8") as f:
 			f.write(new_content)
@@ -49,6 +50,9 @@ def hyper_other_value(value1, value2):
 def hyper_html_value(value):
 	return f'<a href="{value.lower()}.html">{value}</a>'
 
+def join_flip(columns):
+	return join((columns[0], columns[1], columns[4], columns[5]))
+
 def join(columns):
 	return ' & '.join(columns) + '\n'
 
@@ -68,9 +72,9 @@ def process_index():
 		.replace('###EVIDENCE###', evidence)
 	par0 = par1 = ''
 	for line in c_table:
-		columns = line[:4]
+		columns = line[:]
 		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join(columns)
+		par0 += join_flip(columns)
 	for line in e_table:
 		columns = line[:4]
 		columns[0] = hyper_value(columns[0])
@@ -95,12 +99,10 @@ def process_category(c):
 		columns = line[:]
 		if columns[0] == c:
 			par3 = columns[1]
-			par4 = columns[4]
-			if len(columns) > 5:
-				par4 += '</p><p>' + columns[5]
+			par4 = columns[2] + '</p><p>' + columns[3]
 		else:
 			columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join(columns[:4])
+		par0 += join_flip(columns)
 	for line in e_table:
 		columns = line[:4]
 		# colour the rows
@@ -135,7 +137,7 @@ def process_case(case):
 		if columns[0] == case[3]:
 			columns[0] = '¶¶ ' + columns[0]
 		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join(columns[:4])
+		par0 += join_flip(columns)
 	for line in e_table:
 		columns = line[:4]
 		if columns[0] == case[0]:
@@ -186,17 +188,12 @@ def process_source(key):
 			before, after = line.split('{')
 			doi, after = after.split('}')
 			par4 += before + f'{{<a href="https://doi.org/{doi}">{doi}</a>}}' + after
-		# elif len(line) > 80:
-		# 	i = 80
-		# 	while line[i] != ' ':
-		# 		i -= 1
-		# 	par4 += line[:i] + '\n' + line[i:]
 		else:
 			par4 += line
 	for line in c_table:
 		columns = line[:]
 		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join(columns[:4])
+		par0 += join_flip(columns)
 	for line in e_table:
 		columns = line[:4]
 		# colour the rows
@@ -262,6 +259,10 @@ Case ID & Source & Primary & Secondary
 
 c_table = load_data('cat.data')[1:]
 e_table = load_data('evidence.data')[1:]
+
+all_cats = [line[0] for line in c_table]
+primary = {c:len([1 for record in e_table if record[2]==c]) for c in all_cats}
+secondary = {c:len([1 for record in e_table if record[3]==c]) for c in all_cats}
 
 process_index()
 for line in c_table:
