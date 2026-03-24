@@ -263,6 +263,9 @@ e_table = load_data('evidence.data')[1:]
 all_cats = [line[0] for line in c_table]
 primary = {c:len([1 for record in e_table if record[2]==c]) for c in all_cats}
 secondary = {c:len([1 for record in e_table if record[3]==c]) for c in all_cats}
+for cat in c_table:
+	cat.append(str(primary[cat[0]]))
+	cat.append(str(secondary[cat[0]]))
 
 process_index()
 for line in c_table:

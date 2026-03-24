@@ -2,54 +2,38 @@ Code
 Label
 Short
 Long
-As primary
-As secondary
 
 C1
 Structural mismatch
 An expected correspondence, allocation, or refinement relation between views is missing, extra, or incompatible.
 C1 captures the broad family of cases where views are expected to align through some <em>correspondence or refinement relation</em> but do not. Examples include a design-level call relation that is added without a matching implementation update, a missing subsystem in a lower-level model, and failure of a one-to-one model-to-code decomposition mapping. The same family also subsumes many formal refinement cases where a lower-level model changes the realised structure in a way that no longer preserves the intent of the higher-level one.
-13
-8
 
 C2
 Interface contract mismatch
 Views disagree at a boundary on signatures, ports, parameter sets, types, units, directions, or equivalent exchanged values.
 C2 is about <em>interfacing between components</em>, it isolates boundary-level disagreements. Typical exam-ples include incompatible call signatures, wrong connector direction, inconsistent parametrisation of the same physical quantity, or mismatched equivalent values in aligned models [7, 8, 11]. We separated C2 from C1 because many inter-view defects arise not from missing correspondence, but from correspondence that exists yet disagrees on the contract at the boundary.
-4
-5
 
 C3
 Behavioural contradiction   
 Views admit conflicting protocols, orderings, pre/postconditions, state combinations, or jointly unsafe behaviour.
 C3 covers cases where the problem lies in the <em>jointly admitted behaviour</em> rather than in naming or structure. In our corpus, the clearest examples come from behavioural multi-modelling: different models compose into globally unsafe traffic-light states, or one model allows progress that is inconsistent with the state assumed by another. We also observed refinement examples in which lower-level protocols alter the nondeterministic or allowed behaviour of a higher-level one. Although C3 is one of the smallest categories in our counts, we do not interpret that as lack of importance. Quite the opposite: behavioural contradictions are repeatedly described by others as difficult to detect, expensive to formalise, and under-supported by available tools
-3
-6
 
 C4
 Requirement satisfaction gap
 A requirement is not adequately realised, linked, tested, or accompanied by the artefacts needed to justify satisfaction.
 C4 covers failures to justify that <em>requirements are satisfied or covered</em>. Some examples are classical viewpoint gaps, such as a required dependent view not being created, or a formal schema lacking its required associated description. Others arise later in the lifecycle, for instance when critical requirements are not traced through to tests, or when tests continue to execute but no longer cover the intended behaviour after model evolution.
-7
-1
 
 C5
 Terminology divergence      
 Corresponding concepts are named differently, or the same label is used for non-equivalent concepts across views.
 C5 captures lexical and <em>terminological disagreement</em>, be it simply naming or representative of semantic mismatches. Illustrative cases include class renaming in a library that is not propagated across related artefacts, inconsistent names for linked properties, and fragile model-code correspondence rules that depend on naming conventions being followed uniformly. We retained naming as a top-level category because the surveys already indicate that terminology inconsistency is a real obstacle in multi-view work, and because naming problems often act as the first point of failure for correspondence mechanisms.
-3
-3
 
 C6
 Traceability disruption     
 Explicit cross-artefact links are missing, stale, ambiguous, incomplete, or insufficiently maintained for navigation or impact analysis.
 C6 covers explicit <em>relation failures</em>: stale links, incomplete link sets, missing links needed for impact analysis, or insufficient relation information for backward navigation after a test failure. In this category, the main defect is that the cross-artefact relation itself is not reliably available, even when the underlying artefacts may still be individually valid.</p><p>Disruptions of the traceability chain also turned out to be a major meeting point between research prototypes and industrial practice. Published tools often handle trace links more readily than behavioural semantics, but the literature simultaneously shows how easily those links decay under evolution.
-7
-6
 
 C7
 Temporal skew               
 Views are individually plausible but inconsistent because they reflect different points in evolution, propagation, or branching history.
 C7 captures drift caused by <em>asynchronous evolution</em>. Examples include code customised after generation while the source model remains unchanged, models staying stale for long periods while implementations evolve, and parallel versions producing conflicting states for the same method
-3
-9

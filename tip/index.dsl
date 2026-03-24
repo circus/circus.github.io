@@ -24,7 +24,7 @@ and a basis for more precise claims about what checking and repair approaches do
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
-C1 & Structural mismatch@c1.html & 13 & 8
+C1 & Structural mismatch@c1.html & 13 & 7
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
