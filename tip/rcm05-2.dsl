@@ -27,8 +27,8 @@
 	<dd>Cause: protocol refinement tightens behavioural assumptions relative to the abstract view.</dd>
 	<dd>As a result, behavioural possibilities differ across abstraction levels; refinement must be checked to ensure the lower-level behaviour is still permitted by the higher-level one.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

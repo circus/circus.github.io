@@ -25,8 +25,8 @@
 	<dd>Cause: concurrent evolution without immediate reconciliation.</dd>
 	<dd>As a result, merge/conflict situation across versions; synchronisation and repair become necessary.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

@@ -29,8 +29,8 @@
 	<dd>Cause: a consistency rule spanning requirements, implementation, and tests is broken by partial co-evolution.</dd>
 	<dd>As a result, the multi-model set becomes invalid under the stated coverage/satisfaction rule.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

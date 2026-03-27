@@ -32,8 +32,8 @@
 	<dd>Cause: trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic.</dd>
 	<dd>As a result, there are missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

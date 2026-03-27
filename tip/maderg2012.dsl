@@ -17,8 +17,8 @@
   doi = {<a href="https://doi.org/10.1016/j.jss.2011.10.023">10.1016/j.jss.2011.10.023</a>}
 }
 </pre>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

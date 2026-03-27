@@ -28,8 +28,8 @@
 	<dd>Cause: cross-view correspondence constraint between partial requirements views is violated.</dd>
 	<dd>As a result, the same domain participant is represented inconsistently across views, weakening integration between decomposition and flow-oriented descriptions.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

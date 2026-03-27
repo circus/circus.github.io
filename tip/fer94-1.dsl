@@ -28,8 +28,8 @@
 	<dd>Cause: a required successor specification view is missing, so the decomposition is not elaborated into the next required requirements view.</dd>
 	<dd>As a result, the requirements description is incomplete across views; downstream checks and refinements cannot be carried out for that agent.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶¶ C1 & Structural mismatch@c1.html & 13 & 7

@@ -2,6 +2,21 @@
 
 import os
 
+def beautify_latex(lines):
+	for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash'):
+		for i in range(len(lines)):
+			if lines[i].find('\\' + kw) > -1:
+				lines[i] = lines[i].replace(kw, f'[kw1]{kw}[/]')
+	for kw in ('table', 'tabularx', 'purple'):
+		for i in range(len(lines)):
+			if lines[i].find('{' + kw + '}') > -1:
+				lines[i] = lines[i].replace(kw, f'[kw2]{kw}[/]')
+	for i in range(len(lines)):
+		lines[i] = lines[i].replace('&', f'[kw2]&amp;[/]')
+		if lines[i].endswith('\\\\'):
+			lines[i] = lines[i][:-2] + '[kw2]\\\\[/]'
+	return lines
+
 def safe_load(filename):
 	if not filename.endswith('.dsl'):
 		filename += '.dsl'
@@ -208,6 +223,35 @@ def process_source(key):
 		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
+def process_latex(lines, filename):
+	tex_filename = filename + '.tex'
+	html_filename = filename + '.dsl'
+	old_tex_content = safe_load(tex_filename)
+	old_html_content = safe_load(html_filename)
+	new_tex_content = '\n'.join(lines) + '\n'
+	new_html_content = c_pattern\
+		.replace('###TITLE###',title_single)\
+		.replace('###SUBTITLE###',artefact_source)\
+		.replace('###SUBPARA###',sub_tex)\
+		.replace('###EVIDENCE###', '')
+	par0 = par1 = ''
+	par2 = filename
+	par3 = '\n'.join(beautify_latex(lines))
+	for line in c_table:
+		columns = line[:]
+		columns[1] = hyper_other_value(columns[1], columns[0])
+		par0 += join_flip(columns)
+	for line in e_table:
+		columns = line[:4]
+		columns[0] = hyper_value(columns[0])
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
+		if columns[3] != '—':
+			columns[3] = hyper_value(columns[3])
+		par1 += join(columns)
+	maybe_update(new_tex_content, old_tex_content, tex_filename)
+	maybe_update(new_html_content.format(par0, par1, par2, par3), old_html_content, html_filename)
+
 def cap(s):
 	return ' '.join([word[0].upper() + word[1:] for word in s.split(' ')])
 
@@ -222,7 +266,6 @@ c_pattern = '''<html doctype>
 			###SUBTITLE###
 		</h1>
 		###SUBPARA###
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 {0}
@@ -238,6 +281,7 @@ title_single = ' — {2}'
 subtitle_cat = '<br><span class="red">Category</span> <code>{2}</code>: {3}'
 subtitle_case = '<br><span class="red">Case</span> <code>{2}</code>'
 subtitle_source = '<br><span class="red">Source</span> <code>{2}</code>'
+artefact_source = '<br><span class="red">Artefact</span> <code>{2}</code>'
 indexpara = '''<p>
 Multi-view modelling relies on consistency across heterogeneous views. Up until now, the literature
 lacked a compact, example-backed taxonomy of the inconsistency patterns that we keep seeing across
@@ -254,11 +298,13 @@ and a basis for more precise claims about what checking and repair approaches do
 </p></p>
 Feel free to browse specifics hyperlinked below or bulk download
 the BibTeX collection <a href="sources.bib">sources.bib</a> or 
-LaTeX files <a href="macros.tex">macros.tex</a>, <a href="table1.tex">table1.tex</a>, …
+LaTeX files <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, …
 </p>'''
-sub_para = '<p>{4}</p>'
-sub_list = '<dl>{3}</dl>\n<h2>Taxonomy Categories</h2>'
-sub_bib = '<p>{3}</p>\n<pre>{4}</pre>\n<h2>Taxonomy Categories</h2>'
+sub_para = '<p>{4}</p>\n\t\t<clear/>'
+main_table_title = '\n<clear/>\n<h2>Taxonomy Categories</h2>'
+sub_list = '<dl>{3}</dl>' + main_table_title
+sub_bib = '<p>{3}</p>\n<pre>{4}</pre>' + main_table_title
+sub_tex = '<p>Download raw LaTeX: <a href="{2}.tex">{2}.tex</a></p>\n<pre>{3}</pre>' + main_table_title
 evidence = '''<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
@@ -295,35 +341,40 @@ with open('sources.bib', "r", encoding="utf-8") as f:
 for key in bibitems.keys():
 	process_source(key)
 
-with open('macros.tex', "w", encoding="utf-8") as f:
-	f.write('\\usepackage{tabularx}\n')
-	f.write('\\newcolumntype{Y}{>{\\raggedright\\arraybackslash}X}\n\n')
-	for cat in all_cats:
-		letter = chr(ord('A') + int(cat[1]) - 1)
-		f.write(f'\\newcommand{{\\C{letter}}}{{\\textcolor{{purple}}{{\\textbf{{{cat}}}}}\\xspace}}\n')
-		for cat_rec in c_table:
-			if cat_rec[0] == cat:
-				f.write(f'\\newcommand{{\\C{letter}text}}{{{cat_rec[1]}\\xspace}}\n')
-				f.write(f'\\newcommand{{\\C{letter}textU}}{{{cap(cat_rec[1])}\\xspace}}\n')
-				f.write(f'\\newcommand{{\\C{letter}textL}}{{{cat_rec[1].lower()}\\xspace}}\n')
+# Generate the generic macros file (used by all the tables)
+latex = []
+latex.append('\\usepackage{tabularx}')
+latex.append('\\newcolumntype{Y}{>{\\raggedright\\arraybackslash}X}')
+latex.append('')
+for cat in all_cats:
+	letter = chr(ord('A') + int(cat[1]) - 1)
+	latex.append(f'\\newcommand{{\\C{letter}}}{{\\textcolor{{purple}}{{\\textbf{{{cat}}}}}\\xspace}}')
+	for cat_rec in c_table:
+		if cat_rec[0] == cat:
+			latex.append(f'\\newcommand{{\\C{letter}text}}{{{cat_rec[1]}\\xspace}}')
+			latex.append(f'\\newcommand{{\\C{letter}textU}}{{{cap(cat_rec[1])}\\xspace}}')
+			latex.append(f'\\newcommand{{\\C{letter}textL}}{{{cat_rec[1].lower()}\\xspace}}')
+process_latex(latex, 'macros')
 
-with open('table1.tex', "w", encoding="utf-8") as f:
-	f.write('\\begin{table}[t]\n')
-	f.write(f'\\caption{{Stabilised taxonomy of inconsistency patterns. Counts are based on the {len(e_table)} core examples.}}\n')
-	f.write('\\label{tab:taxonomy}\n')
-	f.write('\\small\n')
-	f.write('\\begin{tabularx}{\\linewidth}{@{}l l c Y@{}}\n')
-	f.write('\\toprule\n')
-	f.write('Code & Label & Count & Definition \\\\\n')
-	f.write('\\midrule\n')
-	for cat in all_cats:
-		letter = chr(ord('A') + int(cat[1]) - 1)
-		for cat_rec in c_table:
-			if cat == cat_rec[0]:
-				f.write(f'\\C{letter} & \\C{letter}text & {cat_rec[4]} & {cat_rec[2]} \\\\\n')
-	f.write('\\bottomrule\n')
-	f.write('\\end{tabularx}\n')
-	f.write('\\end{table}\n')
+# Generate the first table (with just the taxonomy and basic statistics/descriptions)
+latex = []
+latex.append('\\begin{table}[t]')
+latex.append(f'\\caption{{Stabilised taxonomy of inconsistency patterns. Counts are based on the {len(e_table)} core examples.}}')
+latex.append('\\label{tab:taxonomy}')
+latex.append('\\small')
+latex.append('\\begin{tabularx}{\\linewidth}{@{}l l c Y@{}}')
+latex.append('\\toprule')
+latex.append('Code & Label & Count & Definition \\\\')
+latex.append('\\midrule')
+for cat in all_cats:
+	letter = chr(ord('A') + int(cat[1]) - 1)
+	for cat_rec in c_table:
+		if cat == cat_rec[0]:
+			latex.append(f'\\C{letter} & \\C{letter}text & {cat_rec[4]} & {cat_rec[2]} \\\\')
+latex.append('\\bottomrule')
+latex.append('\\end{tabularx}')
+latex.append('\\end{table}')
+process_latex(latex, 'table1')
 
 with open('table2.tex', "w", encoding="utf-8") as f:
 	f.write('\\begin{table}[t]\n')

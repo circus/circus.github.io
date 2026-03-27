@@ -29,8 +29,8 @@
 	<dd>Cause: behavioural dependence among views is ignored during composition/execution.</dd>
 	<dd>As a result, violations of global behavioural properties that span models.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

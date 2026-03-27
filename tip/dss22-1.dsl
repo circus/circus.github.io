@@ -28,8 +28,8 @@
 	<dd>Cause: real code organisation does not obey the assumed architectural correspondence rule.</dd>
 	<dd>As a result, initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

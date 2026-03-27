@@ -28,8 +28,8 @@
 	<dd>Cause: semantic/interface constraints between linked elements are violated.</dd>
 	<dd>As a result, incorrect or impossible interaction between components/classes; manual correction required.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶¶ C1 & Structural mismatch@c1.html & 13 & 7

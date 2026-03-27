@@ -26,8 +26,8 @@
 	<dd>Cause: informal naming discipline is relied upon for correspondence but is not socially enforced consistently.</dd>
 	<dd>As a result, reduced precision/usefulness of consistency checks and disagreement over enforcement strictness.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶¶ C1 & Structural mismatch@c1.html & 13 & 7

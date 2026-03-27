@@ -28,8 +28,8 @@
 	<dd>Cause: co-evolution of tests lags behind changes in design/implementation models.</dd>
 	<dd>As a result, passing tests may become misleading or meaningless as evidence for the model.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

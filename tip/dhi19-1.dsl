@@ -26,8 +26,8 @@
 	<dd>Cause: equivalent elements lack aligned terminology.</dd>
 	<dd>As a result, correspondence establishment and interpretation become harder; repair action is naming-related.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

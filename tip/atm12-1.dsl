@@ -28,8 +28,8 @@
 	<dd>Cause: artifact evolution without commensurate maintenance of trace links.</dd>
 	<dd>As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

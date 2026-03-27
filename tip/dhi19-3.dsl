@@ -29,8 +29,8 @@
 	<dd>Cause: refinement relation is ill-formed or points to a mismatched artifact.</dd>
 	<dd>As a result, breakdown of abstraction linkage between management/documentation and engineering views.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

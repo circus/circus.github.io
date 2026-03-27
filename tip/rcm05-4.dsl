@@ -28,8 +28,8 @@
 	<dd>Cause: behavioural refinement introduces intermediate protocol states that must still correspond to one abstract transition.</dd>
 	<dd>As a result, without the extra constraints, the refined protocol can exhibit traces that the abstract protocol never allowed.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

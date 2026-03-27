@@ -29,8 +29,8 @@
 	<dd>Cause: a data-type transformation changes the semantics of state and operations across refinement levels.</dd>
 	<dd>As a result, the refined model may preserve representation but alter observable behaviour unless a valid refinement relation is established.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

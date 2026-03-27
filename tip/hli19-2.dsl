@@ -26,8 +26,8 @@
 	<dd>Cause: shared parameter value diverges across views.</dd>
 	<dd>As a result, behaviour of the implemented function may be incorrect despite local plausibility of each model.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

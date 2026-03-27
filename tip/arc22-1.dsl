@@ -27,8 +27,8 @@
 	<dd>Cause: manual post-generation evolution of code without reverse synchronisation to the model.</dd>
 	<dd>As a result, model ceases to be a trustworthy description of the implementation; maintainability suffers.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶¶ C1 & Structural mismatch@c1.html & 13 & 7

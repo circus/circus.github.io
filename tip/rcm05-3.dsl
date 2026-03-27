@@ -28,8 +28,8 @@
 	<dd>Cause: an operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths.</dd>
 	<dd>As a result, the refined model can admit behaviours not present in the abstract one unless continuation and proper-starting conditions are enforced.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

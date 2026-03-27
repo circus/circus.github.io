@@ -19,8 +19,8 @@
   note = "Examples from authors' slides at \url{<a href="https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}">https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}</a>"
 }
 </pre>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

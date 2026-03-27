@@ -26,8 +26,8 @@
 	<dd>Cause: substantial system evolution without synchronised update of stored trace links.</dd>
 	<dd>As a result, trace set loses validity and requires maintenance/evolution support.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

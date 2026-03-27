@@ -257,6 +257,12 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = expandred(lines[i], 'canvasred', 'https://canvas.utwente.nl/courses/', '', 'Canvas')
 		if lines[i].find('<pdfred>') > -1:
 			lines[i] = expandred(lines[i], 'pdfred', '', '', 'PDF')
+		if lines[i].find('[kw1]') > -1:
+			lines[i] = lines[i].replace('[kw1]', '<span class="kw1">').replace('[/]', '</span>')
+		if lines[i].find('[kw2]') > -1:
+			lines[i] = lines[i].replace('[kw2]', '<span class="kw2">').replace('[/]', '</span>')
+		if lines[i].find('[kw3]') > -1:
+			lines[i] = lines[i].replace('[kw3]', '<span class="kw3">').replace('[/]', '</span>')
 		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

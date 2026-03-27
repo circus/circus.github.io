@@ -20,8 +20,8 @@
   doi = {<a href="https://doi.org/10.5381/jot.2022.21.3.a6">10.5381/jot.2022.21.3.a6</a>}
 }
 </pre>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

@@ -28,8 +28,8 @@
 	<dd>Cause: asynchronous development and missing feedback loop between abstraction levels.</dd>
 	<dd>As a result, implementation may drift from the intended design and engineers lose model-based overview.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

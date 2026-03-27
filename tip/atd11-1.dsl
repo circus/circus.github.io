@@ -27,8 +27,8 @@
 	<dd>Cause: manual, retrospective trace recovery is error-prone and incomplete.</dd>
 	<dd>As a result, important relations can be missed, weakening architecture-related activities and reasoning.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

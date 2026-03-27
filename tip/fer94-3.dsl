@@ -27,8 +27,8 @@
 	<dd>Cause: inter-view coverage/completeness rule on information flow is violated.</dd>
 	<dd>As a result, the requirements model contains an unfulfilled or dangling flow of information between agents.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

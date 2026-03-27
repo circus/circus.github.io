@@ -24,9 +24,8 @@ and a basis for more precise claims about what checking and repair approaches do
 </p></p>
 Feel free to browse specifics hyperlinked below or bulk download
 the BibTeX collection <a href="sources.bib">sources.bib</a> or 
-LaTeX files <a href="macros.tex">macros.tex</a>, <a href="table1.tex">table1.tex</a>, …
+LaTeX files <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, …
 </p>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

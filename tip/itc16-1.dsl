@@ -27,8 +27,8 @@
 	<dd>Cause: concurrent cross-domain evolution in heterogeneous engineering tools.</dd>
 	<dd>As a result, change impact becomes erroneous unless consistency checking notifies engineers.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

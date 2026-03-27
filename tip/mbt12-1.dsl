@@ -27,8 +27,8 @@
 	<dd>Cause: gaps between requirements, design, and test models are not bridged by explicit relations.</dd>
 	<dd>As a result, failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localise.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

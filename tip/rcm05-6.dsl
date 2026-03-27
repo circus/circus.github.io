@@ -28,8 +28,8 @@
 	<dd>Cause: behavioural extension introduces new transitions running alongside the original protocol.</dd>
 	<dd>As a result, consistency depends on substitutivity: the extended model must preserve the old behaviour under interleaving with the new action.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7

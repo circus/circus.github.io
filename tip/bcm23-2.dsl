@@ -28,8 +28,8 @@
 	<dd>Cause: interaction semantics between models are insufficiently constrained or incorrectly coordinated.</dd>
 	<dd>As a result, behavioural safety violation during execution.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 C1 & Structural mismatch@c1.html & 13 & 7

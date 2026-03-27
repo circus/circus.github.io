@@ -27,8 +27,8 @@
 	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>
 	<dd>As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.</dd>
 </dl>
+<clear/>
 <h2>Taxonomy Categories</h2>
-		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
 ¶ C1 & Structural mismatch@c1.html & 13 & 7
