@@ -7,7 +7,7 @@ def beautify_latex(lines):
 		for i in range(len(lines)):
 			if lines[i].find('\\' + kw) > -1:
 				lines[i] = lines[i].replace(kw, f'[kw1]{kw}[/]')
-	for kw in ('table', 'tabularx', 'purple'):
+	for kw in ('table',  'tabular', 'tabularx', 'purple'):
 		for i in range(len(lines)):
 			if lines[i].find('{' + kw + '}') > -1:
 				lines[i] = lines[i].replace(kw, f'[kw2]{kw}[/]')
@@ -18,7 +18,7 @@ def beautify_latex(lines):
 	return lines
 
 def safe_load(filename):
-	if not filename.endswith('.dsl'):
+	if filename.find('.') < -1:
 		filename += '.dsl'
 	if not os.path.exists(filename):
 		return ''
@@ -275,8 +275,11 @@ concise vocabulary for describing consistency problems, a reusable evidence map 
 and a basis for more precise claims about what checking and repair approaches do and do not cover.
 </p></p>
 Feel free to browse specifics hyperlinked below or bulk download
-the BibTeX collection <a href="sources.bib">sources.bib</a> or 
-LaTeX files <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, …
+the BibTeX collection <a href="sources.bib">sources.bib</a> or LaTeX files
+<a href="macros.html">macros.tex</a>,
+<a href="table1.html">table1.tex</a>,
+<a href="table2.html">table2.tex</a>,
+…
 </p>'''
 sub_para = '<p>{4}</p>\n\t\t<clear/>'
 main_table_title = '\n<clear/>\n<h2>Taxonomy Categories</h2>'
@@ -354,10 +357,25 @@ latex.append('\\end{tabularx}')
 latex.append('\\end{table}')
 process_latex(latex, 'table1')
 
-with open('table2.tex', "w", encoding="utf-8") as f:
-	f.write('\\begin{table}[t]\n')
-	f.write('\\caption{All cases with their IDs, primary and possibly secondary categories.}\n')
-	f.write('\\label{tab:allcats}\n')
-	f.write('\\small\n')
-	f.write('\\begin{tabular}{lrr|lrr|lrr}\n')
-	f.write('\\toprule\n')
+latex = []
+latex.append('\\begin{table}[t]')
+latex.append('\\caption{All cases with their IDs, primary and possibly secondary categories.}')
+latex.append('\\label{tab:allcats}')
+latex.append('\\small')
+latex.append('\\begin{tabular}{lrr|lrr|lrr}')
+latex.append('\\toprule')
+groups = [int(x[-2]) for x in c_table]
+print(groups)
+pivot = min(sum(groups) // 3, max(groups))
+print(pivot)
+division = []
+while len(division) != 3:
+	division = [[]]
+	for member in groups:
+		if sum(division[-1]) + member > pivot:
+			division.append([])
+		division[-1].append(member)
+	pivot += 1
+	print('Possibly', division)
+print('Definitely', division)
+process_latex(latex, 'table2')

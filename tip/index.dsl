@@ -23,8 +23,11 @@ concise vocabulary for describing consistency problems, a reusable evidence map 
 and a basis for more precise claims about what checking and repair approaches do and do not cover.
 </p></p>
 Feel free to browse specifics hyperlinked below or bulk download
-the BibTeX collection <a href="sources.bib">sources.bib</a> or 
-LaTeX files <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, …
+the BibTeX collection <a href="sources.bib">sources.bib</a> or LaTeX files
+<a href="macros.html">macros.tex</a>,
+<a href="table1.html">table1.tex</a>,
+<a href="table2.html">table2.tex</a>,
+…
 </p>
 		<table center clrr>
 			Code & Label & As primary & As secondary
