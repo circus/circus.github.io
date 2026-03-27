@@ -250,7 +250,12 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 46 inconsistency examples from 18 sources. After a stabilisation pass using explicit tie-break rules,
 40 examples were retained as core evidence and 6 as support-only examples. The taxonomy provides a
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
-and a basis for more precise claims about what checking and repair approaches do and do not cover.</p>'''
+and a basis for more precise claims about what checking and repair approaches do and do not cover.
+</p></p>
+Feel free to browse specifics hyperlinked below or bulk download
+the BibTeX collection <a href="sources.bib">sources.bib</a> or 
+LaTeX files <a href="macros.tex">macros.tex</a>, <a href="table1.tex">table1.tex</a>, …
+</p>'''
 sub_para = '<p>{4}</p>'
 sub_list = '<dl>{3}</dl>\n<h2>Taxonomy Categories</h2>'
 sub_bib = '<p>{3}</p>\n<pre>{4}</pre>\n<h2>Taxonomy Categories</h2>'
@@ -301,3 +306,29 @@ with open('macros.tex', "w", encoding="utf-8") as f:
 				f.write(f'\\newcommand{{\\C{letter}text}}{{{cat_rec[1]}\\xspace}}\n')
 				f.write(f'\\newcommand{{\\C{letter}textU}}{{{cap(cat_rec[1])}\\xspace}}\n')
 				f.write(f'\\newcommand{{\\C{letter}textL}}{{{cat_rec[1].lower()}\\xspace}}\n')
+
+with open('table1.tex', "w", encoding="utf-8") as f:
+	f.write('\\begin{table}[t]\n')
+	f.write(f'\\caption{{Stabilised taxonomy of inconsistency patterns. Counts are based on the {len(e_table)} core examples.}}\n')
+	f.write('\\label{tab:taxonomy}\n')
+	f.write('\\small\n')
+	f.write('\\begin{tabularx}{\\linewidth}{@{}l l c Y@{}}\n')
+	f.write('\\toprule\n')
+	f.write('Code & Label & Count & Definition \\\\\n')
+	f.write('\\midrule\n')
+	for cat in all_cats:
+		letter = chr(ord('A') + int(cat[1]) - 1)
+		for cat_rec in c_table:
+			if cat == cat_rec[0]:
+				f.write(f'\\C{letter} & \\C{letter}text & {cat_rec[4]} & {cat_rec[2]} \\\\\n')
+	f.write('\\bottomrule\n')
+	f.write('\\end{tabularx}\n')
+	f.write('\\end{table}\n')
+
+with open('table2.tex', "w", encoding="utf-8") as f:
+	f.write('\\begin{table}[t]\n')
+	f.write('\\caption{All cases with their IDs, primary and possibly secondary categories.}\n')
+	f.write('\\label{tab:allcats}\n')
+	f.write('\\small\n')
+	f.write('\\begin{tabular}{lrr|lrr|lrr}\n')
+	f.write('\\toprule\n')

@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{Stabilised taxonomy of inconsistency patterns. Counts are based on the 40 core examples.}
+\label{tab:taxonomy}
+\small
+\begin{tabularx}{\linewidth}{@{}l l c Y@{}}
+\toprule
+Code & Label & Count & Definition \\
+\midrule
+\CA & \CAtext & 13 & An expected correspondence, allocation, or refinement relation between views is missing, extra, or incompatible. \\
+\CB & \CBtext & 4 & Views disagree at a boundary on signatures, ports, parameter sets, types, units, directions, or equivalent exchanged values. \\
+\CC & \CCtext & 3 & Views admit conflicting protocols, orderings, pre/postconditions, state combinations, or jointly unsafe behaviour. \\
+\CD & \CDtext & 7 & A requirement is not adequately realised, linked, tested, or accompanied by the artefacts needed to justify satisfaction. \\
+\CE & \CEtext & 3 & Corresponding concepts are named differently, or the same label is used for non-equivalent concepts across views. \\
+\CF & \CFtext & 7 & Explicit cross-artefact links are missing, stale, ambiguous, incomplete, or insufficiently maintained for navigation or impact analysis. \\
+\CG & \CGtext & 3 & Views are individually plausible but inconsistent because they reflect different points in evolution, propagation, or branching history. \\
+\bottomrule
+\end{tabularx}
+\end{table}

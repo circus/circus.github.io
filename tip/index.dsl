@@ -20,7 +20,12 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 46 inconsistency examples from 18 sources. After a stabilisation pass using explicit tie-break rules,
 40 examples were retained as core evidence and 6 as support-only examples. The taxonomy provides a
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
-and a basis for more precise claims about what checking and repair approaches do and do not cover.</p>
+and a basis for more precise claims about what checking and repair approaches do and do not cover.
+</p></p>
+Feel free to browse specifics hyperlinked below or bulk download
+the BibTeX collection <a href="sources.bib">sources.bib</a> or 
+LaTeX files <a href="macros.tex">macros.tex</a>, <a href="table1.tex">table1.tex</a>, …
+</p>
 		<clear/>
 		<table center clrr>
 			Code & Label & As primary & As secondary
