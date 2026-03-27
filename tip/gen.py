@@ -77,6 +77,43 @@ def add_pair(t,d):
 		result += f'\t<dd>{dd.strip()}</dd>\n'
 	return result
 
+def hyperlink_map_no_highlight():
+	text = ''
+	for line in e_table:
+		columns = line[:4]
+		columns[0] = hyper_value(columns[0])
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
+		if columns[3] != '—':
+			columns[3] = hyper_value(columns[3])
+		text += join(columns)
+	return text
+
+def hyperlink_map_with_highlight(value, index1, index2=-1):
+	text = ''
+	for line in e_table:
+		columns = line[:4]
+		if columns[index1] == value:
+			columns[0] = '¶ ' + hyper_value(columns[0])
+		elif index2 >= 0 and columns[index2] == value:
+			columns[0] = '¶¶ ' + hyper_value(columns[0])
+		else:
+			columns[0] = hyper_value(columns[0])
+		columns[1] = hyper_bracketed_value(columns[1])
+		columns[2] = hyper_value(columns[2])
+		if columns[3] != '—':
+			columns[3] = hyper_value(columns[3])
+		text += join(columns)
+	return text
+
+def hyperlink_cats_no_highlight():
+	text = ''
+	for line in c_table:
+		columns = line[:]
+		columns[1] = hyper_other_value(columns[1], columns[0])
+		text += join_flip(columns)
+	return text
+
 def process_index():
 	filename = 'index.dsl'
 	old_content = safe_load(filename)
@@ -85,19 +122,8 @@ def process_index():
 		.replace('###SUBTITLE###','')\
 		.replace('###SUBPARA###',indexpara)\
 		.replace('###EVIDENCE###', evidence)
-	par0 = par1 = ''
-	for line in c_table:
-		columns = line[:]
-		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join_flip(columns)
-	for line in e_table:
-		columns = line[:4]
-		columns[0] = hyper_value(columns[0])
-		columns[1] = hyper_bracketed_value(columns[1])
-		columns[2] = hyper_value(columns[2])
-		if columns[3] != '—':
-			columns[3] = hyper_value(columns[3])
-		par1 += join(columns)
+	par0 = hyperlink_cats_no_highlight()
+	par1 = hyperlink_map_no_highlight()
 	maybe_update(new_content.format(par0, par1), old_content, filename)
 
 def process_category(c):
@@ -108,30 +134,17 @@ def process_category(c):
 		.replace('###SUBTITLE###',subtitle_cat)\
 		.replace('###SUBPARA###',sub_para)\
 		.replace('###EVIDENCE###', evidence)
-	par0 = par1 = par3 = par4 = ''
+	par0 = par3 = par4 = ''
+	par1 = hyperlink_map_with_highlight(c, 2, 3)
 	par2 = c
 	for line in c_table:
 		columns = line[:]
 		if columns[0] == c:
-			par3 = columns[1]
-			par4 = columns[2] + '</p><p>' + columns[3]
+			par3 += columns[1]
+			par4 += columns[2] + '</p><p>' + columns[3]
 		else:
 			columns[1] = hyper_other_value(columns[1], columns[0])
 		par0 += join_flip(columns)
-	for line in e_table:
-		columns = line[:4]
-		# colour the rows
-		if columns[2] == c:
-			columns[0] = '¶ ' + hyper_value(columns[0])
-		elif columns[3] == c:
-			columns[0] = '¶¶ ' + hyper_value(columns[0])
-		else:
-			columns[0] = hyper_value(columns[0])
-		columns[1] = hyper_bracketed_value(columns[1])
-		columns[2] = hyper_value(columns[2])
-		if columns[3] != '—':
-			columns[3] = hyper_value(columns[3])
-		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 def process_case(case):
@@ -143,7 +156,8 @@ def process_case(case):
 		.replace('###SUBTITLE###',subtitle_case)\
 		.replace('###SUBPARA###',sub_list)\
 		.replace('###EVIDENCE###', evidence)
-	par0 = par1 = par3 = ''
+	par0 = ''
+	par1 = hyperlink_map_with_highlight(case[0], 0)
 	par2 = case[0]
 	for line in c_table:
 		columns = line[:]
@@ -153,17 +167,6 @@ def process_case(case):
 			columns[0] = '¶¶ ' + columns[0]
 		columns[1] = hyper_other_value(columns[1], columns[0])
 		par0 += join_flip(columns)
-	for line in e_table:
-		columns = line[:4]
-		if columns[0] == case[0]:
-			columns[0] = '¶ ' + hyper_value(columns[0])
-		else:
-			columns[0] = hyper_value(columns[0])
-		columns[1] = hyper_bracketed_value(columns[1])
-		columns[2] = hyper_value(columns[2])
-		if columns[3] != '—':
-			columns[3] = hyper_value(columns[3])
-		par1 += join(columns)
 	# fill in the "form"
 	par3 = add_pair('Source', hyper_html_value(case[1]))
 	cats = hyper_html_value(case[2])
@@ -191,8 +194,10 @@ def process_source(key):
 		.replace('###SUBTITLE###',subtitle_source)\
 		.replace('###SUBPARA###',sub_bib)\
 		.replace('###EVIDENCE###', evidence)
-	par0 = par1 = par3 = par4 = ''
+	par0 = hyperlink_cats_no_highlight()
+	par1 = hyperlink_map_with_highlight(key, 1)
 	par2 = key
+	par3 = par4 = ''
 	for line in bibitems[key]:
 		if line.find('http') > -1:
 			before, after = line.split('http')
@@ -205,22 +210,6 @@ def process_source(key):
 			par4 += before + f'{{<a href="https://doi.org/{doi}">{doi}</a>}}' + after
 		else:
 			par4 += line
-	for line in c_table:
-		columns = line[:]
-		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join_flip(columns)
-	for line in e_table:
-		columns = line[:4]
-		# colour the rows
-		if columns[1] == key:
-			columns[0] = '¶ ' + hyper_value(columns[0])
-		else:
-			columns[0] = hyper_value(columns[0])
-		columns[1] = hyper_bracketed_value(columns[1])
-		columns[2] = hyper_value(columns[2])
-		if columns[3] != '—':
-			columns[3] = hyper_value(columns[3])
-		par1 += join(columns)
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 def process_latex(lines, filename):
@@ -234,21 +223,10 @@ def process_latex(lines, filename):
 		.replace('###SUBTITLE###',artefact_source)\
 		.replace('###SUBPARA###',sub_tex)\
 		.replace('###EVIDENCE###', '')
-	par0 = par1 = ''
+	par0 = hyperlink_cats_no_highlight()
+	par1 = hyperlink_map_no_highlight()
 	par2 = filename
 	par3 = '\n'.join(beautify_latex(lines))
-	for line in c_table:
-		columns = line[:]
-		columns[1] = hyper_other_value(columns[1], columns[0])
-		par0 += join_flip(columns)
-	for line in e_table:
-		columns = line[:4]
-		columns[0] = hyper_value(columns[0])
-		columns[1] = hyper_bracketed_value(columns[1])
-		columns[2] = hyper_value(columns[2])
-		if columns[3] != '—':
-			columns[3] = hyper_value(columns[3])
-		par1 += join(columns)
 	maybe_update(new_tex_content, old_tex_content, tex_filename)
 	maybe_update(new_html_content.format(par0, par1, par2, par3), old_html_content, html_filename)
 
