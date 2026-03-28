@@ -134,7 +134,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			i += 1
 		# useful macros
 		if lines[i].strip() == '<clear/>':
-			lines[i] = '<br style="clear:both">'
+			lines[i] = '<br style="clear:both">\n'
 		if lines[i].strip() == '<credit/>':
 			lines[i] = '<div style="text-align:center;">by <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>\n'
 		if lines[i].strip().startswith('<credit '):

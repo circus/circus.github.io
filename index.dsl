@@ -19,6 +19,19 @@
 			<text>evidence-based taxonomy</text>
 		</pic>
 		<clear/>
+		<p>
+			(…work in collecting and aggregating the entire portfolio is in progress, stay tuned…)
+		</p>
+		<clear/>
+		<pic>
+			<a>http://slps.github.io/</a>
+			<img>https://grammarware.net/images/slps.png</img>
+			<alt>SLPS logo</alt>
+			<title>SLPS</title>
+			<name>Software Language Processing Suite</name>
+			<text>software language knowledge aggregator</text>
+		</pic>
+		<clear/>
 		<footer>
 			Dim tiles refer to inactive projects.
 			<!-- See <a href="copyright.html">copyright disclaimer</a>.<br/> -->
