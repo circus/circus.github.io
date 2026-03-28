@@ -34,6 +34,21 @@
 			<name>Parsing in a Broad Sense</name>
 			<text>bx megamodel of (un)parsing flows &amp; structures<br>(2014)</text>
 		</pic>
+		<pic>
+			<a>https://bibtex.github.io/</a>
+			<img>https://grammarware.net/images/bibsleigh.png</img>
+			<alt>BibSLEIGH logo</alt>
+			<title>Bibliography of Software Language Engineering in Generated Hypertext</title>
+			<name>BibSLEIGH</name>
+			<text>browseable SLE+ bibliography<br>(2014–2020)</text>
+		</pic>
+		<pic>
+			<a>grammarlab</a>
+			<img>grammarlab/grammarlab-icon.200.png</img>
+			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
+			<name>GrammarLab</name>
+			<text>a grammar manipulation library for Rascal<br>(2013–2015)</text>
+		</pic>
 		<clear/>
 		<p>
 			(…work in collecting and aggregating the entire portfolio is in progress, stay tuned…)
