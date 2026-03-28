@@ -11,7 +11,7 @@ div.cpic {text-align: center; width: 150px; height: 250px; margin-left: 150px; m
 .tesla {background-color: #040322;}
 .double img {max-height: 250px; max-width: 310px;}
 .tile {float: left; width: 100px; height: 100px; margin: 5px;}
-.pic img, .cpic img, .tile img {border: 0px; max-height: 100px; max-width: 100px;}
+.pic img, .cpic img, .tile img {border: 0px; max-height: 100px; max-width: 100px; margin-top: 3px;}
 .icon {height: 80px;border: 0px;margin: 0px;}
 div, span.pic, span.p {display: block;}
 div.cpic, span.cpic {display: inline-block;}
@@ -21,7 +21,7 @@ a.stud:link, a.stud:visited {color: #00A953; text-decoration: underline; text-de
 a.red:link, a.red:visited, span.red {color: #b64d70; font-style: normal;}
 a.now:link, a.now:visited {color: #ff6332; font-style: normal;}
 .pic:hover, .cpic:hover, .double:hover {background-color: #ffbf95;}
-h1 a img, h1 img {float: right; margin-left: 50px; margin-bottom: 50px;}
+h1 a img, h1 img {float: right; margin-left: 50px; margin-bottom: 50px; max-width: 250px;}
 code {font-family: "Courier Prime", Courier, monospace;}
 .bmp {text-align: center;}
 .bmp img {border: 1px solid black;}

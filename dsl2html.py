@@ -188,6 +188,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = '''<div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. {0}Last updated: #LASTMOD#.<br>
 			<a href="http://validator.w3.org/check/referer"><img src="{1}xhtml.88.png" alt="XHTML 1.1"></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{1}css.88.png" alt="CSS 3"></a></div>'''.format(content, valdir)
+		if lines[i].strip().startswith('<h1 logo='):
+			# <img src="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev"/>
+			words = lines[i].split('"')
+			lines[i] = f'<h1>\n\t<img src="{words[1]}" alt="{words[3]}" title="{words[5]}"/>\n'
 		# macros for <pre> of bibtex
 		if lines[i].find('isbn      =') > -1:
 			parts = lines[i].split('"')

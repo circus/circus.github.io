@@ -16,7 +16,23 @@
 			<alt>TIP logo</alt>
 			<title>Taxonomy of Inconsistency Patterns</title>
 			<name>Taxonomy of Inconsistency Patterns</name>
-			<text>evidence-based taxonomy</text>
+			<text>evidence-based taxonomy<br>(2026)</text>
+		</pic>
+		<pic>
+			<a>engage</a>
+			<img>engage/engage.png</img>
+			<alt>the “Engage!” gesture</alt>
+			<title>Engage!</title>
+			<name>Engage!</name>
+			<text>event-based parser generator<br>(2019–2021)</text>
+		</pic>
+		<pic>
+			<a>https://grammarware.github.io/parsing/</a>
+			<img>https://grammarware.github.io/logos/bx.200.png</img>
+			<alt>BX parsing in a broad sense</alt>
+			<title>Bidirectional Megamodel of Parsing</title>
+			<name>Parsing in a Broad Sense</name>
+			<text>bx megamodel of (un)parsing flows &amp; structures<br>(2014)</text>
 		</pic>
 		<clear/>
 		<p>
@@ -28,8 +44,8 @@
 			<img>https://grammarware.net/images/slps.png</img>
 			<alt>SLPS logo</alt>
 			<title>SLPS</title>
-			<name>Software Language Processing Suite</name>
-			<text>software language knowledge aggregator</text>
+			<name>Software Language Processing Suite </name>
+			<text>SLE knowledge aggregator<br>(2008–2012)</text>
 		</pic>
 		<clear/>
 		<footer>

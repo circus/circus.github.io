@@ -17,7 +17,7 @@
 			<br>
 			If you're interested in collaboration, <a href="mailto:v.zaytsev@utwente.nl">get in touch</a>!
 		</p>
-		<br style="clear:both">
+		<clear/>
 		<h2 help="latest rightmost">Completed constituent projects</h2>
 		<pic>
 			<a>http://purl.utwente.nl/essays/87002</a>
