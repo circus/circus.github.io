@@ -5,14 +5,14 @@
 		<h1 logo="grammarlab.200.png" alt="GrammarLab" title="GrammarLab logo designed by Vadim Zaytsev">
 			GrammarLab: Foundations for a Grammar Laboratory
 		</h1>
-		<h3>
+		<p style="font-weight: bold; font-size: larger;">
 			• <a href="#main">Organisation</a>
 			<!-- • <a href="#next">Future</a> -->
 			• <a href="#events">Activities</a>
 			• <a href="#tech">Technicalities</a>
 			• <a href="#papers">Publications</a>
 			•
-		</h3>
+		</p>
 		<hr/>
 		<h2><a id="main"></a>Organisation</h2>
 		<ul>
