@@ -2,8 +2,7 @@
 	<head jquery title="Taxonomy of Inconsistency Patterns" />
 	<body>
 		<credit/>
-		<h1>
-			<img src="tip.200.png" alt="TIP" title="TIP logo designed by Vadim Zaytsev"/>
+		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">
 			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
 			in Multi-View Modelling
 			
@@ -21,7 +20,7 @@ We built a seed corpus of 31 papers from foundational and survey literature, the
 40 examples were retained as core evidence and 6 as support-only examples. The taxonomy provides a
 concise vocabulary for describing consistency problems, a reusable evidence map for future research,
 and a basis for more precise claims about what checking and repair approaches do and do not cover.
-</p></p>
+</p><p>
 Feel free to browse specifics hyperlinked below or bulk download
 the BibTeX collection <a href="sources.bib">sources.bib</a> or LaTeX files
 <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, and

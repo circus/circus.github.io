@@ -2,8 +2,7 @@
 	<head jquery title="Taxonomy of Inconsistency Patterns — HLI19-3" />
 	<body>
 		<credit/>
-		<h1>
-			<img src="tip.200.png" alt="TIP" title="TIP logo designed by Vadim Zaytsev"/>
+		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">
 			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
 			in Multi-View Modelling
 			<br><span class="red">Case</span> <code>HLI19-3</code>

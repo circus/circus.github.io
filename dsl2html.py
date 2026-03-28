@@ -59,7 +59,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		# table
 		if not table and lines[i].strip().startswith('<table'):
 			table = lines[i].strip().split(' ')[-1][:-1]
-			# print('INTO the table')
+			where = lines[i].rindex(table)
+			lines[i] = lines[i][:where].rstrip() + lines[i][where+len(table):]
 			if lines[i].find('center') > -1:
 				lines[i] = lines[i].replace('center', 'class="c"')
 			inside_table = 0
