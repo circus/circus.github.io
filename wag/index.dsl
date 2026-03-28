@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Dr. Vadim Zaytsev — Weighted Attribute Grammars" />
+	<head jquery title="Weighted Attribute Grammars (Vadim Zaytsev)" />
 	<body>
 		<credit first="Marcus Gerhold@mgerhold.personalweb.utwente.nl" last="others" />
 		<h1>

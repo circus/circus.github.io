@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Taxonomy of Inconsistency Patterns - C6: Traceability disruption" />
+	<head title="Taxonomy of Inconsistency Patterns — C6: Traceability disruption" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">

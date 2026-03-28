@@ -1,5 +1,5 @@
 <html doctype>
-	<head viewport title="Dr. Vadim Zaytsev — a circus of projects, artefacts and deliverables" />
+	<head viewport title="A circus of projects, artefacts and deliverables (Vadim Zaytsev)" />
 	<body>
 		<hr/>
 		<pic>

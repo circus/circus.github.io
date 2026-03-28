@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Taxonomy of Inconsistency Patterns - C4: Requirement satisfaction gap" />
+	<head title="Taxonomy of Inconsistency Patterns — C4: Requirement satisfaction gap" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">

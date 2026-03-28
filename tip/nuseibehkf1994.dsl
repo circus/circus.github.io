@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Taxonomy of Inconsistency Patterns - NuseibehKF1994: " />
+	<head title="Taxonomy of Inconsistency Patterns — NuseibehKF1994" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">

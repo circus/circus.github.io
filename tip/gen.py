@@ -196,7 +196,7 @@ def process_source(key):
 	filename = key.lower() + '.dsl'
 	old_content = safe_load(filename)
 	new_content = c_pattern\
-		.replace('###TITLE###',title_double)\
+		.replace('###TITLE###',title_single)\
 		.replace('###SUBTITLE###',subtitle_source)\
 		.replace('###SUBPARA###',sub_bib)\
 		.replace('###EVIDENCE###', evidence)
@@ -248,7 +248,7 @@ def table2_line(x):
 	return f'{x[0]}~\\cite{{<a href="{x[1].lower()}.html">{x[1]}</a>}} & {latexify(x[2])} & {latexify(x[3])}'
 
 c_pattern = '''<html doctype>
-	<head jquery title="Taxonomy of Inconsistency Patterns###TITLE###" />
+	<head title="Taxonomy of Inconsistency Patterns###TITLE###" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">
@@ -267,7 +267,7 @@ c_pattern = '''<html doctype>
 </html>
 '''
 
-title_double = ' - {2}: {3}'
+title_double = ' — {2}: {3}'
 title_single = ' — {2}'
 subtitle_cat = '<br><span class="red">Category</span> <code>{2}</code>: {3}'
 subtitle_case = '<br><span class="red">Case</span> <code>{2}</code>'

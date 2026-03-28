@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Taxonomy of Inconsistency Patterns - C5: Terminology divergence" />
+	<head title="Taxonomy of Inconsistency Patterns — C5: Terminology divergence" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">

@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Dr. Vadim Zaytsev — Weighted Attribute Grammars" />
+	<head title="GrammarLab (Vadim Zaytsev)" />
 	<body>
 		<credit first="Tijs van der Storm@https://homepages.cwi.nl/~storm/" first="Jurgen Vinju@https://homepages.cwi.nl/~jurgenv/" first="Paul Klint@https://homepages.cwi.nl/~paulk/"/>
 		<h1 logo="grammarlab.200.png" alt="GrammarLab" title="GrammarLab logo designed by Vadim Zaytsev">

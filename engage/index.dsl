@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Dr. Vadim Zaytsev — Weighted Attribute Grammars" />
+	<head title="Engage! (Vadim Zaytsev)" />
 	<body>
 		<credit last="others" />
 		<h1 logo="engage.png" alt="Engage!" hover="the “Engage!” gesture from Star Trek">

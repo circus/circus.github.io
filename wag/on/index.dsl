@@ -1,6 +1,6 @@
 <path css="../.."/>
 <html doctype>
-	<head title="WAGon" />
+	<head title="WAGon (Rafael Dulfer, Vadim Zaytsev)" />
 	<body>
 		<credit first="Rafael Dulfer@dulfer.be">
 		<h1>
@@ -8,8 +8,9 @@
 		</h1>
 		<hr/>
 		<p>
-			WAGon is a Library/Ecosystem/Proof-of-Concept for working with Weighted Attribute Grammars.
-			<br>
+			WAGon is a Library/Ecosystem/Proof-of-Concept for working with <a href="..">Weighted Attribute Grammars</a>.
+		</p>
+		<p>
 			WAGon is designed for researchers and language designers experimenting with WAGs such that they do not have to waste time creating a DSL and parser and can start immediately experimenting with the format itself.
 		</p>
 		<p>
