@@ -2,8 +2,14 @@
 
 import os
 
+def latexify(c):
+	if c in ('—', '–', ''):
+		return c.replace('–', '---').replace('–', '--')
+	letter = chr(ord('A') + int(c[-1]) - 1)
+	return f'\\<a href="{c.lower()}.html">C{letter}</a>'
+
 def beautify_latex(lines):
-	for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash'):
+	for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash', 'cite', 'cline'):
 		for i in range(len(lines)):
 			if lines[i].find('\\' + kw) > -1:
 				lines[i] = lines[i].replace(kw, f'[kw1]{kw}[/]')
@@ -213,6 +219,7 @@ def process_source(key):
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 def process_latex(lines, filename):
+	# print(lines),
 	tex_filename = filename + '.tex'
 	html_filename = filename + '.dsl'
 	old_tex_content = safe_load(tex_filename)
@@ -232,6 +239,13 @@ def process_latex(lines, filename):
 
 def cap(s):
 	return ' '.join([word[0].upper() + word[1:] for word in s.split(' ')])
+
+def table1_line(cat, count, desc):
+	letter = chr(ord('A') + int(cat[1]) - 1)
+	return f'\\<a href="{cat.lower()}.html">C{letter}</a> & \\C{letter}text & {count} & {desc} \\\\'
+
+def table2_line(x):
+	return f'{x[0]}~\\cite{{<a href="{x[1].lower()}.html">{x[1]}</a>}} & {latexify(x[2])} & {latexify(x[3])}'
 
 c_pattern = '''<html doctype>
 	<head jquery title="Taxonomy of Inconsistency Patterns###TITLE###" />
@@ -351,7 +365,7 @@ for cat in all_cats:
 	letter = chr(ord('A') + int(cat[1]) - 1)
 	for cat_rec in c_table:
 		if cat == cat_rec[0]:
-			latex.append(f'\\C{letter} & \\C{letter}text & {cat_rec[4]} & {cat_rec[2]} \\\\')
+			latex.append(table1_line(cat, cat_rec[4], cat_rec[2]))
 latex.append('\\bottomrule')
 latex.append('\\end{tabularx}')
 latex.append('\\end{table}')
@@ -364,18 +378,73 @@ latex.append('\\label{tab:allcats}')
 latex.append('\\small')
 latex.append('\\begin{tabular}{lrr|lrr|lrr}')
 latex.append('\\toprule')
-groups = [int(x[-2]) for x in c_table]
-print(groups)
+last = ''
+full_groups = []
+for line in e_table:
+	if line[2] != last:
+		full_groups.append([])
+		last = line[2]
+	full_groups[-1].append(line[:4])
+# print(full_groups)
+groups = [len(g) for g in full_groups]
+# groups = [int(x[-2]) for x in c_table] # same thing
+# print(groups)
 pivot = min(sum(groups) // 3, max(groups))
-print(pivot)
+# print(pivot)
 division = []
 while len(division) != 3:
 	division = [[]]
 	for member in groups:
+		# if sum([len(d) for d in division[-1]]) + member > pivot:
 		if sum(division[-1]) + member > pivot:
 			division.append([])
 		division[-1].append(member)
 	pivot += 1
-	print('Possibly', division)
-print('Definitely', division)
+	# print('Possibly', division)
+# print('Definitely', division)
+col1 = []
+limit1 = sum(division[0])
+limit2 = sum(division[1]) + limit1
+limit3 = sum(division[2]) + limit2
+for i in range(0, limit1):
+	col1.append(table2_line(e_table[i]))
+col2 = []
+for i in range(limit1, limit2):
+	col2.append(table2_line(e_table[i]))
+col3 = []
+for i in range(limit2, limit3):
+	col3.append(table2_line(e_table[i]))
+last1 = col1[0].split('&')[1]
+last2 = col2[0].split('&')[1]
+last3 = col3[0].split('&')[1]
+sep = ''
+for i in range(0, max(len(col1), len(col2), len(col3))):
+	if i < len(col1):
+		if col1[i].split('&')[1] != last1:
+			sep = '\\cline{1-3}'
+			last1 = col1[i].split('&')[1]
+		latex.append(col1[i] + ' & ')
+	else:
+		latex.append('&&&')
+	if i < len(col2):
+		if col2[i].split('&')[1] != last2:
+			sep = '\\cline{4-6}'
+			last2 = col2[i].split('&')[1]
+		latex.append('\t' + col2[i] + ' & ')
+	else:
+		latex.append('&&&')
+	if i < len(col3):
+		if col3[i].split('&')[1] != last3:
+			sep = '\\cline{7-9}'
+			last3 = col3[i].split('&')[1]
+		latex.append('\t\t' + col3[i] + ' \\\\\n')
+	else:
+		latex.append('&& ')
+	if sep:
+		latex.insert(-3,sep)
+		sep = ''
+latex[-1] += ' \\\\'
+latex.append(f'\\bottomrule')
+latex.append('\\end{tabular}')
+latex.append('\\end{table}')
 process_latex(latex, 'table2')
