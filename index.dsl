@@ -19,6 +19,13 @@
 			<text>evidence-based taxonomy<br>(2026)</text>
 		</pic>
 		<pic>
+			<a>babycobol</a>
+			<img>https://slebok.github.io/www/babycobol.png</img>
+			<title>SLE engineer’s worst nightmare</title>
+			<name>BabyCobol</name>
+			<text>develop industrial parsers in a controlled environment<br>(2019–2021)</text>
+		</pic>
+		<pic>
 			<a>engage</a>
 			<img>engage/engage.png</img>
 			<alt>the “Engage!” gesture</alt>
