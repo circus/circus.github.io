@@ -21,8 +21,8 @@
 	<dd>electric interfaces</dd>
 	<dd>bus interfaces</dd>
 <dt>Quotes</dt>
-	<dd>"Connector does not point from input to output interface or vice versa"</dd>
-	<dd>"Connector does not point from bus interface to compatible bus interface"</dd>
+	<dd class="red">"Connector does not point from input to output interface or vice versa"</dd>
+	<dd class="red">"Connector does not point from bus interface to compatible bus interface"</dd>
 <dt>Summary</dt>
 	<dd>A connector links interfaces in the wrong direction or between incompatible interface kinds.</dd>
 	<dd>Cause: interface compatibility and direction constraints are violated.</dd>

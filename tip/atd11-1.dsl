@@ -20,7 +20,7 @@
 <dt>Artefacts</dt>
 	<dd>Traceability relationships among decision, architecture, and code artifacts</dd>
 <dt>Quotes</dt>
-	<dd>"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"</dd>
+	<dd class="red">"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"</dd>
 <dt>Summary</dt>
 	<dd>Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact.</dd>
 	<dd>Cause: manual, retrospective trace recovery is error-prone and incomplete.</dd>

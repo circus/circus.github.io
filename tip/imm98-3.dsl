@@ -21,7 +21,7 @@
 	<dd>argument lists</dd>
 	<dd>class methods</dd>
 <dt>Quotes</dt>
-	<dd>"semantic inconsistencies in specifications (e.g. a type mis-match between method calls or a non-existent method is called)"</dd>
+	<dd class="red">"semantic inconsistencies in specifications (e.g. a type mis-match between method calls or a non-existent method is called)"</dd>
 <dt>Summary</dt>
 	<dd>Two related artifacts agree enough to connect, but disagree on call signature or method existence.</dd>
 	<dd>Cause: semantic/interface constraints between linked elements are violated.</dd>

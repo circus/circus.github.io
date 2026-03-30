@@ -18,7 +18,7 @@
 <dt>Artefacts</dt>
 	<dd>class method across parallel versions</dd>
 <dt>Quotes</dt>
-	<dd>"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."</dd>
+	<dd class="red">"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."</dd>
 <dt>Summary</dt>
 	<dd>Parallel edits on different versions produce conflicting states for the same method.</dd>
 	<dd>Cause: concurrent evolution without immediate reconciliation.</dd>

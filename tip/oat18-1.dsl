@@ -19,7 +19,7 @@
 <dt>Artefacts</dt>
 	<dd>existing trace links across versions/releases</dd>
 <dt>Quotes</dt>
-	<dd>"a new major version leads to the decay of traceability links"</dd>
+	<dd class="red">"a new major version leads to the decay of traceability links"</dd>
 <dt>Summary</dt>
 	<dd>Trace links that were valid in one project version become stale after major-version evolution.</dd>
 	<dd>Cause: substantial system evolution without synchronised update of stored trace links.</dd>

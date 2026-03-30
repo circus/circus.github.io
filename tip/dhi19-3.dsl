@@ -22,7 +22,7 @@
 	<dd>refined common/model element</dd>
 	<dd>refinement link</dd>
 <dt>Quotes</dt>
-	<dd>"Refinement between project documentation and discipline model" with conditions including name mismatch and wrong refined artifact kind</dd>
+	<dd class="red">"Refinement between project documentation and discipline model" with conditions including name mismatch and wrong refined artifact kind</dd>
 <dt>Summary</dt>
 	<dd>A documentation artifact does not properly refine or correspond to the intended discipline-specific model element.</dd>
 	<dd>Cause: refinement relation is ill-formed or points to a mismatched artifact.</dd>

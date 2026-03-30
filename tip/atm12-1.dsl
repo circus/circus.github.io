@@ -21,7 +21,7 @@
 <dt>Artefacts</dt>
 	<dd>traceability relations between lifecycle artifacts</dd>
 <dt>Quotes</dt>
-	<dd>"it is necessary to have an up-to-date set of traceability relations ... [and] maintain traceability relations over time as the software system evolves in order to prevent their decay"</dd>
+	<dd class="red">"it is necessary to have an up-to-date set of traceability relations ... [and] maintain traceability relations over time as the software system evolves in order to prevent their decay"</dd>
 <dt>Summary</dt>
 	<dd>Trace links that were once valid become stale as related artifacts evolve.</dd>
 	<dd>Cause: artifact evolution without commensurate maintenance of trace links.</dd>

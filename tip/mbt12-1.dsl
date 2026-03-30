@@ -20,7 +20,7 @@
 <dt>Artefacts</dt>
 	<dd>relationships among requirements, design, tests, and executable tests</dd>
 <dt>Quotes</dt>
-	<dd>"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails"</dd>
+	<dd class="red">"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails"</dd>
 <dt>Summary</dt>
 	<dd>When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements.</dd>
 	<dd>Cause: gaps between requirements, design, and test models are not bridged by explicit relations.</dd>

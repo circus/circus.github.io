@@ -22,7 +22,7 @@
 	<dd>buses</dd>
 	<dd>global properties</dd>
 <dt>Quotes</dt>
-	<dd>"the models are not independent ... if we were to run the models independently in parallel, the properties would be violated"</dd>
+	<dd class="red">"the models are not independent ... if we were to run the models independently in parallel, the properties would be violated"</dd>
 <dt>Summary</dt>
 	<dd>Locally sensible models become globally inconsistent when composed without the required coordination semantics.</dd>
 	<dd>Cause: behavioural dependence among views is ignored during composition/execution.</dd>

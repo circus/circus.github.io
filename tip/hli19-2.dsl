@@ -19,7 +19,7 @@
 <dt>Artefacts</dt>
 	<dd>shared parameter/value for total car mass</dd>
 <dt>Quotes</dt>
-	<dd>"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"</dd>
+	<dd class="red">"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"</dd>
 <dt>Summary</dt>
 	<dd>Corresponding models use conflicting values for the same physical quantity.</dd>
 	<dd>Cause: shared parameter value diverges across views.</dd>

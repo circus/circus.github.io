@@ -21,7 +21,7 @@
 	<dd>test cases/scripts/models</dd>
 	<dd>models under test</dd>
 <dt>Quotes</dt>
-	<dd>"When tests are consistent with the design models, it is meant that ... the test cases appropriately cover the models ... Inconsistency caused by, e.g., a drop in test coverage is much more subtle to detect than test case failure"</dd>
+	<dd class="red">"When tests are consistent with the design models, it is meant that ... the test cases appropriately cover the models ... Inconsistency caused by, e.g., a drop in test coverage is much more subtle to detect than test case failure"</dd>
 <dt>Summary</dt>
 	<dd>Tests still run, but no longer cover the intended model elements or behaviours after evolution.</dd>
 	<dd>Cause: co-evolution of tests lags behind changes in design/implementation models.</dd>

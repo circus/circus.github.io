@@ -20,7 +20,7 @@
 <dt>Artefacts</dt>
 	<dd>engineer-defined links and consistency rules across tools</dd>
 <dt>Quotes</dt>
-	<dd>"maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change"</dd>
+	<dd class="red">"maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change"</dd>
 <dt>Summary</dt>
 	<dd>Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules.</dd>
 	<dd>Cause: concurrent cross-domain evolution in heterogeneous engineering tools.</dd>

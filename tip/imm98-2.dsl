@@ -21,7 +21,7 @@
 	<dd>method call connection in design model</dd>
 	<dd>affected textual code views</dd>
 <dt>Quotes</dt>
-	<dd>"adding a method call connection in an OO design view can not be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent"</dd>
+	<dd class="red">"adding a method call connection in an OO design view can not be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent"</dd>
 <dt>Summary</dt>
 	<dd>A design-level call relation is added, but the implementation view is not updated accordingly.</dd>
 	<dd>Cause: refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined.</dd>

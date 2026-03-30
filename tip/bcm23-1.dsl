@@ -21,7 +21,7 @@
 	<dd>traffic light states A/B/C</dd>
 	<dd>global safety property over combined models</dd>
 <dt>Quotes</dt>
-	<dd>"unsafe traffic occurs if traffic light A is green or amber and traffic light B is green or amber simultaneously ... the same state combinations are forbidden for traffic lights B and C"</dd>
+	<dd class="red">"unsafe traffic occurs if traffic light A is green or amber and traffic light B is green or amber simultaneously ... the same state combinations are forbidden for traffic lights B and C"</dd>
 <dt>Summary</dt>
 	<dd>Two behavioural views jointly admit a globally unsafe combination of light states.</dd>
 	<dd>Cause: global property over interacting behavioural models is violated even though each local model may be plausible on its own.</dd>

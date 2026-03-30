@@ -20,7 +20,7 @@
 	<dd>output of one agent</dd>
 	<dd>Input of another agent</dd>
 <dt>Quotes</dt>
-	<dd>"the Output produced by one agent in a tabular collection diagram must be consumed as an Input in the tabular collection diagram [of] another agent"</dd>
+	<dd class="red">"the Output produced by one agent in a tabular collection diagram must be consumed as an Input in the tabular collection diagram [of] another agent"</dd>
 <dt>Summary</dt>
 	<dd>An output declared by one agent is not consumed as an input by any other related agent view.</dd>
 	<dd>Cause: inter-view coverage/completeness rule on information flow is violated.</dd>

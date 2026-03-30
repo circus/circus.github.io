@@ -21,7 +21,7 @@
 	<dd>original put/get protocol</dd>
 	<dd>added parallel full transition</dd>
 <dt>Quotes</dt>
-	<dd>"A state machine is extended with a parallel component independently executing the method full... execution of full in C may not interfere with the ‘old’ behaviour modelled in A."</dd>
+	<dd class="red">"A state machine is extended with a parallel component independently executing the method full... execution of full in C may not interfere with the ‘old’ behaviour modelled in A."</dd>
 <dt>Summary</dt>
 	<dd>A dynamic model is extended with a parallel full action that must remain non-interfering with the existing put/get behaviour.</dd>
 	<dd>Cause: behavioural extension introduces new transitions running alongside the original protocol.</dd>

@@ -25,7 +25,7 @@
 	<dd>generated tests</dd>
 	<dd>failed-test back-traces</dd>
 <dt>Quotes</dt>
-	<dd>"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."</dd>
+	<dd class="red">"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."</dd>
 <dt>Summary</dt>
 	<dd>Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test.</dd>
 	<dd>Cause: trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic.</dd>

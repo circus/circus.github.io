@@ -21,7 +21,7 @@
 	<dd>operation send in A</dd>
 	<dd>operations prepare and transmit in C</dd>
 <dt>Quotes</dt>
-	<dd>"While class A contains a single operation send, class C uses two operations for one send, the first one being responsible for preparing the message... and the second one for actual transmission."</dd>
+	<dd class="red">"While class A contains a single operation send, class C uses two operations for one send, the first one being responsible for preparing the message... and the second one for actual transmission."</dd>
 <dt>Summary</dt>
 	<dd>A single abstract send operation is split into prepare and transmit in the refined class model.</dd>
 	<dd>Cause: an operation is decomposed into a sequence of lower-level steps, introducing the risk of intermediate states and new execution paths.</dd>

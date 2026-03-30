@@ -20,7 +20,7 @@
 	<dd>SysML internal block/activity/parametric diagrams</dd>
 	<dd>Simulink refinement model</dd>
 <dt>Quotes</dt>
-	<dd>"if the system model is changed, requiring some changes in the Simulink model ... not updating the Simulink model of the ABS might result in its incorrect implementation"</dd>
+	<dd class="red">"if the system model is changed, requiring some changes in the Simulink model ... not updating the Simulink model of the ABS might result in its incorrect implementation"</dd>
 <dt>Summary</dt>
 	<dd>A change in the high-level system model is not reflected in the refining Simulink model.</dd>
 	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>

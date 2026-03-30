@@ -21,7 +21,7 @@
 	<dd>formal schema</dd>
 	<dd>companion textual description</dd>
 <dt>Quotes</dt>
-	<dd>"for each Z schema (ViewPoint), there is an associated textual description (ViewPoint)"</dd>
+	<dd class="red">"for each Z schema (ViewPoint), there is an associated textual description (ViewPoint)"</dd>
 <dt>Summary</dt>
 	<dd>A formal schema exists without its required associated textual description view.</dd>
 	<dd>Cause: an existential inter-view dependency is not satisfied; one required companion requirements view is missing.</dd>

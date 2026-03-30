@@ -21,7 +21,7 @@
 	<dd>methods get/put in A</dd>
 	<dd>get/put/full in C</dd>
 <dt>Quotes</dt>
-	<dd>"The classes model buffers with methods put and get, and class C in addition with a method full querying the contents of the buffer... Can a user of A use C as if it were A?"</dd>
+	<dd class="red">"The classes model buffers with methods put and get, and class C in addition with a method full querying the contents of the buffer... Can a user of A use C as if it were A?"</dd>
 <dt>Summary</dt>
 	<dd>A refined class adds a new operation full, raising a substitutivity question for clients expecting only the abstract interface.</dd>
 	<dd>Cause: model extension adds new operations at the lower level, so refinement becomes a subtype-compatibility problem rather than simple behaviour preservation.</dd>

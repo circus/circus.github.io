@@ -22,7 +22,7 @@
 	<dd>operation choose</dd>
 	<dd>class-level data semantics</dd>
 <dt>Quotes</dt>
-	<dd>"In class A attribute buffer is of type set (...) whereas in C buffer is of type (injective) sequence and choose always chooses the first element in the sequence."</dd>
+	<dd class="red">"In class A attribute buffer is of type set (...) whereas in C buffer is of type (injective) sequence and choose always chooses the first element in the sequence."</dd>
 <dt>Summary</dt>
 	<dd>A lower-level class changes a buffer from an unordered set to an injective sequence, thereby changing how choose behaves.</dd>
 	<dd>Cause: a data-type transformation changes the semantics of state and operations across refinement levels.</dd>

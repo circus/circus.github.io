@@ -21,7 +21,7 @@
 	<dd>source/destination entry in TC diagram</dd>
 	<dd>named agent in hierarchy</dd>
 <dt>Quotes</dt>
-	<dd>"every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"</dd>
+	<dd class="red">"every Source or Destination in a tabular collection diagram has a corresponding agent with the same name in the agent hierarchy"</dd>
 <dt>Summary</dt>
 	<dd>A source or destination named in a tabular collection diagram has no matching named agent in the hierarchy, or the names diverge.</dd>
 	<dd>Cause: cross-view correspondence constraint between partial requirements views is violated.</dd>

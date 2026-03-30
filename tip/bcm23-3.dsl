@@ -21,7 +21,7 @@
 <dt>Artefacts</dt>
 	<dd>behavioural relations/interactions between models</dd>
 <dt>Quotes</dt>
-	<dd>"the traffic light model is currently not related to the T-Junction and bus models while the T-Junction is supposed to control the traffic lights"</dd>
+	<dd class="red">"the traffic light model is currently not related to the T-Junction and bus models while the T-Junction is supposed to control the traffic lights"</dd>
 <dt>Summary</dt>
 	<dd>The intended control relation exists conceptually, but is absent from the multi-model as an explicit relation.</dd>
 	<dd>Cause: missing inter-model linkage/interaction specification.</dd>

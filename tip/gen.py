@@ -78,9 +78,10 @@ def join(columns):
 	return ' & '.join(columns) + '\n'
 
 def add_pair(t,d):
+	c = ' class="red"' if t == 'Quotes' else ''
 	result = f'<dt>{t}</dt>\n'
 	for dd in d.split('//'):
-		result += f'\t<dd>{dd.strip()}</dd>\n'
+		result += f'\t<dd{c}>{dd.strip()}</dd>\n'
 	return result
 
 def hyperlink_map_no_highlight():

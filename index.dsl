@@ -56,11 +56,6 @@
 			<name>GrammarLab</name>
 			<text>a grammar manipulation library for Rascal<br>(2013–2015)</text>
 		</pic>
-		<clear/>
-		<p>
-			(…work in collecting and aggregating the entire portfolio is in progress, stay tuned…)
-		</p>
-		<clear/>
 		<pic>
 			<a>http://slps.github.io/</a>
 			<img>https://grammarware.net/images/slps.png</img>
@@ -69,6 +64,10 @@
 			<name>Software Language Processing Suite </name>
 			<text>SLE knowledge aggregator<br>(2008–2012)</text>
 		</pic>
+		<clear/>
+		<blockquote>
+			(…work in collecting and aggregating the entire portfolio is in progress, stay tuned…)
+		</blockquote>
 		<clear/>
 		<footer>
 			Dim tiles refer to inactive projects.

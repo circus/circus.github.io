@@ -19,7 +19,7 @@
 <dt>Artefacts</dt>
 	<dd>expected subsystem/block correspondence</dd>
 <dt>Quotes</dt>
-	<dd>"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"</dd>
+	<dd class="red">"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"</dd>
 <dt>Summary</dt>
 	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
 	<dd>Cause: missing correspondence under a refinement relation.</dd>
