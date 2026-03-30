@@ -215,6 +215,8 @@ def process_source(key):
 			before, after = line.split('{')
 			doi, after = after.split('}')
 			par4 += before + f'{{<a href="https://doi.org/{doi}">{doi}</a>}}' + after
+		elif line.find('{{') > -1 and line.find('}}') > -1:
+			par4 += line.replace('{{', '{').replace('}}', '}')
 		else:
 			par4 += line
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)

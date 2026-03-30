@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@inproceedings{DemuthKEM2016,
   author = {Andreas Demuth and Roland Kretschmer and Alexander Egyed and Michael Maes},
-  title = {{Introducing Traceability and Consistency Checking for Change Impact Analysis across Engineering Tools in an Automation Solution Company: An Experience Report}},
+  title = {Introducing Traceability and Consistency Checking for Change Impact Analysis across Engineering Tools in an Automation Solution Company: An Experience Report},
   booktitle = {2016 IEEE International Conference on Software Maintenance and Evolution (ICSME)},
   year = {2016},
   doi = {<a href="https://doi.org/10.1109/ICSME.2016.50">10.1109/ICSME.2016.50</a>}

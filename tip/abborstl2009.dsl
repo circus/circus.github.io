@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@inproceedings{AbborsTL2009,
   author = {Fredrik Abbors and Dragos Truscan and Johan Lilius},
-  title = {{Tracing Requirements in a Model-Based Testing Approach}},
+  title = {Tracing Requirements in a Model-Based Testing Approach},
   booktitle = {First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)},
   year = {2009},
   pages = {123--128},

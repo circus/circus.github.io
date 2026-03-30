@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@inproceedings{JavedMZ2018,
   author = {Muhammad Atif Javed and Faiz U. L. Muram and Uwe Zdun},
-  title = {{On-Demand Automated Traceability Maintenance and Evolution}},
+  title = {On-Demand Automated Traceability Maintenance and Evolution},
   booktitle = {Proceedings of the 17th International Conference on New Opportunities for Software Reuse (ICSR)},
   year = {2018},
   pages = {111--120},

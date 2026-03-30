@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@inproceedings{Wehrheim2005,
   author = {Heike Wehrheim},
-  title = {{Refinement and Consistency in Multiview Models}},
+  title = {Refinement and Consistency in Multiview Models},
   booktitle = {Language Engineering for Model-Driven Software Development},
   series = {Dagstuhl Seminar Proceedings},
   volume = {4101},

@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@inproceedings{BuchgeherWeinreich2011,
   author = {Georg Buchgeher and Rainer Weinreich},
-  title = {{Automatic Tracing of Decisions to Architecture and Implementation}},
+  title = {Automatic Tracing of Decisions to Architecture and Implementation},
   booktitle = {Proceedings of the 2011 Ninth Working IEEE/IFIP Conference on Software Architecture (WICSA)},
   year = {2011},
   pages = {46--55},

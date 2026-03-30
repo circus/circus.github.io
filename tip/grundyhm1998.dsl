@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@article{GrundyHM1998,
   author = {John Grundy and John Hosking and Warwick B. Mugridge},
-  title = {{Inconsistency Management for Multiple-View Software Development Environments}},
+  title = {Inconsistency Management for Multiple-View Software Development Environments},
   journal = {IEEE Transactions on Software Engineering},
   year = {1998},
   doi = {<a href="https://doi.org/10.1109/32.730545">10.1109/32.730545</a>}

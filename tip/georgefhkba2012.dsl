@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@article{GeorgeFHKBA2012,
   author = {Mathew George and Klaus-Peter Fischer-Hellmann and Martin Knahl and Uwe Bleimann and Colin Atkinson},
-  title = {{Traceability in Model-Based Testing}},
+  title = {Traceability in Model-Based Testing},
   journal = {Future Internet},
   year = {2012},
   volume = {4},

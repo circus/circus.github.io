@@ -10,7 +10,7 @@
 		<p></p>
 <pre>@article{KrauterKRLS2023,
   author = {Tim Kr{\"a}uter and Harald K{\"o}nig and Adrian Rutle and Yngve Lamo and Patrick St{\"u}nkel},
-  title = {{Behavioral Consistency in Multi-Modeling}},
+  title = {Behavioral Consistency in Multi-Modeling},
   journal = {Journal of Object Technology},
   year = {2023},
   volume = {22},
