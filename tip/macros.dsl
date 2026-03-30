@@ -11,31 +11,31 @@
 <pre>\[kw1]usepackage[/]{[kw2]tabularx[/]}
 \[kw1]newcolumntype[/]{Y}{>{\[kw1]raggedright[/]\[kw1]arraybackslash[/]}X}
 
-\[kw1]newcommand[/]{\CA}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C1}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c1.html">CA</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C1}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CAtext}{Structural mismatch\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CAtextU}{Structural Mismatch\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CAtextL}{structural mismatch\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CB}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C2}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c2.html">CB</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C2}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CBtext}{Interface contract mismatch\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CBtextU}{Interface Contract Mismatch\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CBtextL}{interface contract mismatch\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CC}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C3}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c3.html">CC</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C3}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CCtext}{Behavioural contradiction\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CCtextU}{Behavioural Contradiction\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CCtextL}{behavioural contradiction\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CD}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C4}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c4.html">CD</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C4}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CDtext}{Requirement satisfaction gap\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CDtextU}{Requirement Satisfaction Gap\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CDtextL}{requirement satisfaction gap\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CE}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C5}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c5.html">CE</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C5}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CEtext}{Terminology divergence\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CEtextU}{Terminology Divergence\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CEtextL}{terminology divergence\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CF}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C6}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c6.html">CF</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C6}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CFtext}{Traceability disruption\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CFtextU}{Traceability Disruption\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CFtextL}{traceability disruption\[kw1]xspace[/]}
-\[kw1]newcommand[/]{\CG}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C7}}\[kw1]xspace[/]}
+\[kw1]newcommand[/]{\<a href="c7.html">CG</a>}{\[kw1]textcolor[/]{[kw2]purple[/]}{\textbf{C7}}\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CGtext}{Temporal skew\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CGtextU}{Temporal Skew\[kw1]xspace[/]}
 \[kw1]newcommand[/]{\CGtextL}{temporal skew\[kw1]xspace[/]}</pre>

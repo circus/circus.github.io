@@ -12,9 +12,9 @@
   [kw2]author[/] = {Robbert Jongeling},
   [kw2]title[/] = {How to Live with Inconsistencies in Industrial Model-Based Development Practice},
   [kw2]booktitle[/] = {Proceedings of the Doctoral Symposium of the ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MoDELS DocSymp)},
-  [kw2]prooflink[/] = "<a href="https://modelsconf19.org/?page_id=1933">https://modelsconf19.org/?page_id=1933</a>",
   [kw2]year[/] = {2019},
   [kw2]pages[/] = {642--647},
+  [kw2]url[/] = "<a href="https://modelsconf19.org/?page_id=1933">https://modelsconf19.org/?page_id=1933</a>",
   [kw2]doi[/] = {<a href="https://doi.org/10.1109/MODELS-C.2019.00098">10.1109/MODELS-C.2019.00098</a>}
 }
 </pre>

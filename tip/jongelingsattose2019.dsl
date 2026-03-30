@@ -12,7 +12,7 @@
   [kw2]author[/] = {Robbert Jongeling},
   [kw2]editor[/] = {Anne Etien},
   [kw2]title[/] = {Work in Progress towards Consistency Management for Industrial Model-based Development},
-  [kw2]booktitle[/] = {Proceedings of the Seminar Series on Advanced Techniques {\&} Tools for Software Evolution (SATTOSE)},
+  [kw2]booktitle[/] = {Proceedings of the Seminar Series on Advanced Techniques {\&} Tools for Software Evolution (SATToSE)},
   [kw2]series[/] = {{CEUR} Workshop Proceedings},
   [kw2]publisher[/] = {CEUR-WS.org},
   [kw2]year[/] = {2019},

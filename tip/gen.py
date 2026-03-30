@@ -1,6 +1,7 @@
 #!/opt/local/bin/python
 
 import os
+import datetime
 
 def split3(text, one, two, include=True):
 	first, second = text.split(one, 1)
@@ -15,18 +16,27 @@ def latexify(c):
 	return f'\\<a href="{c.lower()}.html">C{letter}</a>'
 
 def beautify_latex(lines):
-	for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash', 'cite', 'cline'):
-		for i in range(len(lines)):
+	a = datetime.datetime.now()
+	for i in range(len(lines)):
+		for letter in 'ABCDEFG':
+			number = ord(letter) - 64
+			if lines[i].find(f'\\C{letter} ') > -1 or lines[i].find(f'{{\\C{letter}}}') > -1:
+				lines[i] = lines[i].replace(f'\\C{letter}', f'\\<a href="c{number}.html">C{letter}</a>', 1)
+		if lines[i].find('\\cite') > -1:
+			before, key, after = split3(lines[i], '{', '}', include=False)
+			lines[i] = f'{before}{{<a href="{key.lower()}.html">{key}</a>}}{after}'
+		for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash', 'cite', 'cline'):
 			if lines[i].find('\\' + kw) > -1:
-				lines[i] = lines[i].replace(kw, f'[kw1]{kw}[/]')
-	for kw in ('table',  'tabular', 'tabularx', 'purple'):
-		for i in range(len(lines)):
+				lines[i] = lines[i].replace('\\'+kw, f'\\[kw1]{kw}[/]')
+		for kw in ('table',  'tabular', 'tabularx', 'purple'):
 			if lines[i].find('{' + kw + '}') > -1:
 				lines[i] = lines[i].replace(kw, f'[kw2]{kw}[/]')
-	for i in range(len(lines)):
-		lines[i] = lines[i].replace('&', f'[kw2]&amp;[/]')
+		if '&' in lines[i]:
+			lines[i] = lines[i].replace('&', f'[kw2]&amp;[/]')
 		if lines[i].endswith('\\\\'):
 			lines[i] = lines[i][:-2] + '[kw2]\\\\[/]'
+	b = datetime.datetime.now()
+	print(f'[LOG] beautify_latex() ran in {(b-a).microseconds} ms')
 	return lines
 
 def safe_load(filename):
