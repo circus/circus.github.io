@@ -35,7 +35,7 @@ def beautify_latex(lines):
 		if lines[i].endswith('\\\\'):
 			lines[i] = lines[i][:-2] + '[kw2]\\\\[/]'
 	b = datetime.datetime.now()
-	print(f'[LOG] beautify_latex() ran in {(b-a).microseconds} ms')
+	# print(f'[LOG] beautify_latex() ran in {(b-a).microseconds} ms')
 	return lines
 
 def safe_load(filename):

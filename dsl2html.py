@@ -170,7 +170,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				logopath = rootpath + 'logos/'
 			else:
 				logopath = imgdir
-			lines[i] = '''<br><a href="http://validator.w3.org/check/referer"><img src="{0}xhtml.88.png" alt="XHTML 1.1"></a>
+			lines[i] = '''<br><a href="http://validator.w3.org/check/referer"><img src="{0}html.88.png" alt="HTML 5"></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{0}css.88.png" alt="CSS 3"></a>\n'''.format(logopath)
 		if lines[i].strip().startswith('<footer'):
 			rootpath = '../'*dsl.count('/') + '..\\'*dsl.count('\\')
@@ -187,7 +187,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			else:
 				valdir = imgdir
 			lines[i] = '''<div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. {0}Last updated: #LASTMOD#.<br>
-			<a href="http://validator.w3.org/check/referer"><img src="{1}xhtml.88.png" alt="XHTML 1.1"></a>
+			<a href="http://validator.w3.org/check/referer"><img src="{1}html.88.png" alt="HTML 5"></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{1}css.88.png" alt="CSS 3"></a></div>'''.format(content, valdir)
 		if lines[i].strip().startswith('<h1 logo='):
 			# <img src="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev"/>
