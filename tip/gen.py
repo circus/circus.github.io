@@ -13,7 +13,6 @@ def latexify(c):
 		return c.replace('–', '---').replace('–', '--')
 	letter = chr(ord('A') + int(c[-1]) - 1)
 	return f'\\C{letter}'
-	return f'\\<a href="{c.lower()}.html">C{letter}</a>'
 
 def beautify_latex(lines):
 	a = datetime.datetime.now()
@@ -24,7 +23,7 @@ def beautify_latex(lines):
 				lines[i] = lines[i].replace(f'\\C{letter}', f'\\<a href="c{number}.html">C{letter}</a>', 1)
 		if lines[i].find('\\cite') > -1:
 			before, key, after = split3(lines[i], '{', '}', include=False)
-			lines[i] = f'{before}{{<a href="{key.lower()}.html">{key}</a>}}{after}'
+			lines[i] = f'{before}{{<a href="{key.lower()}.html" class="red">{key}</a>}}{after}'
 		for kw in ('begin', 'end', 'caption', 'label', 'small', 'toprule', 'bottomrule', 'midrule', 'linewidth', 'usepackage', 'newcolumntype', 'newcommand', 'textcolor', 'xspace', 'raggedright', 'arraybackslash', 'cite', 'cline'):
 			if lines[i].find('\\' + kw) > -1:
 				lines[i] = lines[i].replace('\\'+kw, f'\\[kw1]{kw}[/]')
@@ -253,7 +252,7 @@ def process_source(key):
 		par4 += line2add
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
-def process_latex(lines, filename):
+def process_latex(lines, filename, link_cases=False):
 	# print(lines),
 	tex_filename = filename + '.tex'
 	html_filename = filename + '.dsl'
@@ -265,6 +264,18 @@ def process_latex(lines, filename):
 		.replace('###SUBTITLE###',artefact_source)\
 		.replace('###SUBPARA###',sub_tex)\
 		.replace('###EVIDENCE###', '')
+	if link_cases:
+		for i in range(len(lines)):
+			if lines[i].find('\\cite') < 0:
+				continue
+			case, rest = lines[i].split('~')
+			if case.startswith('\t'):
+				start = '\t'*(len(case)-len(case.strip()))
+				case = case.strip()
+			else:
+				start = ''
+			# print(f'[DEBUG] "{start}|{case}|{rest}"')
+			lines[i] = f'{start}<a href="{case.lower()}.html">{case}</a>~{rest}'
 	par0 = hyperlink_cats_no_highlight()
 	par1 = hyperlink_map_no_highlight()
 	par2 = filename
@@ -278,11 +289,9 @@ def cap(s):
 def table1_line(cat, count, desc):
 	letter = chr(ord('A') + int(cat[1]) - 1)
 	return f'\\C{letter} & \\C{letter}text & {count} & {desc} \\\\'
-	return f'\\<a href="{cat.lower()}.html">C{letter}</a> & \\C{letter}text & {count} & {desc} \\\\'
 
 def table2_line(x):
 	return f'{x[0]}~\\cite{{{x[1]}}} & {latexify(x[2])} & {latexify(x[3])}'
-	return f'{x[0]}~\\cite{{<a href="{x[1].lower()}.html">{x[1]}</a>}} & {latexify(x[2])} & {latexify(x[3])}'
 
 c_pattern = '''<html doctype>
 	<head title="Taxonomy of Inconsistency Patterns###TITLE###" />
@@ -486,4 +495,4 @@ latex[-1] += ' \\\\'
 latex.append(f'\\bottomrule')
 latex.append('\\end{tabular}')
 latex.append('\\end{table}')
-process_latex(latex, 'table2')
+process_latex(latex, 'table2', link_cases=True)
