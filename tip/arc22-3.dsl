@@ -21,7 +21,7 @@
 	<dd>implementation artefacts</dd>
 	<dd>feedback links</dd>
 <dt>Quotes</dt>
-	<dd class="red">"It is accepted by engineers that the models are not fully consistent with the eventual implementation ... Nevertheless, it is required that the eventual implementation conforms to the requirements. In the current setting, there is no feedback loop between the model and implementation"</dd>
+	<dd class="red">"It is accepted by engineers that the models are not fully consistent with the eventual implementation, so the initial impact of an inconsistency is small. Nevertheless, it is required that the eventual implementation conforms to the requirements."</dd>
 <dt>Summary</dt>
 	<dd>Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist.</dd>
 	<dd>Cause: asynchronous development and missing feedback loop between abstraction levels.</dd>

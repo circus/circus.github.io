@@ -21,7 +21,8 @@
 	<dd>formal schema</dd>
 	<dd>companion textual description</dd>
 <dt>Quotes</dt>
-	<dd class="red">"for each Z schema (ViewPoint), there is an associated textual description (ViewPoint)"</dd>
+	<dd class="red">"Two Viewpoints may be non-overlapping, but there is some existential relationship in which the existence of one depends in some way on the existence of the other."</dd>
+	<dd class="red">"For example, the Z method requires that for each Z schema (Viewpoint), there is an associated textual description (Viewpoint)."</dd>
 <dt>Summary</dt>
 	<dd>A formal schema exists without its required associated textual description view.</dd>
 	<dd>Cause: an existential inter-view dependency is not satisfied; one required companion requirements view is missing.</dd>
