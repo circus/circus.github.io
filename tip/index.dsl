@@ -25,6 +25,9 @@ Feel free to browse specifics hyperlinked below or bulk download
 the BibTeX collection <a href="sources.bib">sources.bib</a> or LaTeX files
 <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, and
 <a href="table2.html">table2.tex</a>.
+</p><p>
+Raw data is available as <a href="cat.data">cat.data</a> and <a href="evidence.data">evidence.data</a>.
+The format is “newline-separated values” which is like CSV but values within each record are “vertically” separated with newlines; with double newlines separating records.
 </p>
 		<table center clrr>
 			Code & Label & As primary & As secondary

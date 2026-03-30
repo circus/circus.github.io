@@ -12,14 +12,14 @@
 <dt>Categories</dt>
 	<dd><a href="c1.html">C1</a></dd>
 <dt>Domain</dt>
-	<dd>industrial MBSE (SysML/Simulink)</dd>
+	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>)</dd>
 <dt>Views</dt>
-	<dd>SysML block diagram</dd>
-	<dd>Simulink model</dd>
+	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
 <dt>Artefacts</dt>
 	<dd>expected subsystem/block correspondence</dd>
 <dt>Quotes</dt>
-	<dd class="red">"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"</dd>
+	<dd class="red">"we could for example detect if the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model is missing a subsystem that was expected in the <a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram"</dd>
 <dt>Summary</dt>
 	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
 	<dd>Cause: missing correspondence under a refinement relation.</dd>

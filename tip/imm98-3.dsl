@@ -13,7 +13,7 @@
 	<dd><a href="c2.html">C2</a> (primary); <a href="c1.html">C1</a> (secondary)</dd>
 <dt>Domain</dt>
 	<dd>software development environments</dd>
-	<dd>UML-like OO design</dd>
+	<dd><a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a>-like OO design</dd>
 <dt>Views</dt>
 	<dd>multiple design and implementation views</dd>
 <dt>Artefacts</dt>

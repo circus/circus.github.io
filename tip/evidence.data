@@ -104,7 +104,7 @@ C1
 C6
 industrial model-code consistency
 system model // code repositories/folders
-system components // Git repositories // folders with public_include
+system components // Git repositories // folders with <code>public_include</code>
 "each system component in the model ... should be matched to a Git repository. Soon, exceptions to this rule appeared, because in some cases multiple system components were included in a single repository"
 The intended one-to-one mapping between model components and code containers fails in practice. // Cause: real code organisation does not obey the assumed architectural correspondence rule. // As a result, initial consistency rule is invalid or too rigid; matching heuristic and rule must be revised.
 

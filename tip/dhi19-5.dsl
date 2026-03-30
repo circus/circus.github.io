@@ -13,13 +13,13 @@
 	<dd><a href="c4.html">C4</a> (primary); <a href="c2.html">C2</a> (secondary)</dd>
 <dt>Domain</dt>
 	<dd>automated production systems</dd>
-	<dd>planning + Simulink</dd>
+	<dd>planning + <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a></dd>
 <dt>Views</dt>
 	<dd>planning property model</dd>
-	<dd>top-level Simulink display model</dd>
+	<dd>top-level <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> display model</dd>
 <dt>Artefacts</dt>
 	<dd>Planning Property</dd>
-	<dd>Simulink Display</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> Display</dd>
 	<dd>satisfies link</dd>
 <dt>Quotes</dt>
 	<dd class="red">"Display ?d (value ?vVal) must satisfy respective Property ?p (defaultValue ?dVal, minValue ?minVal, maxValue ?maxVal)"</dd>

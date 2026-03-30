@@ -82,11 +82,18 @@ def join_flip(columns):
 def join(columns):
 	return ' & '.join(columns) + '\n'
 
+def hyperlinkify(x):
+	return x.strip()\
+		.replace('SysML', '<a href="https://sysml.org/" title="System Modelling Language">SysML</a>')\
+		.replace('UML', '<a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a>')\
+		.replace('Simulink', '<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>')\
+		.replace('Git', '<a href="https://git-scm.com/">Git</a>')
+
 def add_pair(t,d):
 	c = ' class="red"' if t == 'Quotes' else ''
 	result = f'<dt>{t}</dt>\n'
 	for dd in d.split('//'):
-		result += f'\t<dd{c}>{dd.strip()}</dd>\n'
+		result += f'\t<dd{c}>{hyperlinkify(dd)}</dd>\n'
 	return result
 
 def hyperlink_map_no_highlight():
@@ -306,6 +313,9 @@ Feel free to browse specifics hyperlinked below or bulk download
 the BibTeX collection <a href="sources.bib">sources.bib</a> or LaTeX files
 <a href="macros.html">macros.tex</a>, <a href="table1.html">table1.tex</a>, and
 <a href="table2.html">table2.tex</a>.
+</p><p>
+Raw data is available as <a href="cat.data">cat.data</a> and <a href="evidence.data">evidence.data</a>.
+The format is “newline-separated values” which is like CSV but values within each record are “vertically” separated with newlines; with double newlines separating records.
 </p>'''
 sub_para = '<p>{4}</p>\n\t\t<clear/>'
 main_table_title = '\n<clear/>\n<h2>Taxonomy Categories</h2>'

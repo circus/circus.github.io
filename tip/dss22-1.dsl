@@ -18,10 +18,10 @@
 	<dd>code repositories/folders</dd>
 <dt>Artefacts</dt>
 	<dd>system components</dd>
-	<dd>Git repositories</dd>
-	<dd>folders with public_include</dd>
+	<dd><a href="https://git-scm.com/">Git</a> repositories</dd>
+	<dd>folders with <code>public_include</code></dd>
 <dt>Quotes</dt>
-	<dd class="red">"each system component in the model ... should be matched to a Git repository. Soon, exceptions to this rule appeared, because in some cases multiple system components were included in a single repository"</dd>
+	<dd class="red">"each system component in the model ... should be matched to a <a href="https://git-scm.com/">Git</a> repository. Soon, exceptions to this rule appeared, because in some cases multiple system components were included in a single repository"</dd>
 <dt>Summary</dt>
 	<dd>The intended one-to-one mapping between model components and code containers fails in practice.</dd>
 	<dd>Cause: real code organisation does not obey the assumed architectural correspondence rule.</dd>

@@ -12,14 +12,14 @@
 <dt>Categories</dt>
 	<dd><a href="c2.html">C2</a> (primary); <a href="c3.html">C3</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>industrial MBSE (SysML/Simulink, automotive ABS example)</dd>
+	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>, automotive ABS example)</dd>
 <dt>Views</dt>
 	<dd>system model</dd>
-	<dd>Simulink model</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
 <dt>Artefacts</dt>
 	<dd>shared parameter/value for total car mass</dd>
 <dt>Quotes</dt>
-	<dd class="red">"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"</dd>
+	<dd class="red">"if the system model and <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"</dd>
 <dt>Summary</dt>
 	<dd>Corresponding models use conflicting values for the same physical quantity.</dd>
 	<dd>Cause: shared parameter value diverges across views.</dd>

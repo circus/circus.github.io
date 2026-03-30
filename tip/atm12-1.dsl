@@ -13,7 +13,7 @@
 	<dd><a href="c6.html">C6</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 <dt>Domain</dt>
 	<dd>requirements traceability</dd>
-	<dd>UML-based development</dd>
+	<dd><a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a>-based development</dd>
 <dt>Views</dt>
 	<dd>requirements</dd>
 	<dd>analysis models</dd>

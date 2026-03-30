@@ -16,7 +16,7 @@
 	<dd>traffic management</dd>
 <dt>Views</dt>
 	<dd>BPMN bus controller model</dd>
-	<dd>UML/BPMN traffic-light/T-Junction behaviour</dd>
+	<dd><a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a>/BPMN traffic-light/T-Junction behaviour</dd>
 <dt>Artefacts</dt>
 	<dd>Pass Junction activity</dd>
 	<dd>corresponding traffic-light states</dd>

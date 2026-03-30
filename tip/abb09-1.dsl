@@ -14,13 +14,13 @@
 <dt>Domain</dt>
 	<dd>model-based testing in telecommunications</dd>
 <dt>Views</dt>
-	<dd>requirements model (SysML)</dd>
-	<dd>UML system models</dd>
+	<dd>requirements model (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>)</dd>
+	<dd><a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a> system models</dd>
 	<dd>QML/Qtronic test specifications</dd>
 	<dd>test reports</dd>
 <dt>Artefacts</dt>
 	<dd>requirement elements and links</dd>
-	<dd>traced UML elements</dd>
+	<dd>traced <a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a> elements</dd>
 	<dd>propagated QML requirement tags</dd>
 	<dd>generated tests</dd>
 	<dd>failed-test back-traces</dd>
