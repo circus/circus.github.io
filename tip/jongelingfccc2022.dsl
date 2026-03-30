@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>JongelingFCCC2022</code>
 		</h1>
 		<p></p>
-<pre>@article{JongelingFCCC2022,
-  author = {Robbert Jongeling and Johan Fredriksson and Jan Carlson and Federico Ciccozzi and Antonio Cicchetti},
-  title = {Structural Consistency between a System Model and Its Implementation: A Design Science Study in Industry},
-  journal = {Journal of Object Technology},
-  year = {2022},
-  volume = {21},
-  number = {3},
-  pages = {3:1--16},
-  doi = {<a href="https://doi.org/10.5381/jot.2022.21.3.a6">10.5381/jot.2022.21.3.a6</a>}
+<pre>[kw1]@article[/]{JongelingFCCC2022,
+  [kw2]author[/] = {Robbert Jongeling [kw2]and[/] Johan Fredriksson [kw2]and[/] Jan Carlson [kw2]and[/] Federico Ciccozzi [kw2]and[/] Antonio Cicchetti},
+  [kw2]title[/] = {Structural Consistency between a System Model and Its Implementation: A Design Science Study in Industry},
+  [kw2]journal[/] = {Journal of Object Technology},
+  [kw2]year[/] = {2022},
+  [kw2]volume[/] = {21},
+  [kw2]number[/] = {3},
+  [kw2]pages[/] = {3:1--16},
+  [kw2]doi[/] = {<a href="https://doi.org/10.5381/jot.2022.21.3.a6">10.5381/jot.2022.21.3.a6</a>}
 }
 </pre>
 <clear/>

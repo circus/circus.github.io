@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>GeorgeFHKBA2012</code>
 		</h1>
 		<p></p>
-<pre>@article{GeorgeFHKBA2012,
-  author = {Mathew George and Klaus-Peter Fischer-Hellmann and Martin Knahl and Uwe Bleimann and Colin Atkinson},
-  title = {Traceability in Model-Based Testing},
-  journal = {Future Internet},
-  year = {2012},
-  volume = {4},
-  number = {4},
-  pages = {1026--1036},
-  doi = {<a href="https://doi.org/10.3390/fi4041026">10.3390/fi4041026</a>}
+<pre>[kw1]@article[/]{GeorgeFHKBA2012,
+  [kw2]author[/] = {Mathew George [kw2]and[/] Klaus-Peter Fischer-Hellmann [kw2]and[/] Martin Knahl [kw2]and[/] Uwe Bleimann [kw2]and[/] Colin Atkinson},
+  [kw2]title[/] = {Traceability in Model-Based Testing},
+  [kw2]journal[/] = {Future Internet},
+  [kw2]year[/] = {2012},
+  [kw2]volume[/] = {4},
+  [kw2]number[/] = {4},
+  [kw2]pages[/] = {1026--1036},
+  [kw2]doi[/] = {<a href="https://doi.org/10.3390/fi4041026">10.3390/fi4041026</a>}
 }
 </pre>
 <clear/>

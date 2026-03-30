@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>KrauterKRLS2023</code>
 		</h1>
 		<p></p>
-<pre>@article{KrauterKRLS2023,
-  author = {Tim Kr{\"a}uter and Harald K{\"o}nig and Adrian Rutle and Yngve Lamo and Patrick St{\"u}nkel},
-  title = {Behavioral Consistency in Multi-Modeling},
-  journal = {Journal of Object Technology},
-  year = {2023},
-  volume = {22},
-  number = {2},
-  pages = {2:1--15},
-  doi = {<a href="https://doi.org/10.5381/jot.2023.22.2.a9">10.5381/jot.2023.22.2.a9</a>}
+<pre>[kw1]@article[/]{KrauterKRLS2023,
+  [kw2]author[/] = {Tim Kräuter [kw2]and[/] Harald König [kw2]and[/] Adrian Rutle [kw2]and[/] Yngve Lamo [kw2]and[/] Patrick Stünkel},
+  [kw2]title[/] = {Behavioral Consistency in Multi-Modeling},
+  [kw2]journal[/] = {Journal of Object Technology},
+  [kw2]year[/] = {2023},
+  [kw2]volume[/] = {22},
+  [kw2]number[/] = {2},
+  [kw2]pages[/] = {2:1--15},
+  [kw2]doi[/] = {<a href="https://doi.org/10.5381/jot.2023.22.2.a9">10.5381/jot.2023.22.2.a9</a>}
 }
 </pre>
 <clear/>

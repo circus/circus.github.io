@@ -8,14 +8,14 @@
 			<br><span class="red">Source</span> <code>TaylorMD2009</code>
 		</h1>
 		<p></p>
-<pre>@book{TaylorMD2009,
+<pre>[kw1]@book[/]{TaylorMD2009,
   title={Software Architecture: Foundations, Theory, and Practice},
-  author = {Richard N. Taylor and Nenad Medvidovi{\'c} and Eric M. Dashofy},
+  [kw2]author[/] = {Richard N. Taylor [kw2]and[/] Nenad Medvidović [kw2]and[/] Eric M. Dashofy},
   isbn={9780470167748},
   lccn={2009280435},
   year={2009},
   publisher={Wiley},
-  note = "Examples from authors' slides at \url{<a href="https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}">https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}</a>"
+  [kw2]note[/] = "Examples from authors' slides at \url{<a href="https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}">https://ics.uci.edu/~taylor/classes/221/13_Analysis_of_Software_Architectures.pdf}</a>"
 }
 </pre>
 <clear/>

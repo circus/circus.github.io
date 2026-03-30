@@ -8,14 +8,14 @@
 			<br><span class="red">Source</span> <code>AbborsTL2009</code>
 		</h1>
 		<p></p>
-<pre>@inproceedings{AbborsTL2009,
-  author = {Fredrik Abbors and Dragos Truscan and Johan Lilius},
-  title = {Tracing Requirements in a Model-Based Testing Approach},
-  booktitle = {First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)},
-  year = {2009},
-  pages = {123--128},
-  publisher = {IEEE Computer Society},
-  doi = {<a href="https://doi.org/10.1109/VALID.2009.15">10.1109/VALID.2009.15</a>}
+<pre>[kw1]@inproceedings[/]{AbborsTL2009,
+  [kw2]author[/] = {Fredrik Abbors [kw2]and[/] Dragos Truscan [kw2]and[/] Johan Lilius},
+  [kw2]title[/] = {Tracing Requirements in a Model-Based Testing Approach},
+  [kw2]booktitle[/] = {First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)},
+  [kw2]year[/] = {2009},
+  [kw2]pages[/] = {123--128},
+  [kw2]publisher[/] = {IEEE Computer Society},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1109/VALID.2009.15">10.1109/VALID.2009.15</a>}
 }
 </pre>
 <clear/>

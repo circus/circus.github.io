@@ -8,14 +8,14 @@
 			<br><span class="red">Source</span> <code>MurtaHW2008</code>
 		</h1>
 		<p></p>
-<pre>@article{MurtaHW2008,
-  author = {Leonardo G. P. Murta and Andr{\'e} van der Hoek and Cl{\'a}udia M. L. Werner},
-  title = {Continuous and Automated Evolution of Architecture-to-Implementation Traceability Links},
-  journal = {Automated Software Engineering},
-  year = {2008},
-  volume = {15},
-  pages = {75--107},
-  doi = {<a href="https://doi.org/10.1007/s10515-007-0020-6">10.1007/s10515-007-0020-6</a>}
+<pre>[kw1]@article[/]{MurtaHW2008,
+  [kw2]author[/] = {Leonardo G. P. Murta [kw2]and[/] André van der Hoek [kw2]and[/] Cláudia M. L. Werner},
+  [kw2]title[/] = {Continuous and Automated Evolution of Architecture-to-Implementation Traceability Links},
+  [kw2]journal[/] = {Automated Software Engineering},
+  [kw2]year[/] = {2008},
+  [kw2]volume[/] = {15},
+  [kw2]pages[/] = {75--107},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1007/s10515-007-0020-6">10.1007/s10515-007-0020-6</a>}
 }
 </pre>
 <clear/>

@@ -8,12 +8,12 @@
 			<br><span class="red">Source</span> <code>JongelingCCC2022</code>
 		</h1>
 		<p></p>
-<pre>@article{JongelingCCC2022,
-  author = {Robbert Jongeling and Federico Ciccozzi and Jan Carlson and Antonio Cicchetti},
-  title = {Consistency Management in Industrial Continuous Model-Based Development Settings: A Reality Check},
-  journal = {Software and Systems Modeling},
-  year = {2022},
-  doi = {<a href="https://doi.org/10.1007/s10270-022-01000-5">10.1007/s10270-022-01000-5</a>}
+<pre>[kw1]@article[/]{JongelingCCC2022,
+  [kw2]author[/] = {Robbert Jongeling [kw2]and[/] Federico Ciccozzi [kw2]and[/] Jan Carlson [kw2]and[/] Antonio Cicchetti},
+  [kw2]title[/] = {Consistency Management in Industrial Continuous Model-Based Development Settings: A Reality Check},
+  [kw2]journal[/] = {Software and Systems Modeling},
+  [kw2]year[/] = {2022},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1007/s10270-022-01000-5">10.1007/s10270-022-01000-5</a>}
 }
 </pre>
 <clear/>

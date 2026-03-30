@@ -8,12 +8,12 @@
 			<br><span class="red">Source</span> <code>MaderG2012</code>
 		</h1>
 		<p></p>
-<pre>@article{MaderG2012,
-  author = {Patrick M{\"a}der and Orlena Gotel},
-  title = {Towards Automated Traceability Maintenance},
-  journal = {Journal of Systems and Software},
-  year = {2012},
-  doi = {<a href="https://doi.org/10.1016/j.jss.2011.10.023">10.1016/j.jss.2011.10.023</a>}
+<pre>[kw1]@article[/]{MaderG2012,
+  [kw2]author[/] = {Patrick Mäder [kw2]and[/] Orlena Gotel},
+  [kw2]title[/] = {Towards Automated Traceability Maintenance},
+  [kw2]journal[/] = {Journal of Systems and Software},
+  [kw2]year[/] = {2012},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1016/j.jss.2011.10.023">10.1016/j.jss.2011.10.023</a>}
 }
 </pre>
 <clear/>

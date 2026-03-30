@@ -8,12 +8,12 @@
 			<br><span class="red">Source</span> <code>GrundyHM1998</code>
 		</h1>
 		<p></p>
-<pre>@article{GrundyHM1998,
-  author = {John Grundy and John Hosking and Warwick B. Mugridge},
-  title = {Inconsistency Management for Multiple-View Software Development Environments},
-  journal = {IEEE Transactions on Software Engineering},
-  year = {1998},
-  doi = {<a href="https://doi.org/10.1109/32.730545">10.1109/32.730545</a>}
+<pre>[kw1]@article[/]{GrundyHM1998,
+  [kw2]author[/] = {John Grundy [kw2]and[/] John Hosking [kw2]and[/] Warwick B. Mugridge},
+  [kw2]title[/] = {Inconsistency Management for Multiple-View Software Development Environments},
+  [kw2]journal[/] = {IEEE Transactions on Software Engineering},
+  [kw2]year[/] = {1998},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1109/32.730545">10.1109/32.730545</a>}
 }
 </pre>
 <clear/>

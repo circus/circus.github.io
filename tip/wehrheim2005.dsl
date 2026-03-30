@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>Wehrheim2005</code>
 		</h1>
 		<p></p>
-<pre>@inproceedings{Wehrheim2005,
-  author = {Heike Wehrheim},
-  title = {Refinement and Consistency in Multiview Models},
-  booktitle = {Language Engineering for Model-Driven Software Development},
-  series = {Dagstuhl Seminar Proceedings},
-  volume = {4101},
-  year = {2005},
-  pages = {1--11},
-  doi = {<a href="https://doi.org/10.4230/DagSemProc.04101.13">10.4230/DagSemProc.04101.13</a>}
+<pre>[kw1]@inproceedings[/]{Wehrheim2005,
+  [kw2]author[/] = {Heike Wehrheim},
+  [kw2]title[/] = {Refinement and Consistency in Multiview Models},
+  [kw2]booktitle[/] = {Language Engineering for Model-Driven Software Development},
+  [kw2]series[/] = {Dagstuhl Seminar Proceedings},
+  [kw2]volume[/] = {4101},
+  [kw2]year[/] = {2005},
+  [kw2]pages[/] = {1--11},
+  [kw2]doi[/] = {<a href="https://doi.org/10.4230/DagSemProc.04101.13">10.4230/DagSemProc.04101.13</a>}
 }</pre>
 <clear/>
 <h2>Taxonomy Categories</h2>

@@ -8,14 +8,14 @@
 			<br><span class="red">Source</span> <code>BuchgeherWeinreich2011</code>
 		</h1>
 		<p></p>
-<pre>@inproceedings{BuchgeherWeinreich2011,
-  author = {Georg Buchgeher and Rainer Weinreich},
-  title = {Automatic Tracing of Decisions to Architecture and Implementation},
-  booktitle = {Proceedings of the 2011 Ninth Working IEEE/IFIP Conference on Software Architecture (WICSA)},
-  year = {2011},
-  pages = {46--55},
-  publisher = {IEEE Computer Society},
-  doi = {<a href="https://doi.org/10.1109/WICSA.2011.16">10.1109/WICSA.2011.16</a>}
+<pre>[kw1]@inproceedings[/]{BuchgeherWeinreich2011,
+  [kw2]author[/] = {Georg Buchgeher [kw2]and[/] Rainer Weinreich},
+  [kw2]title[/] = {Automatic Tracing of Decisions to Architecture and Implementation},
+  [kw2]booktitle[/] = {Proceedings of the 2011 Ninth Working IEEE/IFIP Conference on Software Architecture (WICSA)},
+  [kw2]year[/] = {2011},
+  [kw2]pages[/] = {46--55},
+  [kw2]publisher[/] = {IEEE Computer Society},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1109/WICSA.2011.16">10.1109/WICSA.2011.16</a>}
 }
 </pre>
 <clear/>

@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>NuseibehKF1994</code>
 		</h1>
 		<p></p>
-<pre>@article{NuseibehKF1994,
-  author = {Bashar Nuseibeh and Jeff Kramer and Anthony Finkelstein},
-  title = {A Framework for Expressing the Relationships between Multiple Views in Requirements Specification},
-  journal = {IEEE Transactions on Software Engineering},
-  year = {1994},
-  volume = {20},
-  number = {10},
-  pages = {760--773},
-  doi = {<a href="https://doi.org/10.1109/32.328995">10.1109/32.328995</a>}
+<pre>[kw1]@article[/]{NuseibehKF1994,
+  [kw2]author[/] = {Bashar Nuseibeh [kw2]and[/] Jeff Kramer [kw2]and[/] Anthony Finkelstein},
+  [kw2]title[/] = {A Framework for Expressing the Relationships between Multiple Views in Requirements Specification},
+  [kw2]journal[/] = {IEEE Transactions on Software Engineering},
+  [kw2]year[/] = {1994},
+  [kw2]volume[/] = {20},
+  [kw2]number[/] = {10},
+  [kw2]pages[/] = {760--773},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1109/32.328995">10.1109/32.328995</a>}
 }
 </pre>
 <clear/>

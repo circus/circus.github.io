@@ -8,13 +8,13 @@
 			<br><span class="red">Source</span> <code>JavedMZ2018</code>
 		</h1>
 		<p></p>
-<pre>@inproceedings{JavedMZ2018,
-  author = {Muhammad Atif Javed and Faiz U. L. Muram and Uwe Zdun},
-  title = {On-Demand Automated Traceability Maintenance and Evolution},
-  booktitle = {Proceedings of the 17th International Conference on New Opportunities for Software Reuse (ICSR)},
-  year = {2018},
-  pages = {111--120},
-  doi = {<a href="https://doi.org/10.1007/978-3-319-90421-4_7">10.1007/978-3-319-90421-4_7</a>}
+<pre>[kw1]@inproceedings[/]{JavedMZ2018,
+  [kw2]author[/] = {Muhammad Atif Javed [kw2]and[/] Faiz U. L. Muram [kw2]and[/] Uwe Zdun},
+  [kw2]title[/] = {On-Demand Automated Traceability Maintenance and Evolution},
+  [kw2]booktitle[/] = {Proceedings of the 17th International Conference on New Opportunities for Software Reuse (ICSR)},
+  [kw2]year[/] = {2018},
+  [kw2]pages[/] = {111--120},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1007/978-3-319-90421-4_7">10.1007/978-3-319-90421-4_7</a>}
 }
 </pre>
 <clear/>

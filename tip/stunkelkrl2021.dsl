@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>StunkelKRL2021</code>
 		</h1>
 		<p></p>
-<pre>@article{StunkelKRL2021,
-  author = {Patrick St{\"u}nkel and Harald K{\"o}nig and Adrian Rutle and Yngve Lamo},
-  title = {Multi-Model Evolution through Model Repair},
-  journal = {Journal of Object Technology},
-  year = {2021},
-  volume = {20},
-  number = {1},
-  pages = {1:1--25},
-  doi = {<a href="https://doi.org/10.5381/jot.2021.20.1.a2">10.5381/jot.2021.20.1.a2</a>}
+<pre>[kw1]@article[/]{StunkelKRL2021,
+  [kw2]author[/] = {Patrick Stünkel [kw2]and[/] Harald König [kw2]and[/] Adrian Rutle [kw2]and[/] Yngve Lamo},
+  [kw2]title[/] = {Multi-Model Evolution through Model Repair},
+  [kw2]journal[/] = {Journal of Object Technology},
+  [kw2]year[/] = {2021},
+  [kw2]volume[/] = {20},
+  [kw2]number[/] = {1},
+  [kw2]pages[/] = {1:1--25},
+  [kw2]doi[/] = {<a href="https://doi.org/10.5381/jot.2021.20.1.a2">10.5381/jot.2021.20.1.a2</a>}
 }
 </pre>
 <clear/>

@@ -8,15 +8,15 @@
 			<br><span class="red">Source</span> <code>ValderasPelechano2009</code>
 		</h1>
 		<p></p>
-<pre>@article{ValderasPelechano2009,
-  author = {Pedro Valderas and Vicente Pelechano},
-  title = {Introducing Requirements Traceability Support in Model-Driven Development of Web Applications},
-  journal = {Information and Software Technology},
-  year = {2009},
-  volume = {51},
-  number = {4},
-  pages = {749--768},
-  doi = {<a href="https://doi.org/10.1016/j.infsof.2008.09.008">10.1016/j.infsof.2008.09.008</a>}
+<pre>[kw1]@article[/]{ValderasPelechano2009,
+  [kw2]author[/] = {Pedro Valderas [kw2]and[/] Vicente Pelechano},
+  [kw2]title[/] = {Introducing Requirements Traceability Support in Model-Driven Development of Web Applications},
+  [kw2]journal[/] = {Information and Software Technology},
+  [kw2]year[/] = {2009},
+  [kw2]volume[/] = {51},
+  [kw2]number[/] = {4},
+  [kw2]pages[/] = {749--768},
+  [kw2]doi[/] = {<a href="https://doi.org/10.1016/j.infsof.2008.09.008">10.1016/j.infsof.2008.09.008</a>}
 }
 </pre>
 <clear/>

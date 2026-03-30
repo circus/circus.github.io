@@ -8,13 +8,13 @@
 			<br><span class="red">Source</span> <code>Feldmann2019</code>
 		</h1>
 		<p></p>
-<pre>@phdthesis{Feldmann2019,
-  author = {Stefan Feldmann},
-  title = {Diagnosis and Handling of Inconsistencies in Heterogeneous Models of Automated Production Systems},
-  school = {Technical University of Munich},
-  year = {2019},
-  url = "<a href="https://d-nb.info/119840244X/34">https://d-nb.info/119840244X/34</a>",
-  isbn = {978-3-96548-053-7}
+<pre>[kw1]@phdthesis[/]{Feldmann2019,
+  [kw2]author[/] = {Stefan Feldmann},
+  [kw2]title[/] = {Diagnosis and Handling of Inconsistencies in Heterogeneous Models of Automated Production Systems},
+  [kw2]school[/] = {Technical University of Munich},
+  [kw2]year[/] = {2019},
+  [kw2]url[/] = "<a href="https://d-nb.info/119840244X/34">https://d-nb.info/119840244X/34</a>",
+  [kw2]isbn[/] = {978-3-96548-053-7}
 }
 </pre>
 <clear/>

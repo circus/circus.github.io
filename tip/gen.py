@@ -2,6 +2,11 @@
 
 import os
 
+def split3(text, one, two, include=True):
+	first, second = text.split(one, 1)
+	second, third = second.split(two, 1)
+	return (first, one+second, two+third) if include else (first, second, third)
+
 def latexify(c):
 	if c in ('—', '–', ''):
 		return c.replace('–', '---').replace('–', '--')
@@ -206,19 +211,26 @@ def process_source(key):
 	par2 = key
 	par3 = par4 = ''
 	for line in bibitems[key]:
+		line2add = line
 		if line.find('http') > -1:
-			before, after = line.split('http')
-			link, after = after.split('"')
-			link = 'http' + link
-			par4 += before + f'<a href="{link}">{link}</a>"' + after
+			before, link, after = split3(line, 'http', '"')
+			line2add = f'{before}<a href="{link}">{link}</a>{after}'
 		elif line.find('doi =') > -1:
-			before, after = line.split('{')
-			doi, after = after.split('}')
-			par4 += before + f'{{<a href="https://doi.org/{doi}">{doi}</a>}}' + after
+			before, doi, after = split3(line, '{', '}', include=False)
+			line2add = f'{before}{{<a href="https://doi.org/{doi}">{doi}</a>}}{after}'
 		elif line.find('{{') > -1 and line.find('}}') > -1:
-			par4 += line.replace('{{', '{').replace('}}', '}')
-		else:
-			par4 += line
+			line2add = line.replace('{{', '{').replace('}}', '}')
+		elif line.startswith('@'):
+			before, kw, after = split3(line, '@', '{')
+			line2add = f'{before}[kw1]{kw}[/]{after}'
+		# beautification
+		if line.find(' = ') > -1:
+			key, val = line2add.split(' = ')
+			key = key.strip()
+			if key == 'author':
+				val = val.replace(' and ', ' [kw2]and[/] ')
+			line2add = f'  [kw2]{key}[/] = {val}'
+		par4 += line2add
 	maybe_update(new_content.format(par0, par1, par2, par3, par4), old_content, filename)
 
 def process_latex(lines, filename):
