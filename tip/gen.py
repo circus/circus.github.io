@@ -11,6 +11,7 @@ def latexify(c):
 	if c in ('—', '–', ''):
 		return c.replace('–', '---').replace('–', '--')
 	letter = chr(ord('A') + int(c[-1]) - 1)
+	return f'\\C{letter}'
 	return f'\\<a href="{c.lower()}.html">C{letter}</a>'
 
 def beautify_latex(lines):
@@ -266,9 +267,11 @@ def cap(s):
 
 def table1_line(cat, count, desc):
 	letter = chr(ord('A') + int(cat[1]) - 1)
+	return f'\\C{letter} & \\C{letter}text & {count} & {desc} \\\\'
 	return f'\\<a href="{cat.lower()}.html">C{letter}</a> & \\C{letter}text & {count} & {desc} \\\\'
 
 def table2_line(x):
+	return f'{x[0]}~\\cite{{{x[1]}}} & {latexify(x[2])} & {latexify(x[3])}'
 	return f'{x[0]}~\\cite{{<a href="{x[1].lower()}.html">{x[1]}</a>}} & {latexify(x[2])} & {latexify(x[3])}'
 
 c_pattern = '''<html doctype>
