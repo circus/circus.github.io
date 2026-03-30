@@ -1,35 +1,29 @@
 <html doctype>
-	<head title="Taxonomy of Inconsistency Patterns — HLI19-3" />
+	<head title="Taxonomy of Inconsistency Patterns — JongelingSATToSE2019" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">
 			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
 			in Multi-View Modelling
-			<br><span class="red">Case</span> <code>HLI19-3</code>
+			<br><span class="red">Source</span> <code>JongelingSATToSE2019</code>
 		</h1>
-		<dl><dt>Source</dt>
-	<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
-<dt>Categories</dt>
-	<dd><a href="c1.html">C1</a></dd>
-<dt>Domain</dt>
-	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>)</dd>
-<dt>Views</dt>
-	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram</dd>
-	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
-<dt>Artefacts</dt>
-	<dd>expected subsystem/block correspondence</dd>
-<dt>Quotes</dt>
-	<dd class="red">"we could for example detect if the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model is missing a subsystem that was expected in the <a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram"</dd>
-<dt>Summary</dt>
-	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
-	<dd>Cause: missing correspondence under a refinement relation.</dd>
-	<dd>As a result, likely incompleteness or incorrect realisation of the higher-level design.</dd>
-</dl>
+		<p></p>
+<pre>[kw1]@inproceedings[/]{JongelingSATToSE2019,
+  [kw2]author[/] = {Robbert Jongeling},
+  [kw2]editor[/] = {Anne Etien},
+  [kw2]title[/] = {Work in Progress towards Consistency Management for Industrial Model-based Development},
+  [kw2]booktitle[/] = {Proceedings of the Seminar Series on Advanced Techniques {\&} Tools for Software Evolution (SATTOSE)},
+  [kw2]series[/] = {{CEUR} Workshop Proceedings},
+  [kw2]publisher[/] = {CEUR-WS.org},
+  [kw2]year[/] = {2019},
+  [kw2]url[/] = "<a href="https://ceur-ws.org/Vol-2510/sattose2019_paper_9.pdf">https://ceur-ws.org/Vol-2510/sattose2019\_paper\_9.pdf</a>",
+}
+</pre>
 <clear/>
 <h2>Taxonomy Categories</h2>
 		<table center clrr>
 			Code & Label & As primary & As secondary
-¶ C1 & Structural mismatch@c1.html & 13 & 7
+C1 & Structural mismatch@c1.html & 13 & 7
 C2 & Interface contract mismatch@c2.html & 4 & 5
 C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
@@ -41,7 +35,7 @@ C7 & Temporal skew@c7.html & 3 & 9
 		<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
-¶ HLI19-3@hli19-3.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & —
+HLI19-1@hli19-1.html & [JongelingDocSymp2019]@jongelingdocsymp2019.html & C1@c1.html & —
 RCM05-1@rcm05-1.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-5@rcm05-5.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-2@rcm05-2.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C3@c3.html
@@ -52,12 +46,12 @@ DHI19-3@dhi19-3.html & [Feldmann2019]@feldmann2019.html & C1@c1.html & C5@c5.htm
 FER94-2@fer94-2.html & [NuseibehKF1994]@nuseibehkf1994.html & C1@c1.html & C5@c5.html
 DSS22-1@dss22-1.html & [JongelingFCCC2022]@jongelingfccc2022.html & C1@c1.html & C6@c6.html
 IMM98-2@imm98-2.html & [GrundyHM1998]@grundyhm1998.html & C1@c1.html & C7@c7.html
-HLI19-1@hli19-1.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & C7@c7.html
+¶ CCM19-1@ccm19-1.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C1@c1.html & C7@c7.html
 ARC22-3@arc22-3.html & [JongelingCCC2022]@jongelingccc2022.html & C1@c1.html & C7@c7.html
 DHI19-2@dhi19-2.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 DHI19-4@dhi19-4.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 IMM98-3@imm98-3.html & [GrundyHM1998]@grundyhm1998.html & C2@c2.html & C1@c1.html
-HLI19-2@hli19-2.html & [Jongeling2019]@jongeling2019.html & C2@c2.html & C3@c3.html
+¶ CCM19-2@ccm19-2.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C2@c2.html & C3@c3.html
 BCM23-1@bcm23-1.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C1@c1.html
 BCM23-2@bcm23-2.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C2@c2.html
 BCM23-4@bcm23-4.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C6@c6.html

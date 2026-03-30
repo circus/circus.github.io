@@ -1,29 +1,31 @@
 <html doctype>
-	<head title="Taxonomy of Inconsistency Patterns — HLI19-1" />
+	<head title="Taxonomy of Inconsistency Patterns — CCM19-1" />
 	<body>
 		<credit/>
 		<h1 logo="tip.200.png" alt="TIP" hover="TIP logo designed by Vadim Zaytsev">
 			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
 			in Multi-View Modelling
-			<br><span class="red">Case</span> <code>HLI19-1</code>
+			<br><span class="red">Case</span> <code>CCM19-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-	<dd><a href="jongelingdocsymp2019.html">JongelingDocSymp2019</a></dd>
+	<dd><a href="jongelingsattose2019.html">JongelingSATToSE2019</a></dd>
 <dt>Categories</dt>
-	<dd><a href="c1.html">C1</a></dd>
+	<dd><a href="c1.html">C1</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
 <dt>Domain</dt>
-	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>)</dd>
+	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>, automotive <a href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" title="anti-lock braking system">ABS</a> example)</dd>
 <dt>Views</dt>
-	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram</dd>
-	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
+	<dd>high-level <a href="https://sysml.org/" title="System Modelling Language">SysML</a> diagrams</dd>
+	<dd>lower-level <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
 <dt>Artefacts</dt>
-	<dd>expected subsystem/block correspondence</dd>
+	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> internal block/activity/parametric diagrams</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> refinement model</dd>
 <dt>Quotes</dt>
-	<dd class="red">"We could […] detect if the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model is missing a subsystem that was expected in the <a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram, indicating a probable inconsistency between the two models."</dd>
+	<dd class="red">"In our running example, this indeed happens, the system model is changed, requiring some changes in the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model."</dd>
+	<dd class="red">"In the running example, not updating the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model of the <a href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" title="anti-lock braking system">ABS</a> might result in its incorrect implementation."</dd>
 <dt>Summary</dt>
-	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
-	<dd>Cause: missing correspondence under a refinement relation.</dd>
-	<dd>As a result, likely incompleteness or incorrect realisation of the higher-level design.</dd>
+	<dd>A change in the high-level system model is not reflected in the refining <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model.</dd>
+	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>
+	<dd>As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.</dd>
 </dl>
 <clear/>
 <h2>Taxonomy Categories</h2>
@@ -35,13 +37,13 @@ C3 & Behavioural contradiction@c3.html & 3 & 6
 C4 & Requirement satisfaction gap@c4.html & 7 & 1
 C5 & Terminology divergence@c5.html & 3 & 3
 C6 & Traceability disruption@c6.html & 7 & 6
-C7 & Temporal skew@c7.html & 3 & 9
+¶¶ C7 & Temporal skew@c7.html & 3 & 9
 
 		</table>
 		<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
-¶ HLI19-1@hli19-1.html & [JongelingDocSymp2019]@jongelingdocsymp2019.html & C1@c1.html & —
+HLI19-1@hli19-1.html & [JongelingDocSymp2019]@jongelingdocsymp2019.html & C1@c1.html & —
 RCM05-1@rcm05-1.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-5@rcm05-5.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-2@rcm05-2.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C3@c3.html
@@ -52,7 +54,7 @@ DHI19-3@dhi19-3.html & [Feldmann2019]@feldmann2019.html & C1@c1.html & C5@c5.htm
 FER94-2@fer94-2.html & [NuseibehKF1994]@nuseibehkf1994.html & C1@c1.html & C5@c5.html
 DSS22-1@dss22-1.html & [JongelingFCCC2022]@jongelingfccc2022.html & C1@c1.html & C6@c6.html
 IMM98-2@imm98-2.html & [GrundyHM1998]@grundyhm1998.html & C1@c1.html & C7@c7.html
-CCM19-1@ccm19-1.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C1@c1.html & C7@c7.html
+¶ CCM19-1@ccm19-1.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C1@c1.html & C7@c7.html
 ARC22-3@arc22-3.html & [JongelingCCC2022]@jongelingccc2022.html & C1@c1.html & C7@c7.html
 DHI19-2@dhi19-2.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 DHI19-4@dhi19-4.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html

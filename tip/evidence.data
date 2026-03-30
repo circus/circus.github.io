@@ -8,14 +8,14 @@ Artefacts
 Quotes
 Summary
 
-HLI19-3
-Jongeling2019
+HLI19-1
+JongelingDocSymp2019
 C1
 —
 industrial MBSE (SysML/Simulink)
 SysML block diagram // Simulink model
 expected subsystem/block correspondence
-"we could for example detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram"
+"We could […] detect if the Simulink model is missing a subsystem that was expected in the SysML block diagram, indicating a probable inconsistency between the two models."
 A lower-level model omits a subsystem required by the higher-level architectural view. // Cause: missing correspondence under a refinement relation. // As a result, likely incompleteness or incorrect realisation of the higher-level design.
 
 RCM05-1
@@ -85,8 +85,8 @@ C5
 automated production systems // project + discipline models
 project documentation // discipline-specific model
 documentation item // refined common/model element // refinement link
-"Refinement between project documentation and discipline model" with conditions including name mismatch and wrong refined artifact kind
-A documentation artifact does not properly refine or correspond to the intended discipline-specific model element. // Cause: refinement relation is ill-formed or points to a mismatched artifact. // As a result, breakdown of abstraction linkage between management/documentation and engineering views.
+"Inconsistency for refinement between project documentation and discipline-specific model."
+A documentation artefact does not properly refine or correspond to the intended discipline-specific model element. // Cause: refinement relation is ill-formed or points to a mismatched artefact. // As a result, breakdown of abstraction linkage between management/documentation and engineering views.
 
 FER94-2
 NuseibehKF1994
@@ -115,17 +115,17 @@ C7
 software development environments // UML-like OO design
 OO design view // textual code view(s)
 method call connection in design model // affected textual code views
-"adding a method call connection in an OO design view can not be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent"
+"Adding a method call connection in an OO design view cannot be automatically added to the appropriate textual code view(s) affected by this change, so the code views become inconsistent."
 A design-level call relation is added, but the implementation view is not updated accordingly. // Cause: refinement/correspondence relation exists, but automatic propagation is unavailable because the mapping to implementation details is underdetermined. // As a result, implementation no longer reflects the design; manual repair is required.
 
-HLI19-1
-Jongeling2019
+CCM19-1
+JongelingSATToSE2019
 C1
 C7
 industrial MBSE (SysML/Simulink, automotive ABS example)
 high-level SysML diagrams // lower-level Simulink model
 SysML internal block/activity/parametric diagrams // Simulink refinement model
-"if the system model is changed, requiring some changes in the Simulink model ... not updating the Simulink model of the ABS might result in its incorrect implementation"
+"In our running example, this indeed happens, the system model is changed, requiring some changes in the Simulink model." // "In the running example, not updating the Simulink model of the ABS might result in its incorrect implementation."
 A change in the high-level system model is not reflected in the refining Simulink model. // Cause: evolution of the abstract model without co-evolution of the lower-level model. // As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.
 
 ARC22-3
@@ -134,7 +134,7 @@ C1
 C7
 industrial continuous model-based development
 high-level system/architecture models // implementation
-system models // implementation artifacts // feedback links
+system models // implementation artefacts // feedback links
 "It is accepted by engineers that the models are not fully consistent with the eventual implementation ... Nevertheless, it is required that the eventual implementation conforms to the requirements. In the current setting, there is no feedback loop between the model and implementation"
 Engineers temporarily accept mismatch between high-level models and implementation, but lack of feedback makes the mismatch persist. // Cause: asynchronous development and missing feedback loop between abstraction levels. // As a result, implementation may drift from the intended design and engineers lose model-based overview.
 
@@ -155,8 +155,8 @@ C1
 automated production systems // SysML-Simulink alignment
 top-level Simulink model // SysML/UML property model
 Simulink Constant // SysML/UML Property // equivalence link
-"Equivalence between top-level Simulink Constant and SysML Property" with condition "?vVal != ?pVal"
-Two elements explicitly marked equivalent carry different values across models. // Cause: value disagreement between corresponding elements under an equivalence relation. // As a result, equivalent artifacts cease to agree semantically, requiring repair or tolerance.
+"Inconsistency for equivalence between top-level MATLAB/Simulink Constant and UML Property" ("…and SysML Property" inside the figure)
+Two elements explicitly marked equivalent carry different values across models. // Cause: value disagreement between corresponding elements under an equivalence relation. // As a result, equivalent artefacts cease to agree semantically, requiring repair or tolerance.
 
 IMM98-3
 GrundyHM1998
@@ -165,24 +165,24 @@ C1
 software development environments // UML-like OO design
 multiple design and implementation views
 method calls // argument lists // class methods
-"semantic inconsistencies in specifications (e.g. a type mis-match between method calls or a non-existent method is called)"
-Two related artifacts agree enough to connect, but disagree on call signature or method existence. // Cause: semantic/interface constraints between linked elements are violated. // As a result, incorrect or impossible interaction between components/classes; manual correction required.
+"Inconsistency detection is needed after one view is edited in order to detect: […] semantic inconsistencies in specifications (e.g., a type mismatch between method calls or a nonexistent method is called); […]."
+Two related artefacts agree enough to connect, but disagree on call signature or method existence. // Cause: semantic/interface constraints between linked elements are violated. // As a result, incorrect or impossible interaction between components/classes; manual correction required.
 
-HLI19-2
-Jongeling2019
+CCM19-2
+JongelingSATToSE2019
 C2
 C3
 industrial MBSE (SysML/Simulink, automotive ABS example)
 system model // Simulink model
 shared parameter/value for total car mass
-"if the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS"
+"If the system model and Simulink model assume a different total mass of the car, this inconsistency could result in an incorrect ABS."
 Corresponding models use conflicting values for the same physical quantity. // Cause: shared parameter value diverges across views. // As a result, behaviour of the implemented function may be incorrect despite local plausibility of each model.
 
 BCM23-1
 KrauterKRLS2023
 C3
 C1
-behavioural multi-modeling // traffic management
+behavioural multi-modelling // traffic management
 UML state machine traffic-light model // BPMN T-Junction controller model
 traffic light states A/B/C // global safety property over combined models
 "unsafe traffic occurs if traffic light A is green or amber and traffic light B is green or amber simultaneously ... the same state combinations are forbidden for traffic lights B and C"
@@ -225,7 +225,7 @@ C2
 automated production systems // planning + Simulink
 planning property model // top-level Simulink display model
 Planning Property // Simulink Display // satisfies link
-"Display ?d (value ?vVal) must satisfy respective Property ?p (defaultValue ?dVal, minValue ?minVal, maxValue ?maxVal)"
+"Inconsistency for satisfaction between top-level MATLAB/Simulink Display and Planning Property"
 A displayed/implemented value violates the property it is supposed to satisfy, either by being unequal or out of range. // Cause: satisfaction relation exists, but checked property bounds or expected value are violated. // As a result, supposedly satisfied planning/property constraint is not actually met.
 
 FER94-3
@@ -245,7 +245,7 @@ C6
 model-based testing in telecommunications
 requirements model (SysML) // UML system models // QML/Qtronic test specifications // test reports
 requirement elements and links // traced UML elements // propagated QML requirement tags // generated tests // failed-test back-traces
-"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."
+"Ultimately, since requirements are traced to model elements, it facilitates the identification of which functionalities of SUT are not in sync with the model, and hence with the requirements." // "Traceability of requirements can help in depicting missing tests, i.e. when critical requirements are not traced to any tests."
 Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test. // Cause: trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic. // As a result, there are missing tests and incomplete requirement coverage; failed tests can be back-traced to linked model elements; omissions and requirement misinterpretations surface early in modeling.
 
 FER94-4
@@ -285,7 +285,7 @@ C5
 automated production systems // heterogeneous engineering models
 inter-model vocabulary alignment
 properties across linked models
-"Figure A.4. Inconsistency 1.4: Naming inconsistency for properties"
+"Naming inconsistency for elements (common vocabulary)" // "Naming inconsistency for properties (common vocabulary)" // "Naming inconsistency for elements (mechatronics vocabulary)" // "Naming inconsistency for properties (mechatronics vocabulary)"
 Linked properties across models use inconsistent names. // Cause: equivalent elements lack aligned terminology. // As a result, correspondence establishment and interpretation become harder; repair action is naming-related.
 
 DSS22-3
@@ -304,9 +304,9 @@ C5
 C7
 software development environments // UML-like OO design
 OOA/D design view // other design diagrams // code // documentation // analysis diagrams
-class interface // related diagrams // derived code // documentation artifacts
-"renaming a class in an OO design view means all other analysis, design, implementation and documentation views become inconsistent unless the class name is changed in these views"
-A class is renamed in one design view, but the corresponding name is not propagated to related views and artifacts. // Cause: local edit to a shared conceptual element is not propagated across redundant or corresponding representations. // As a result, cross-view disagreement; developers may overlook the inconsistency; downstream artifacts no longer refer to the same concept consistently.
+class interface // related diagrams // derived code // documentation artefacts
+"Inconsistency detection is needed after one view is edited in order to detect: structural inconsistencies between views (e.g., class attributes added in one view aren’t in another); […]." // "Renaming a class in an OO design view means all other analysis, design, implementation and documentation views become inconsistent unless the class name is changed in these views."
+A class is renamed in one design view, but the corresponding name is not propagated to related views and artefacts. // Cause: local edit to a shared conceptual element is not propagated across redundant or corresponding representations. // As a result, cross-view disagreement; developers may overlook the inconsistency; downstream artefacts no longer refer to the same concept consistently.
 
 ATD11-1
 BuchgeherWeinreich2011
@@ -314,9 +314,9 @@ C6
 —
 Architecture decisions and implementation traceability
 Requirements/design decisions // architecture // implementation
-Traceability relationships among decision, architecture, and code artifacts
-"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information"
-Architectural-decision traces are incomplete or missing when recovered manually from artifacts after the fact. // Cause: manual, retrospective trace recovery is error-prone and incomplete. // As a result, important relations can be missed, weakening architecture-related activities and reasoning.
+Traceability relationships among decision, architecture, and code artefacts
+"Manual discovery and recovery of tracing information by studying documents, architecture documentation and implementation is time-intensive, costly, and may miss important information not found in the analyzed artifacts."
+Architectural-decision traces are incomplete or missing when recovered manually from artefacts after the fact. // Cause: manual, retrospective trace recovery is error-prone and incomplete. // As a result, important relations can be missed, weakening architecture-related activities and reasoning.
 
 BCM23-3
 KrauterKRLS2023
@@ -335,7 +335,7 @@ C4
 model-based testing
 requirements model // design model // test model
 relationships among requirements, design, tests, and executable tests
-"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails"
+"Relationships between the different models will help to navigate from one model to another, and trace back to the respective requirements and the design model when the test fails."
 When a test fails, missing cross-model relationships prevent reliable backward navigation to the responsible requirement/design elements. // Cause: gaps between requirements, design, and test models are not bridged by explicit relations. // As a result, failed tests are harder to diagnose; inconsistencies in requirements elicitation and tests are harder to localise.
 
 ITC16-1
@@ -345,7 +345,7 @@ C7
 automation engineering // electrical models and controller software
 electrical model // corresponding software controller
 engineer-defined links and consistency rules across tools
-"maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change"
+"We discuss experiences […] in maintaining the consistency between electrical models and the corresponding software controller when both are subject to continuous change."
 Electrical and controller views co-evolve, but their cross-tool relations drift unless maintained through explicit links and rules. // Cause: concurrent cross-domain evolution in heterogeneous engineering tools. // As a result, change impact becomes erroneous unless consistency checking notifies engineers.
 
 OAT18-1
@@ -353,9 +353,9 @@ JavedMZ2018
 C6
 C7
 software traceability evolution
-versions of a software project // traceability links between artifacts
+versions of a software project // traceability links between artefacts
 existing trace links across versions/releases
-"a new major version leads to the decay of traceability links"
+"After the painstaking process of traceability construction, a substantial evolution of a software system, such as a new major version leads to the decay of traceability links."
 Trace links that were valid in one project version become stale after major-version evolution. // Cause: substantial system evolution without synchronised update of stored trace links. // As a result, trace set loses validity and requires maintenance/evolution support.
 
 ATM12-1
@@ -364,9 +364,9 @@ C6
 C7
 requirements traceability // UML-based development
 requirements // analysis models // design models
-traceability relations between lifecycle artifacts
+traceability relations between lifecycle artefacts
 "it is necessary to have an up-to-date set of traceability relations ... [and] maintain traceability relations over time as the software system evolves in order to prevent their decay"
-Trace links that were once valid become stale as related artifacts evolve. // Cause: artifact evolution without commensurate maintenance of trace links. // As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.
+Trace links that were once valid become stale as related artefacts evolve. // Cause: artefact evolution without commensurate maintenance of trace links. // As a result, dependencies become unreliable and development tasks lose the expected benefits of traceability.
 
 CAE08-1
 MurtaHW2008
@@ -376,7 +376,7 @@ architecture-to-implementation traceability
 software architecture // implementation code
 versions of architectural elements // versions of source code configuration items // trace links
 "A traditional obstacle in the use of multiple representations is the need to maintain traceability among the representations in the face of evolution ... relate versions of architectural elements to versions of source code configuration items"
-Architecture-to-code links must survive concurrent version evolution on both sides. // Cause: trace links are tied to evolving versions of both architecture and code artifacts. // As a result, without continuous evolution of traces, architecture and implementation lose synchronisation.
+Architecture-to-code links must survive concurrent version evolution on both sides. // Cause: trace links are tied to evolving versions of both architecture and code artefacts. // As a result, without continuous evolution of traces, architecture and implementation lose synchronisation.
 
 ARC22-1
 JongelingCCC2022
@@ -395,7 +395,7 @@ C5
 collaborative software development
 alternative versions of shared views
 class method across parallel versions
-"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."
+"Inconsistency detection is needed after one view is edited in order to detect: […] inconsistencies between specifications at different levels of abstraction (e.g., system requirements and design conflict); and inconsistencies between the work of multiple developers (e.g., when any inconsistency is caused by different developers working concurrently)." // "While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."
 Parallel edits on different versions produce conflicting states for the same method. // Cause: concurrent evolution without immediate reconciliation. // As a result, merge/conflict situation across versions; synchronisation and repair become necessary.
 
 DSS22-2

@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Taxonomy of Inconsistency Patterns — Jongeling2019</title>
+		<title>Taxonomy of Inconsistency Patterns — CCM19-1</title>
 		<link href="../common.css" rel="stylesheet" type="text/css">
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,35 +21,44 @@
 	<img src="tip.200.png" alt="TIP" title="TIP logo designed by Vadim Zaytsev">
 			<a href="index.html"><u>T</u>axonomy of <u>I</u>nconsistency <u>P</u>atterns</a>
 			in Multi-View Modelling
-			<br><span class="red">Source</span> <code>Jongeling2019</code>
+			<br><span class="red">Case</span> <code>CCM19-1</code>
 		</h1>
-		<p></p>
-<pre><span class="kw1">@inproceedings</span>{Jongeling2019,
-  <span class="kw2">author</span> = {Robbert Jongeling},
-  <span class="kw2">title</span> = {How to Live with Inconsistencies in Industrial Model-Based Development Practice},
-  <span class="kw2">booktitle</span> = {Proceedings of the Doctoral Symposium of the ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MoDELS DocSymp)},
-  <span class="kw2">prooflink</span> = "<a href="https://modelsconf19.org/?page_id=1933">https://modelsconf19.org/?page_id=1933</a>",
-  <span class="kw2">year</span> = {2019},
-  <span class="kw2">pages</span> = {642--647},
-  <span class="kw2">doi</span> = {<a href="https://doi.org/10.1109/MODELS-C.2019.00098">10.1109/MODELS-C.2019.00098</a>}
-}
-</pre>
+		<dl><dt>Source</dt>
+	<dd><a href="jongelingsattose2019.html">JongelingSATToSE2019</a></dd>
+<dt>Categories</dt>
+	<dd><a href="c1.html">C1</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+<dt>Domain</dt>
+	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>, automotive <a href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" title="anti-lock braking system">ABS</a> example)</dd>
+<dt>Views</dt>
+	<dd>high-level <a href="https://sysml.org/" title="System Modelling Language">SysML</a> diagrams</dd>
+	<dd>lower-level <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
+<dt>Artefacts</dt>
+	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> internal block/activity/parametric diagrams</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> refinement model</dd>
+<dt>Quotes</dt>
+	<dd class="red">"In our running example, this indeed happens, the system model is changed, requiring some changes in the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model."</dd>
+	<dd class="red">"In the running example, not updating the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model of the <a href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" title="anti-lock braking system">ABS</a> might result in its incorrect implementation."</dd>
+<dt>Summary</dt>
+	<dd>A change in the high-level system model is not reflected in the refining <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model.</dd>
+	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>
+	<dd>As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.</dd>
+</dl>
 <br style="clear:both">
 <h2>Taxonomy Categories</h2>
 		<table class="c">
 <tr><td class="c">Code</td><td>Label</td><td class="r">As primary</td><td class="r">As secondary</td></tr>
-<tr><td class="c">C1</td><td><a href="c1.html">Structural mismatch</a></td><td class="r">13</td><td class="r">7</td></tr>
+<tr><td class="c X">C1</td><td class="X"><a href="c1.html">Structural mismatch</a></td><td class="r X">13</td><td class="r X">7</td></tr>
 <tr><td class="c">C2</td><td><a href="c2.html">Interface contract mismatch</a></td><td class="r">4</td><td class="r">5</td></tr>
 <tr><td class="c">C3</td><td><a href="c3.html">Behavioural contradiction</a></td><td class="r">3</td><td class="r">6</td></tr>
 <tr><td class="c">C4</td><td><a href="c4.html">Requirement satisfaction gap</a></td><td class="r">7</td><td class="r">1</td></tr>
 <tr><td class="c">C5</td><td><a href="c5.html">Terminology divergence</a></td><td class="r">3</td><td class="r">3</td></tr>
 <tr><td class="c">C6</td><td><a href="c6.html">Traceability disruption</a></td><td class="r">7</td><td class="r">6</td></tr>
-<tr><td class="c">C7</td><td><a href="c7.html">Temporal skew</a></td><td class="r">3</td><td class="r">9</td></tr>
+<tr><td class="c XX">C7</td><td class="XX"><a href="c7.html">Temporal skew</a></td><td class="r XX">3</td><td class="r XX">9</td></tr>
 		</table>
 		<h2>Evidence Map</h2>
 <table class="c">
 <tr><td>Case ID</td><td>Source</td><td class="c">Primary</td><td class="c">Secondary</td></tr>
-<tr><td class="X"><a href="hli19-3.html">HLI19-3</a></td><td class="X"><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c X"><a href="c1.html">C1</a></td><td class="c X">—</td></tr>
+<tr><td><a href="hli19-1.html">HLI19-1</a></td><td><a href="jongelingdocsymp2019.html">[JongelingDocSymp2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c">—</td></tr>
 <tr><td><a href="rcm05-1.html">RCM05-1</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="rcm05-5.html">RCM05-5</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="rcm05-2.html">RCM05-2</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
@@ -60,12 +69,12 @@
 <tr><td><a href="fer94-2.html">FER94-2</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c5.html">C5</a></td></tr>
 <tr><td><a href="dss22-1.html">DSS22-1</a></td><td><a href="jongelingfccc2022.html">[JongelingFCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
 <tr><td><a href="imm98-2.html">IMM98-2</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
-<tr><td class="X"><a href="hli19-1.html">HLI19-1</a></td><td class="X"><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c X"><a href="c1.html">C1</a></td><td class="c X"><a href="c7.html">C7</a></td></tr>
+<tr><td class="X"><a href="ccm19-1.html">CCM19-1</a></td><td class="X"><a href="jongelingsattose2019.html">[JongelingSATToSE2019]</a></td><td class="c X"><a href="c1.html">C1</a></td><td class="c X"><a href="c7.html">C7</a></td></tr>
 <tr><td><a href="arc22-3.html">ARC22-3</a></td><td><a href="jongelingccc2022.html">[JongelingCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
 <tr><td><a href="dhi19-2.html">DHI19-2</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="dhi19-4.html">DHI19-4</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="imm98-3.html">IMM98-3</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
-<tr><td class="X"><a href="hli19-2.html">HLI19-2</a></td><td class="X"><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c X"><a href="c2.html">C2</a></td><td class="c X"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="ccm19-2.html">CCM19-2</a></td><td><a href="jongelingsattose2019.html">[JongelingSATToSE2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
 <tr><td><a href="bcm23-1.html">BCM23-1</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="bcm23-2.html">BCM23-2</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="bcm23-4.html">BCM23-4</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c6.html">C6</a></td></tr>

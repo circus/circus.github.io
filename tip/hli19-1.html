@@ -24,23 +24,22 @@
 			<br><span class="red">Case</span> <code>HLI19-1</code>
 		</h1>
 		<dl><dt>Source</dt>
-	<dd><a href="jongeling2019.html">Jongeling2019</a></dd>
+	<dd><a href="jongelingdocsymp2019.html">JongelingDocSymp2019</a></dd>
 <dt>Categories</dt>
-	<dd><a href="c1.html">C1</a> (primary); <a href="c7.html">C7</a> (secondary)</dd>
+	<dd><a href="c1.html">C1</a></dd>
 <dt>Domain</dt>
-	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>, automotive ABS example)</dd>
+	<dd>industrial MBSE (<a href="https://sysml.org/" title="System Modelling Language">SysML</a>/<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>)</dd>
 <dt>Views</dt>
-	<dd>high-level <a href="https://sysml.org/" title="System Modelling Language">SysML</a> diagrams</dd>
-	<dd>lower-level <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
+	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram</dd>
+	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model</dd>
 <dt>Artefacts</dt>
-	<dd><a href="https://sysml.org/" title="System Modelling Language">SysML</a> internal block/activity/parametric diagrams</dd>
-	<dd><a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> refinement model</dd>
+	<dd>expected subsystem/block correspondence</dd>
 <dt>Quotes</dt>
-	<dd class="red">"if the system model is changed, requiring some changes in the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model ... not updating the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model of the ABS might result in its incorrect implementation"</dd>
+	<dd class="red">"We could […] detect if the <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model is missing a subsystem that was expected in the <a href="https://sysml.org/" title="System Modelling Language">SysML</a> block diagram, indicating a probable inconsistency between the two models."</dd>
 <dt>Summary</dt>
-	<dd>A change in the high-level system model is not reflected in the refining <a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a> model.</dd>
-	<dd>Cause: evolution of the abstract model without co-evolution of the lower-level model.</dd>
-	<dd>As a result, incorrect implementation of the affected function; need to tolerate temporarily but eventually repair.</dd>
+	<dd>A lower-level model omits a subsystem required by the higher-level architectural view.</dd>
+	<dd>Cause: missing correspondence under a refinement relation.</dd>
+	<dd>As a result, likely incompleteness or incorrect realisation of the higher-level design.</dd>
 </dl>
 <br style="clear:both">
 <h2>Taxonomy Categories</h2>
@@ -52,12 +51,12 @@
 <tr><td class="c">C4</td><td><a href="c4.html">Requirement satisfaction gap</a></td><td class="r">7</td><td class="r">1</td></tr>
 <tr><td class="c">C5</td><td><a href="c5.html">Terminology divergence</a></td><td class="r">3</td><td class="r">3</td></tr>
 <tr><td class="c">C6</td><td><a href="c6.html">Traceability disruption</a></td><td class="r">7</td><td class="r">6</td></tr>
-<tr><td class="c XX">C7</td><td class="XX"><a href="c7.html">Temporal skew</a></td><td class="r XX">3</td><td class="r XX">9</td></tr>
+<tr><td class="c">C7</td><td><a href="c7.html">Temporal skew</a></td><td class="r">3</td><td class="r">9</td></tr>
 		</table>
 		<h2>Evidence Map</h2>
 <table class="c">
 <tr><td>Case ID</td><td>Source</td><td class="c">Primary</td><td class="c">Secondary</td></tr>
-<tr><td><a href="hli19-3.html">HLI19-3</a></td><td><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c">—</td></tr>
+<tr><td class="X"><a href="hli19-1.html">HLI19-1</a></td><td class="X"><a href="jongelingdocsymp2019.html">[JongelingDocSymp2019]</a></td><td class="c X"><a href="c1.html">C1</a></td><td class="c X">—</td></tr>
 <tr><td><a href="rcm05-1.html">RCM05-1</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="rcm05-5.html">RCM05-5</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="rcm05-2.html">RCM05-2</a></td><td><a href="wehrheim2005.html">[Wehrheim2005]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
@@ -68,12 +67,12 @@
 <tr><td><a href="fer94-2.html">FER94-2</a></td><td><a href="nuseibehkf1994.html">[NuseibehKF1994]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c5.html">C5</a></td></tr>
 <tr><td><a href="dss22-1.html">DSS22-1</a></td><td><a href="jongelingfccc2022.html">[JongelingFCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c6.html">C6</a></td></tr>
 <tr><td><a href="imm98-2.html">IMM98-2</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
-<tr><td class="X"><a href="hli19-1.html">HLI19-1</a></td><td class="X"><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c X"><a href="c1.html">C1</a></td><td class="c X"><a href="c7.html">C7</a></td></tr>
+<tr><td><a href="ccm19-1.html">CCM19-1</a></td><td><a href="jongelingsattose2019.html">[JongelingSATToSE2019]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
 <tr><td><a href="arc22-3.html">ARC22-3</a></td><td><a href="jongelingccc2022.html">[JongelingCCC2022]</a></td><td class="c"><a href="c1.html">C1</a></td><td class="c"><a href="c7.html">C7</a></td></tr>
 <tr><td><a href="dhi19-2.html">DHI19-2</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="dhi19-4.html">DHI19-4</a></td><td><a href="feldmann2019.html">[Feldmann2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="imm98-3.html">IMM98-3</a></td><td><a href="grundyhm1998.html">[GrundyHM1998]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
-<tr><td><a href="hli19-2.html">HLI19-2</a></td><td><a href="jongeling2019.html">[Jongeling2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
+<tr><td><a href="ccm19-2.html">CCM19-2</a></td><td><a href="jongelingsattose2019.html">[JongelingSATToSE2019]</a></td><td class="c"><a href="c2.html">C2</a></td><td class="c"><a href="c3.html">C3</a></td></tr>
 <tr><td><a href="bcm23-1.html">BCM23-1</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c1.html">C1</a></td></tr>
 <tr><td><a href="bcm23-2.html">BCM23-2</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c2.html">C2</a></td></tr>
 <tr><td><a href="bcm23-4.html">BCM23-4</a></td><td><a href="krauterkrls2023.html">[KrauterKRLS2023]</a></td><td class="c"><a href="c3.html">C3</a></td><td class="c"><a href="c6.html">C6</a></td></tr>

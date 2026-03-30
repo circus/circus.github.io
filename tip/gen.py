@@ -87,6 +87,8 @@ def hyperlinkify(x):
 		.replace('SysML', '<a href="https://sysml.org/" title="System Modelling Language">SysML</a>')\
 		.replace('UML', '<a href="https://www.omg.org/uml/" title="Unified Modelling Language">UML</a>')\
 		.replace('Simulink', '<a href="https://en.wikipedia.org/wiki/Simulink">Simulink</a>')\
+		.replace('MATLAB', '<a href="https://en.wikipedia.org/wiki/MATLAB">MATLAB</a>')\
+		.replace('ABS', '<a href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" title="anti-lock braking system">ABS</a>')\
 		.replace('Git', '<a href="https://git-scm.com/">Git</a>')
 
 def add_pair(t,d):
@@ -221,7 +223,7 @@ def process_source(key):
 		line2add = line
 		if line.find('http') > -1:
 			before, link, after = split3(line, 'http', '"')
-			line2add = f'{before}<a href="{link}">{link}</a>{after}'
+			line2add = f'{before}<a href="{link.replace('\\_','_')}">{link}</a>{after}'
 		elif line.find('doi =') > -1:
 			before, doi, after = split3(line, '{', '}', include=False)
 			line2add = f'{before}{{<a href="https://doi.org/{doi}">{doi}</a>}}{after}'

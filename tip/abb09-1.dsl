@@ -25,7 +25,8 @@
 	<dd>generated tests</dd>
 	<dd>failed-test back-traces</dd>
 <dt>Quotes</dt>
-	<dd class="red">"requirements are traced to models, to test specifications, and back to models again" ... "critical requirements are not traced to any tests."</dd>
+	<dd class="red">"Ultimately, since requirements are traced to model elements, it facilitates the identification of which functionalities of SUT are not in sync with the model, and hence with the requirements."</dd>
+	<dd class="red">"Traceability of requirements can help in depicting missing tests, i.e. when critical requirements are not traced to any tests."</dd>
 <dt>Summary</dt>
 	<dd>Some critical requirements may end up uncovered because they are not traced through the requirements-model-specification-test chain to any generated test.</dd>
 	<dd>Cause: trace links must be propagated across several modeling and testing steps; the paper notes that requirements change over the lifecycle, trace upkeep becomes tedious, and only requirements attached to state-machine transitions are currently propagated to Qtronic.</dd>
@@ -47,7 +48,7 @@ C7 & Temporal skew@c7.html & 3 & 9
 		<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
-HLI19-3@hli19-3.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & —
+HLI19-1@hli19-1.html & [JongelingDocSymp2019]@jongelingdocsymp2019.html & C1@c1.html & —
 RCM05-1@rcm05-1.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-5@rcm05-5.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-2@rcm05-2.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C3@c3.html
@@ -58,12 +59,12 @@ DHI19-3@dhi19-3.html & [Feldmann2019]@feldmann2019.html & C1@c1.html & C5@c5.htm
 FER94-2@fer94-2.html & [NuseibehKF1994]@nuseibehkf1994.html & C1@c1.html & C5@c5.html
 DSS22-1@dss22-1.html & [JongelingFCCC2022]@jongelingfccc2022.html & C1@c1.html & C6@c6.html
 IMM98-2@imm98-2.html & [GrundyHM1998]@grundyhm1998.html & C1@c1.html & C7@c7.html
-HLI19-1@hli19-1.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & C7@c7.html
+CCM19-1@ccm19-1.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C1@c1.html & C7@c7.html
 ARC22-3@arc22-3.html & [JongelingCCC2022]@jongelingccc2022.html & C1@c1.html & C7@c7.html
 DHI19-2@dhi19-2.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 DHI19-4@dhi19-4.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 IMM98-3@imm98-3.html & [GrundyHM1998]@grundyhm1998.html & C2@c2.html & C1@c1.html
-HLI19-2@hli19-2.html & [Jongeling2019]@jongeling2019.html & C2@c2.html & C3@c3.html
+CCM19-2@ccm19-2.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C2@c2.html & C3@c3.html
 BCM23-1@bcm23-1.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C1@c1.html
 BCM23-2@bcm23-2.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C2@c2.html
 BCM23-4@bcm23-4.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C6@c6.html

@@ -18,6 +18,7 @@
 <dt>Artefacts</dt>
 	<dd>class method across parallel versions</dd>
 <dt>Quotes</dt>
+	<dd class="red">"Inconsistency detection is needed after one view is edited in order to detect: […] inconsistencies between specifications at different levels of abstraction (e.g., system requirements and design conflict); and inconsistencies between the work of multiple developers (e.g., when any inconsistency is caused by different developers working concurrently)."</dd>
 	<dd class="red">"While alternate versions of a view are being modified independently, inconsistencies between these views may easily result. For example, a class method modified by one developer may be deleted or renamed by another."</dd>
 <dt>Summary</dt>
 	<dd>Parallel edits on different versions produce conflicting states for the same method.</dd>
@@ -40,7 +41,7 @@ C6 & Traceability disruption@c6.html & 7 & 6
 		<h2>Evidence Map</h2>
 <table center llcc>
 Case ID & Source & Primary & Secondary
-HLI19-3@hli19-3.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & —
+HLI19-1@hli19-1.html & [JongelingDocSymp2019]@jongelingdocsymp2019.html & C1@c1.html & —
 RCM05-1@rcm05-1.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-5@rcm05-5.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C2@c2.html
 RCM05-2@rcm05-2.html & [Wehrheim2005]@wehrheim2005.html & C1@c1.html & C3@c3.html
@@ -51,12 +52,12 @@ DHI19-3@dhi19-3.html & [Feldmann2019]@feldmann2019.html & C1@c1.html & C5@c5.htm
 FER94-2@fer94-2.html & [NuseibehKF1994]@nuseibehkf1994.html & C1@c1.html & C5@c5.html
 DSS22-1@dss22-1.html & [JongelingFCCC2022]@jongelingfccc2022.html & C1@c1.html & C6@c6.html
 IMM98-2@imm98-2.html & [GrundyHM1998]@grundyhm1998.html & C1@c1.html & C7@c7.html
-HLI19-1@hli19-1.html & [Jongeling2019]@jongeling2019.html & C1@c1.html & C7@c7.html
+CCM19-1@ccm19-1.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C1@c1.html & C7@c7.html
 ARC22-3@arc22-3.html & [JongelingCCC2022]@jongelingccc2022.html & C1@c1.html & C7@c7.html
 DHI19-2@dhi19-2.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 DHI19-4@dhi19-4.html & [Feldmann2019]@feldmann2019.html & C2@c2.html & C1@c1.html
 IMM98-3@imm98-3.html & [GrundyHM1998]@grundyhm1998.html & C2@c2.html & C1@c1.html
-HLI19-2@hli19-2.html & [Jongeling2019]@jongeling2019.html & C2@c2.html & C3@c3.html
+CCM19-2@ccm19-2.html & [JongelingSATToSE2019]@jongelingsattose2019.html & C2@c2.html & C3@c3.html
 BCM23-1@bcm23-1.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C1@c1.html
 BCM23-2@bcm23-2.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C2@c2.html
 BCM23-4@bcm23-4.html & [KrauterKRLS2023]@krauterkrls2023.html & C3@c3.html & C6@c6.html
