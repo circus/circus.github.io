@@ -42,7 +42,7 @@
 			<text>bx megamodel of (un)parsing flows &amp; structures<br>(2014)</text>
 		</pic>
 		<pic>
-			<a>https://bibtex.github.io/</a>
+			<a>bibsleigh</a>
 			<img>https://grammarware.net/images/bibsleigh.png</img>
 			<alt>BibSLEIGH logo</alt>
 			<title>Bibliography of Software Language Engineering in Generated Hypertext</title>
