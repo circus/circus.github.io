@@ -34,6 +34,14 @@
 			<text>event-based parser generator<br>(2019–2021)</text>
 		</pic>
 		<pic>
+			<a>dyol</a>
+			<img>dyol/dyol.200.png</img>
+			<alt>Design with Intent deck symbol</alt>
+			<title>Design Your Own Language</title>
+			<name>DYOL</name>
+			<text>a language design with intent toolkit made from 24 books<br>(2017)</text>
+		</pic>
+		<pic>
 			<a>https://grammarware.github.io/parsing/</a>
 			<img>https://grammarware.github.io/logos/bx.200.png</img>
 			<alt>BX parsing in a broad sense</alt>
@@ -43,7 +51,7 @@
 		</pic>
 		<pic>
 			<a>bibsleigh</a>
-			<img>https://grammarware.net/images/bibsleigh.png</img>
+			<img>bibsleigh/bibsleigh.png</img>
 			<alt>BibSLEIGH logo</alt>
 			<title>Bibliography of Software Language Engineering in Generated Hypertext</title>
 			<name>BibSLEIGH</name>
