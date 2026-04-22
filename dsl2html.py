@@ -139,8 +139,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		if lines[i].strip() == '<credit/>':
 			lines[i] = '<div style="text-align:center;">by <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>\n'
 		if lines[i].strip().startswith('<credit '):
-			odd = first = last = False
+			odd = first = last = project = False
 			bywhom = ['<a href="http://grammarware.github.io">Vadim Zaytsev</a>']
+			project_name = ''
 			for word in lines[i].strip().split('"'):
 				if odd:
 					if word.find('@') > -1:
@@ -154,13 +155,16 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 						bywhom.insert(0, creditline)
 					elif last:
 						bywhom.append(creditline)
+					elif project:
+						project_name = f'<strong>{creditline}</strong>'
 					else:
 						print(f'\n[FAIL] How to credit "{word}"?\n')
 				else:
 					first = word.endswith('first=')
 					last = word.endswith('last=')
+					project = word.endswith('project=')
 				odd = not odd
-			lines[i] = '<div style="text-align:center;">by ' + ' &amp; '.join(bywhom) + '</div><hr>\n'
+			lines[i] = f'<div style="text-align:center;">{project_name} by {' &amp; '.join(bywhom)}</div><hr>\n'
 		if lines[i].strip() == '<html doctype>':
 			lines[i] = '''<!doctype html><html lang="en">
 '''

@@ -1,9 +1,9 @@
 <html doctype>
-	<head title="Engage! (Vadim Zaytsev)" />
+	<head title="BabyCobol (Vadim Zaytsev)" />
 	<body>
 		<credit/>
 		<h1 logo="https://slebok.github.io/www/babycobol.png" alt="BabyCobol" hover="BabyCobol: software language engineer’s worst nightmare">
-			BabyCobol
+			<a href="https://slebok.github.io/baby/">BabyCobol</a>
 		</h1>
       <p>
           <a href="https://slebok.github.io/baby/">BabyCobol</a> is a project in software language design aimed at creating a language that is, on one hand, small enough to be quickly implementable (fully or partially) within any framework that can support its features, and, on the other hand, complex enough to cover typical problems of legacy language processing. If you learn how to compile <a href="https://www.cs.tufts.edu/~sguyer/classes/comp181-2006/minijava.html">MiniJava</a>, you stand a good chance of implementing a reasonably good compiler for any contemporary programming language. If you show how your language extension works on <a href="https://doi.org/10.1145/503502.503505">Featherweight Java</a>, it has a good chance of being applicable to any reasonable modern object-oriented programming language. If you can handle BabyCobol with your tool and with your skills, you are ready to face the challenges of software modernisation, codebase migration and legacy language processing in general. At this day and age, being future proof means being able to handle software of the past. 

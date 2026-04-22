@@ -57,3 +57,4 @@ pre {white-space: pre-wrap; border: 1px #552200 solid; font-size: larger; width:
 span.kw1 {color: #6699CC; font-weight: bold;}
 span.kw2 {color: #CC6633; font-weight: bold;}
 .hl {background-color: #ffcc66}
+figure { text-align: center; font-weight: bold; float: left; margin: 10px; }
