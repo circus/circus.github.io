@@ -6,7 +6,7 @@ import random
 W, H = 1376, 768
 OUT = Path("wadt.svg")
 
-all_colors = [
+all_colours = [
     "#3e7fba",  # blue
     "#5ab1d8",  # cyan
     "#5dad55",  # green
@@ -31,14 +31,23 @@ svg_parts = [
     '<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>',
 ]
 
-last = newc = ''
+colours = []
+# just fill it in
+for x in range(0,6):
+    colours.append([])
+    for y in range(0,6):
+        colours[-1].append(random.choice(all_colours))
+# fix adjacents
+for x in range(0,6):
+    for y in range(0,6):
+        while x > 0 and colours[x][y] == colours[x-1][y] or y > 0 and colours[x][y] == colours[x][y-1]:
+            colours[x][y] = random.choice(all_colours)
+            print('FIX')
+
 label = ''
 cx = 0
 for x in range(0,6):
     for y in range(0,6):
-        while newc == last:
-            newc = random.choice(all_colors)
-        last = newc
         if y == 2:
             if x == 0 or x == 5:
                 label = text('.', x*100+50, y*100+30)
@@ -46,7 +55,7 @@ for x in range(0,6):
                 svg_parts.append(text(letters[cx], x*100+50, y*100+50))
                 cx += 1
                 continue
-        svg_parts.append(rect(x*100, y*100, 95, 95, newc))
+        svg_parts.append(rect(x*100, y*100, 95, 95, colours[x][y]))
         if label:
             svg_parts.append(label)
             label = ''
@@ -54,4 +63,4 @@ for x in range(0,6):
 svg_parts.append("</svg>")
 
 OUT.write_text("\n".join(svg_parts), encoding="utf-8")
-print(f"Wrote {OUT.resolve()}")
+print(f"Generated {OUT.resolve()}")
