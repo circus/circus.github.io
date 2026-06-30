@@ -44,7 +44,8 @@
 			<text>WAG for HMI in IoT</text>
 		</pic>
 		<pic>
-			<a>http://purl.utwente.nl/essays/99790</a>
+			<!-- <a>http://purl.utwente.nl/essays/99790</a> -->
+			<a>on</a>
 			<img>../languages/rust.svg</img>
 			<alt>Rust logo (CC-BY)</alt>
 			<title>UT MSc CS student project</title>
@@ -52,7 +53,8 @@
 			<text>WAGon: WAG Oriented Notation</text>
 		</pic>
 		<pic>
-			<a>http://grammarware.net/edits/index.html#Veen2024</a>
+			<!-- <a>http://grammarware.net/edits/index.html#Veen2024</a> -->
+			<a>https://github.com/SvdVeen/NoWa</a>
 			<img>../languages/csharp.svg</img>
 			<alt>C# logo (public domain)</alt>
 			<title>UT MSc Capita Selecta student project</title>
