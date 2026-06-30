@@ -21,8 +21,8 @@
 		<h2 help="latest leftmost">Completed constituent projects</h2>
 		<pic>
 			<a>https://grammarware.net/writes/index.html#WAGT2026</a>
-			<img>wag.300.png</img>
-			<alt>Grammarware</alt>
+			<img>wadt.svg</img>
+			<alt>reimagined/regenerated WADT 2018 logo</alt>
 			<title>workshop paper</title>
 			<name>Gerhold &amp; Zaytsev (2026)</name>
 			<text>Reconciling Weighted and Attribute Grammars</text>

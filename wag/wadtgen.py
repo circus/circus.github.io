@@ -3,7 +3,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 import random
 
-W, H = 1376, 768
+SIZE= 595
 OUT = Path("wadt.svg")
 
 all_colours = [
@@ -27,7 +27,7 @@ def text(label, x, y):
     return f'<text x="{x}" y="{y}" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="700" text-anchor="middle" dominant-baseline="middle" fill="#000000">{escape(label)}</text>'
 
 svg_parts = [
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="{SIZE}" height="{SIZE}" viewBox="0 0 {SIZE} {SIZE}">',
     '<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>',
 ]
 
