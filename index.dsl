@@ -4,7 +4,7 @@
 		<hr/>
 		<pic>
 			<a>wag</a>
-			<img>logos/terminal.200.png</img>
+			<img>wag/wag.300.png</img>
 			<alt>Grammarware</alt>
 			<title>WAG: Weighted Attribute Grammars</title>
 			<name>Weighted Attribute Grammars</name>
@@ -19,11 +19,19 @@
 			<text>evidence-based taxonomy<br>(2026)</text>
 		</pic>
 		<pic>
+			<a>https://cfpbok.github.io/</a>
+			<img>https://cfpbok.github.io/sle.png</img>
+			<alt>SLE logo</alt>
+			<title>CfPBoK</title>
+			<name>CfPBoK</name>
+			<text>cross-labelling of calls for papers and papers of SLE<br>(2026)</text>
+		</pic>
+		<pic>
 			<a>babycobol</a>
 			<img>https://slebok.github.io/www/babycobol.png</img>
 			<title>SLE engineer’s worst nightmare</title>
 			<name>BabyCobol</name>
-			<text>develop industrial parsers in a controlled environment<br>(2019–2021)</text>
+			<text>develop industrial parsers in a controlled environment<br>(2019+)</text>
 		</pic>
 		<pic>
 			<a>engage</a>
