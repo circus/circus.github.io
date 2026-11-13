@@ -1,0 +1,53 @@
+<!doctype html><html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>WAGon (Rafael Dulfer, Vadim Zaytsev)</title>
+		<link href="../../common.css" rel="stylesheet" type="text/css">
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3743366-8', 'auto');
+  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+<div style="text-align:center;"> by <a href="https://dulfer.be">Rafael Dulfer</a> &amp; <a href="http://grammarware.github.io">Vadim Zaytsev</a></div><hr>
+		<h1>
+			<a href="..">Weighted Attribute Grammars</a> Oriented Notation
+			(<a href="index.html">WAGon</a>)
+		</h1>
+		<hr>
+		<h2>
+			<a href="index.html">WAGon</a> <a href="https://github.com/Rafaeltheraven/wagon/tree/main/wagon-parser">Parser</a>
+		</h2>
+		<p>
+			A library for parsing the WAGon DSL. This crate provides a struct that, given a String with the DSL as input, either returns a full AST representing the input file, or a proper error. The error can be handled as needed, the AST can function as the basis for any code generation or analysis that one wants to do.
+		</p>
+		<p>
+			Additionally, this crate includes a very simple checker which does the following things:
+		</p>
+		<ul>
+			<li>Check whether any rule has duplicate attributes in their declaration (i.e. <code>S&lt;*a, *a> -&rt; ...;</code>).</li>
+			<li>Check whether alternate definitions of the same nonterminal have different attributes in their declarations (i.e. <code>S&lt;*a&rt; -&rt; ...; S&lt;*b, *c&rt; -&rt; ...;</code>).</li>
+			<li>Merge multiple rules for the same nonterminal into a single rule with alternatives.</li>
+			<li>Factor our EBNF operators.</li>
+		</ul>
+		<h3>Example</h3>
+		<pre>
+use wagon_parser::parse_and_check;
+&nbsp;
+let input_grammar = ...;
+let wag = parse_and_check(input_grammar);
+assert!(wag.is_ok());</pre>
+		<p>
+			This crate also defines the AST for a fully parsed WAGon WAG. It's structure mirrors that of the formal DSL.
+		</p>
+<div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. Last updated: November 2026.<br>
+			<a href="http://validator.w3.org/check/referer"><img src="../../logos/html.88.png" alt="HTML 5"></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../logos/css.88.png" alt="CSS 3"></a></div>	</body>
+</html>
